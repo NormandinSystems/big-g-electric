@@ -100,16 +100,39 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white">
-                    <span class="font-bold text-2xl tracking-tight text-brand-blue dark:text-blue-400">Big G Electric</span>
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer group" onclick="window.scrollTo(0,0)">
+                    <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
+                    <span class="font-extrabold text-2xl md:text-3xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-500 dark:from-blue-400 dark:to-blue-200 drop-shadow-sm">Big G Electric</span>
                 </div>
 
                 <!-- Desktop Menu -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-services">Services</a>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors pb-2 -mb-2">
+                            <span data-i18n="nav-services">Services</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-2 w-[500px] rounded-xl shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-700 overflow-hidden">
+                            <div class="p-4 grid grid-cols-2 gap-x-6 gap-y-1">
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                                <a href="#ev-charging" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-lighting">Lighting</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-auto">Home Automation</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-gen">Generator</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
+                                <a href="#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors col-span-2" data-i18n="nav-other">Other Services</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="#about" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-about">Why Us</a>
-                    <a href="#ev-charging" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-ev">EV Charging</a>
                     <a href="#reviews" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-reviews">Reviews</a>
                     <a href="#contact" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-contact">Contact Us</a>
                 </nav>
@@ -137,11 +160,29 @@
         </div>
 
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 absolute w-full left-0 shadow-xl transition-colors duration-300">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-services">Services</a>
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 absolute w-full left-0 shadow-xl transition-colors duration-300 max-h-[85vh] overflow-y-auto">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <div class="px-3 pb-2">
+                    <span class="block text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2" data-i18n="nav-services">Services</span>
+                    <div class="pl-3 border-l-2 border-gray-100 dark:border-gray-800 space-y-1">
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                        <a href="#ev-charging" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-lighting">Lighting</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-auto">Home Automation</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-gen">Generator</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
+                        <a href="#services" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-other">Other Services</a>
+                    </div>
+                </div>
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-about">Why Us</a>
-                <a href="#ev-charging" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-ev">EV Charging</a>
                 <a href="#reviews" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-reviews">Reviews</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-contact">Contact Us</a>
                 <a href="tel:+15551234567" class="block px-3 py-3 mt-4 text-center rounded-lg text-base font-bold bg-brand-blue text-white hover:bg-brand-dark transition-colors shadow-md flex items-center justify-center gap-2">
@@ -544,7 +585,7 @@
                 <div>
                     <div class="flex items-center gap-2 mb-4 text-white">
                         <img src="logomark.webp" alt="Big G Electric Logo" class="w-8 h-8 rounded-lg object-contain bg-white">
-                        <span class="font-bold text-xl tracking-tight">Big G Electric</span>
+                        <span class="font-extrabold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Big G Electric</span>
                     </div>
                     <p class="text-sm mb-4" data-i18n="footer-desc">Professional electrical services, EV charging installation, and heat pump solutions serving the Greater Montreal area.</p>
                 </div>
@@ -587,6 +628,21 @@
         const translations = {
             en: {
                 'nav-services': 'Services',
+                'nav-outdoor': 'Outdoor and Landscape Lighting',
+                'nav-ev-install': 'Electric Car Charger Installation',
+                'nav-spa': 'Spa and Pools',
+                'nav-lighting': 'Lighting',
+                'nav-elec-heat': 'Electrical Heating',
+                'nav-diag': 'Diagnostics & Repairs',
+                'nav-panel': 'Electrical Panel Upgrades',
+                'nav-rewire': 'Rewiring',
+                'nav-surge': 'Surge Protection',
+                'nav-auto': 'Home Automation',
+                'nav-other': 'Other Services',
+                'nav-hvac': 'Heating and Cooling',
+                'nav-plan': 'Home Protection Plan',
+                'nav-gen': 'Generator',
+                'nav-grants': 'Grant and Tax Credit Programs',
                 'nav-about': 'Why Us',
                 'nav-ev': 'EV Charging',
                 'nav-reviews': 'Reviews',
@@ -620,8 +676,8 @@
                 'part-subtitle': 'Collaborating with industry leaders to bring you the best materials, technology, and savings.',
                 'part-hydro-title': 'Hydro Quebec',
                 'part-hydro-desc': 'Through our Hydro Quebec partnership, we are able to receive subventions, allowing for additional tasks completed or materials to be purchased at a discount and shipped directly to our warehouse in Dollard-Des Ormeaux.',
-                'part-novair-title': 'Novair Heat Pumps',
-                'part-novair-desc': 'We\'re proud to partner with Novair to offer high-efficiency heat pumps built for Quebec winters. Their reliable, energy-saving systems paired with our expert installation will deliver dependable comfort all season long.',
+                'part-novair-title': 'Novair AC & Heat Pumps',
+                'part-novair-desc': 'We\'re proud to partner with Novair to offer high-efficiency split units, AC, and heat pumps built for Quebec winters. Their reliable, energy-saving systems paired with our expert installation will deliver dependable comfort all season long.',
                 'part-finance-title': 'Financeit',
                 'part-finance-desc': 'We understand that electrical upgrades are an investment. We\'ve partnered with Financeit to offer flexible, affordable payment plans so you can get your project done today and pay over time.',
                 'rev-title': 'What Our Community Says',
@@ -647,7 +703,7 @@
                 'opt-res': 'Residential Repair',
                 'opt-com': 'Commercial Project',
                 'opt-ev': 'EV Charging Station',
-                'opt-heat': 'Heat Pump Installation',
+                'opt-heat': 'Split Unit / AC / Heat Pump',
                 'opt-other': 'Other',
                 'form-submit': 'Submit Request',
                 'form-success': 'Thank you! Your request has been sent.',
@@ -660,6 +716,21 @@
             },
             fr: {
                 'nav-services': 'Services',
+                'nav-outdoor': 'Éclairage Extérieur et Paysager',
+                'nav-ev-install': 'Installation de Borne de Recharge VE',
+                'nav-spa': 'Spas et Piscines',
+                'nav-lighting': 'Éclairage',
+                'nav-elec-heat': 'Chauffage Électrique',
+                'nav-diag': 'Diagnostics et Réparations',
+                'nav-panel': 'Mise à Niveau de Panneaux Électriques',
+                'nav-rewire': 'Recâblage',
+                'nav-surge': 'Protection Contre les Surtensions',
+                'nav-auto': 'Domotique',
+                'nav-other': 'Autres Services',
+                'nav-hvac': 'Chauffage et Climatisation',
+                'nav-plan': 'Plan de Protection Domiciliaire',
+                'nav-gen': 'Génératrice',
+                'nav-grants': 'Programmes de Subventions et Crédits',
                 'nav-about': 'Pourquoi Nous',
                 'nav-ev': 'Recharge VE',
                 'nav-reviews': 'Avis',
@@ -693,8 +764,8 @@
                 'part-subtitle': 'Collaborer avec les leaders de l\'industrie pour vous apporter les meilleurs matériaux, technologies et économies.',
                 'part-hydro-title': 'Hydro-Québec',
                 'part-hydro-desc': 'Grâce à notre partenariat avec Hydro-Québec, nous sommes en mesure de recevoir des subventions, permettant d\'accomplir des tâches supplémentaires ou d\'acheter des matériaux à prix réduit et expédiés directement à notre entrepôt de Dollard-Des Ormeaux.',
-                'part-novair-title': 'Thermopompes Novair',
-                'part-novair-desc': 'Nous sommes fiers de nous associer à Novair pour offrir des thermopompes à haute efficacité conçues pour les hivers québécois. Leurs systèmes fiables et économes en énergie, associés à notre installation experte, offriront un confort fiable toute la saison.',
+                'part-novair-title': 'Climatisation et Thermopompes Novair',
+                'part-novair-desc': 'Nous sommes fiers de nous associer à Novair pour offrir des unités murales (split), de la climatisation et des thermopompes à haute efficacité conçues pour les hivers québécois. Leurs systèmes fiables et économes en énergie, associés à notre installation experte, offriront un confort fiable toute la saison.',
                 'part-finance-title': 'Financeit',
                 'part-finance-desc': 'Nous comprenons que les rénovations électriques sont un investissement. C\'est pourquoi nous nous sommes associés à Financeit pour offrir des plans de paiement flexibles et abordables afin que vous puissiez réaliser votre projet aujourd\'hui et payer au fil du temps.',
                 'rev-title': 'Ce Que Dit Notre Communauté',
@@ -720,7 +791,7 @@
                 'opt-res': 'Réparation Résidentielle',
                 'opt-com': 'Projet Commercial',
                 'opt-ev': 'Borne de Recharge VE',
-                'opt-heat': 'Installation de Thermopompe',
+                'opt-heat': 'Unité Murale / Clim / Thermopompe',
                 'opt-other': 'Autre',
                 'form-submit': 'Soumettre la Demande',
                 'form-success': 'Merci ! Votre demande a été envoyée.',
