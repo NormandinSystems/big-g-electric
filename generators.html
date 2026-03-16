@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Backup Generator Solutions | Generac Dealer | Big G Electric Montreal</title>
+    <meta name="description" content="Never be caught in the dark again. Big G Electric offers professional installation and maintenance of Generac home standby generators in Montreal and Laval.">
+    <meta name="keywords" content="Generac dealer Montreal, home backup generators, standby generator installation, generator maintenance Laval, power outage protection, Big G Electric">
+    <meta name="author" content="Big G Electric">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Schema Markup for Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Backup Generator Installation and Maintenance",
+      "provider": {
+        "@type": "Electrician",
+        "name": "Big G Electric",
+        "image": "logomark.webp",
+        "telephone": "+15551234567",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dollard-Des Ormeaux",
+          "addressRegion": "QC",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": ["Montreal", "Laval", "West Island", "South Shore"],
+      "description": "Authorized Generac Service Dealer providing partial and whole-home backup power systems, including installation, tune-ups, and comprehensive maintenance plans."
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config & Custom CSS -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            light: '#e6f0fa',
+                            dark: '#003d82',
+                            accent: '#facc15'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass {
+            background: rgba(17, 24, 39, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 glass border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
+                    <span class="font-extrabold text-2xl md:text-3xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-500 dark:from-blue-400 dark:to-blue-200 drop-shadow-sm">Big G Electric</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors pb-2 -mb-2">
+                            <span data-i18n="nav-services">Services</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-2 w-[500px] rounded-xl shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-700 overflow-hidden">
+                            <div class="p-4 grid grid-cols-2 gap-x-6 gap-y-1">
+                                <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                                <a href="index.html#ev-charging" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                                <a href="spa-and-pools.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-lighting">Lighting</a>
+                                <a href="electrical-heating.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                                <a href="electrical-panel-upgrades.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                                <a href="surge-protection.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-auto">Home Automation</a>
+                                <a href="heating-and-cooling.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
+                                <a href="generators.html" class="block px-3 py-2 text-sm text-brand-blue dark:text-blue-400 bg-blue-50 dark:bg-gray-700/50 rounded transition-colors font-semibold" data-i18n="nav-gen">Generator</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors col-span-2" data-i18n="nav-other">Other Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#about" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-about">Why Us</a>
+                    <a href="index.html#reviews" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-reviews">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-contact">Contact Us</a>
+                </nav>
+
+                <!-- Controls: Lang, Theme, Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="langToggle" class="text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors px-2 py-1 rounded border border-gray-300 dark:border-gray-700">
+                        FR
+                    </button>
+                    <button id="themeToggle" class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Dark Mode">
+                        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <a href="tel:+15551234567" class="hidden lg:flex items-center gap-2 bg-brand-blue hover:bg-brand-dark text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg hover:shadow-brand-blue/30">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span data-i18n="nav-call">Call Now</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 absolute w-full left-0 shadow-xl transition-colors duration-300 max-h-[85vh] overflow-y-auto">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <div class="px-3 pb-2">
+                    <span class="block text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2" data-i18n="nav-services">Services</span>
+                    <div class="pl-3 border-l-2 border-gray-100 dark:border-gray-800 space-y-1">
+                        <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                        <a href="index.html#ev-charging" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                        <a href="spa-and-pools.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                        <a href="electrical-heating.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                        <a href="electrical-panel-upgrades.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                        <a href="surge-protection.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                        <a href="heating-and-cooling.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                        <a href="generators.html" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-blue dark:text-blue-400 bg-blue-50 dark:bg-gray-800 transition-colors" data-i18n="nav-gen">Generator</a>
+                    </div>
+                </div>
+                <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-about">Why Us</a>
+                <a href="index.html#reviews" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-reviews">Reviews</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-contact">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-gray-900">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1498084393753-b411b2d25b34?q=80&w=2069&auto=format&fit=crop" alt="Home during a dark storm" class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-gray-900/40"></div>
+            </div>
+
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/20 border border-brand-accent/50 text-yellow-400 font-semibold text-sm tracking-wider uppercase mb-6 backdrop-blur-sm">
+                    <i data-lucide="zap" class="w-4 h-4"></i>
+                    <span data-i18n="gen-hero-badge">Never Be Caught In The Dark Again</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight" data-i18n="gen-hero-title">
+                    Backup Generator Solutions in <span class="text-brand-accent">Montreal</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 font-light" data-i18n="gen-hero-desc">
+                    At Big G Electric, we are seeing a growing demand for partial and whole-home backup power systems due to increased power outages. We can match you with the right size generator for your peace of mind.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:-translate-y-1" data-i18n="gen-cta-book">
+                        Get a Free Quote!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partner Banner -->
+        <section class="py-8 bg-brand-blue dark:bg-brand-dark transition-colors duration-300 border-b border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 reveal">
+                    <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide text-center" data-i18n="gen-partner-text">
+                        We are proud to be a
+                    </h3>
+                    <div class="bg-white px-6 py-3 rounded-lg shadow-md flex items-center gap-3">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-brand-blue"></i>
+                        <span class="text-gray-900 font-extrabold text-xl tracking-tight uppercase" data-i18n="gen-partner-badge">Generac Authorized Service Dealer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="gen-ben-title">Benefits of a New Generac Standby Generator</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="gen-ben-subtitle">
+                        By choosing a Generac standby generator from Big G Electric, you ensure reliable power backup, professional service, and long-term value for your home.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                    <!-- Reliability -->
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i data-lucide="shield" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b1-title">Reliability</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b1-desc">Generac generators are known for their reliability and ability to provide continuous power during outages, ensuring your home remains functional.</p>
+                    </div>
+
+                    <!-- Automatic Operation -->
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i data-lucide="power" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b2-title">Automatic Operation</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b2-desc">These generators automatically detect power outages and start up within seconds, providing a seamless transition and minimizing disruption.</p>
+                    </div>
+
+                    <!-- Fuel Options -->
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i data-lucide="flame" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b3-title">Flexible Fuel Options</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b3-desc">Generac generators can run on natural gas or liquid propane, providing flexibility in fuel choice and ensuring a steady supply of power.</p>
+                    </div>
+
+                    <!-- Protection -->
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i data-lucide="monitor" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b4-title">Protection for Appliances</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b4-desc">By providing a stable power source, these generators protect your sensitive home appliances and electronics from damage caused by power surges.</p>
+                    </div>
+
+                    <!-- Increased Value -->
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b5-title">Increased Home Value</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b5-desc">Installing a standby generator can dramatically enhance your home’s value and appeal to future buyers, making it a valuable long-term investment.</p>
+                    </div>
+
+                    <!-- Peace of Mind -->
+                    <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                        <i data-lucide="heart" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b6-title">Total Peace of Mind</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b6-desc">Have peace of mind knowing your home will remain powered during extreme weather emergencies, protecting your family’s comfort and safety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Maintenance Pricing Plans -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white" data-i18n="gen-plans-title">Membership & Maintenance Options</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="gen-plans-subtitle">Keep your generator running perfectly year-round with our exclusive Generac service plans.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto reveal">
+                    <!-- Silver Plan -->
+                    <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col h-full hover:shadow-lg transition-shadow">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold text-gray-400 dark:text-gray-500 mb-2" data-i18n="gen-plan1-name">Silver</h3>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-4xl font-extrabold text-gray-900 dark:text-white">$389</span>
+                                <span class="text-gray-500 font-medium" data-i18n="gen-annually">/ Annually</span>
+                            </div>
+                            <p class="text-sm font-semibold text-brand-blue mt-2" data-i18n="gen-p1-visits">1 Visit Included</p>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p-feat1">1 spring maintenance visit</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p-feat2">1 battery replacement every 2 years</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p1-feat3">5% parts discount</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p-feat4">Guaranteed 24hr office response time</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="w-full block text-center bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold py-3 rounded-xl transition-colors" data-i18n="gen-btn-select">Select Silver</a>
+                    </div>
+
+                    <!-- Platinum Plan (Featured) -->
+                    <div class="bg-brand-blue dark:bg-brand-dark rounded-3xl p-8 shadow-xl border-2 border-brand-accent flex flex-col h-full transform lg:-translate-y-4 relative">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-accent text-gray-900 text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-full">
+                            <span data-i18n="gen-plan-popular">Most Comprehensive</span>
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold text-blue-200 mb-2" data-i18n="gen-plan3-name">Platinum</h3>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-4xl font-extrabold text-white">$979</span>
+                                <span class="text-blue-200 font-medium" data-i18n="gen-annually">/ Annually</span>
+                            </div>
+                            <p class="text-sm font-semibold text-brand-accent mt-2" data-i18n="gen-p3-visits">3 Visits Included</p>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0 mt-0.5"></i>
+                                <span class="text-blue-50 text-sm" data-i18n="gen-p3-feat1">2 maintenance (1 spring, 1 when required)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0 mt-0.5"></i>
+                                <span class="text-blue-50 text-sm" data-i18n="gen-p3-feat2">1 fall tune up visit</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0 mt-0.5"></i>
+                                <span class="text-blue-50 text-sm" data-i18n="gen-p-feat2">1 battery replacement every 2 years</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0 mt-0.5"></i>
+                                <span class="text-blue-50 text-sm" data-i18n="gen-p3-feat4">15% parts discount</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0 mt-0.5"></i>
+                                <span class="text-blue-50 text-sm font-semibold" data-i18n="gen-p3-feat5">Guaranteed 12hr office response time</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent shrink-0 mt-0.5"></i>
+                                <span class="text-blue-50 text-sm font-semibold" data-i18n="gen-p3-feat6">Generator remote monitoring INCLUDED</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="w-full block text-center bg-brand-accent hover:bg-yellow-500 text-gray-900 font-bold py-3 rounded-xl transition-colors shadow-lg" data-i18n="gen-btn-select-plat">Select Platinum</a>
+                    </div>
+
+                    <!-- Gold Plan -->
+                    <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col h-full hover:shadow-lg transition-shadow">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold text-yellow-600 dark:text-yellow-500 mb-2" data-i18n="gen-plan2-name">Gold</h3>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-4xl font-extrabold text-gray-900 dark:text-white">$529</span>
+                                <span class="text-gray-500 font-medium" data-i18n="gen-annually">/ Annually</span>
+                            </div>
+                            <p class="text-sm font-semibold text-brand-blue mt-2" data-i18n="gen-p2-visits">2 Visits Included</p>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-grow">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p2-feat1">1 spring maintenance visit</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p3-feat2">1 fall tune up visit</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p-feat2">1 battery replacement every 2 years</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p2-feat4">10% parts discount</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p-feat4">Guaranteed 24hr office response time</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="w-full block text-center bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold py-3 rounded-xl transition-colors" data-i18n="gen-btn-select">Select Gold</a>
+                    </div>
+                </div>
+
+                <!-- Membership Fine Print -->
+                <div class="mt-12 bg-gray-100 dark:bg-gray-800/50 rounded-2xl p-6 text-sm text-gray-600 dark:text-gray-400 max-w-4xl mx-auto border border-gray-200 dark:border-gray-700 reveal">
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-3" data-i18n="gen-fine-title">Important Membership Details:</h4>
+                    <ul class="space-y-2 list-disc pl-5">
+                        <li data-i18n="gen-fine-1"><strong>Generator remote monitoring</strong> available for $29/month (can be added to any plan, included in Platinum).</li>
+                        <li data-i18n="gen-fine-2">Extra maintenance visit after 100hrs of runtime available for plan holders at $299 / extra visit required.</li>
+                        <li data-i18n="gen-fine-3">All maintenance and tune up visits to be scheduled Monday-Friday between 8am-5pm at our convenience.</li>
+                        <li data-i18n="gen-fine-4"><strong>$189 Emergency call out fee</strong> (plus applicable charges for work).</li>
+                        <li data-i18n="gen-fine-5">Repairs are not included with maintenance plans unless covered by Generac warranty.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklists -->
+        <section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white" data-i18n="gen-chk-title">What is Included in Our Visits?</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="gen-chk-subtitle">Comprehensive, certified care to keep your generator ready for anything.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 reveal">
+                    <!-- Maintenance Checklist -->
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700">
+                        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="settings" class="w-8 h-8 text-brand-blue"></i>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="gen-cl1-title">Generator Maintenance</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-1">Change oil & replace oil filter</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-2">Replace air filter & spark plugs</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-3">Check wiring for loose connections & corrosion</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-4">Clean and tighten battery terminals</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-5">Valve adjustments (if required)</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-6">Transfer power for 10 min (if ATS accessible)</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-7">Check battery state & cranking voltage</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-8">Gas pressure test</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-9">Check generator voltage and amperage output</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-10">Check fuel pressure under load</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-11">Clean interior and exterior of generator</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-12">Run generator 5 minutes off load</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tune Up Checklist -->
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700">
+                        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="wrench" class="w-8 h-8 text-brand-blue"></i>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="gen-cl2-title">Generator Tune Up</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-1">Pre-winter inspection</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-2">Start-up</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-3">Check voltage</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-4">Check oil</span></li>
+                        </ul>
+                        
+                        <div class="mt-8 p-6 bg-brand-blue/10 dark:bg-brand-blue/5 rounded-2xl border border-brand-blue/20">
+                            <p class="text-sm text-gray-700 dark:text-gray-300 italic" data-i18n="gen-cl-note">
+                                "Electrika Home Services offers professional installation and maintenance, ensuring your generator is correctly set up and functioning optimally, with ongoing support as needed."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimal Contact Form Section -->
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="bg-white dark:bg-gray-900 p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact-title">Request a Callback</h2>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="contact-subtitle">Leave your details and we'll get back to you shortly to explore your generator options.</p>
+                    </div>
+                    <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-6">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-name">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-phone">Phone Number</label>
+                                <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-email">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-city">City / Neighborhood</label>
+                                <input type="text" name="city" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-service">Service Needed</label>
+                            <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all appearance-none">
+                                <option data-i18n="nav-gen" selected>Generator Installation / Maintenance</option>
+                                <option data-i18n="nav-hvac">Heating and Cooling</option>
+                                <option data-i18n="nav-surge">Surge Protection</option>
+                                <option data-i18n="nav-panel">Electrical Panel Upgrades</option>
+                                <option data-i18n="nav-elec-heat">Electrical Heating</option>
+                                <option data-i18n="nav-outdoor">Outdoor and Landscape Lighting</option>
+                                <option data-i18n="nav-spa">Spa and Pools</option>
+                                <option data-i18n="opt-ev">EV Charging Station</option>
+                                <option data-i18n="opt-res">Residential Repair</option>
+                                <option data-i18n="opt-other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-message">Project Details / Message</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-file">Upload Photos / Documents (Optional)</label>
+                            <input type="file" name="attachment" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-brand-blue file:text-white hover:file:bg-brand-dark cursor-pointer">
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold py-4 rounded-lg transition-colors" data-i18n="form-submit">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8 border-b border-gray-800 pb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <img src="logomark.webp" alt="Big G Electric Logo" class="w-8 h-8 rounded-lg object-contain bg-white">
+                        <span class="font-extrabold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Big G Electric</span>
+                    </div>
+                    <p class="text-sm mb-4" data-i18n="footer-desc">Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.</p>
+                    <p class="text-sm font-bold text-gray-300">RBQ : 8310-7342-46</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-contact">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Dollard-Des Ormeaux, QC</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (555) 123-4567</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> info@biggelectric.ca</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-hours">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-3 text-brand-accent font-bold mb-2">
+                            <i data-lucide="clock" class="w-5 h-5 shrink-0"></i>
+                            <span data-i18n="hours-247" class="leading-tight">Open 24 Hours,<br>7 Days a Week</span>
+                        </li>
+                        <li class="text-gray-400 mt-2 leading-relaxed" data-i18n="hours-desc">Available day and night for your electrical emergencies and scheduled projects.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                <p data-i18n="footer-rights">&copy; 2026 Big G Electric. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // --- Internationalization (i18n) Logic ---
+        const translations = {
+            en: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Outdoor and Landscape Lighting',
+                'nav-ev-install': 'Electric Car Charger Installation',
+                'nav-spa': 'Spa and Pools',
+                'nav-lighting': 'Lighting',
+                'nav-elec-heat': 'Electrical Heating',
+                'nav-diag': 'Diagnostics & Repairs',
+                'nav-panel': 'Electrical Panel Upgrades',
+                'nav-rewire': 'Rewiring',
+                'nav-surge': 'Surge Protection',
+                'nav-auto': 'Home Automation',
+                'nav-other': 'Other Services',
+                'nav-hvac': 'Heating and Cooling',
+                'nav-plan': 'Home Protection Plan',
+                'nav-gen': 'Generator',
+                'nav-grants': 'Grant and Tax Credit Programs',
+                'nav-about': 'Why Us',
+                'nav-ev': 'EV Charging',
+                'nav-reviews': 'Reviews',
+                'nav-contact': 'Contact Us',
+                'nav-call': 'Call Now',
+                
+                // Generators Page Specific
+                'gen-hero-badge': 'Never Be Caught In The Dark Again',
+                'gen-hero-title': 'Backup Generator Solutions in <span class="text-brand-accent">Montreal</span>',
+                'gen-hero-desc': 'At Big G Electric, we are seeing a growing demand for partial and whole-home backup power systems due to increased power outages. We can match you with the right size generator for your peace of mind.',
+                'gen-cta-book': 'Get a Free Quote!',
+                
+                'gen-partner-text': 'We are proud to be a',
+                'gen-partner-badge': 'Generac Authorized Service Dealer',
+                
+                'gen-ben-title': 'Benefits of a New Generac Standby Generator',
+                'gen-ben-subtitle': 'By choosing a Generac standby generator from Big G Electric, you ensure reliable power backup, professional service, and long-term value for your home.',
+                'gen-b1-title': 'Reliability',
+                'gen-b1-desc': 'Generac generators are known for their reliability and ability to provide continuous power during outages, ensuring your home remains functional.',
+                'gen-b2-title': 'Automatic Operation',
+                'gen-b2-desc': 'These generators automatically detect power outages and start up within seconds, providing a seamless transition and minimizing disruption.',
+                'gen-b3-title': 'Flexible Fuel Options',
+                'gen-b3-desc': 'Generac generators can run on natural gas or liquid propane, providing flexibility in fuel choice and ensuring a steady supply of power.',
+                'gen-b4-title': 'Protection for Appliances',
+                'gen-b4-desc': 'By providing a stable power source, these generators protect your sensitive home appliances and electronics from damage caused by power surges.',
+                'gen-b5-title': 'Increased Home Value',
+                'gen-b5-desc': 'Installing a standby generator can dramatically enhance your home’s value and appeal to future buyers, making it a valuable long-term investment.',
+                'gen-b6-title': 'Total Peace of Mind',
+                'gen-b6-desc': 'Have peace of mind knowing your home will remain powered during extreme weather emergencies, protecting your family’s comfort and safety.',
+                
+                'gen-plans-title': 'Membership & Maintenance Options',
+                'gen-plans-subtitle': 'Keep your generator running perfectly year-round with our exclusive Generac service plans.',
+                'gen-annually': '/ Annually',
+                'gen-btn-select': 'Select Plan',
+                'gen-btn-select-plat': 'Select Platinum',
+                'gen-plan-popular': 'Most Comprehensive',
+                
+                'gen-plan1-name': 'Silver',
+                'gen-p1-visits': '1 Visit Included',
+                'gen-p-feat1': '1 spring maintenance visit',
+                'gen-p-feat2': '1 battery replacement every 2 years',
+                'gen-p1-feat3': '5% parts discount',
+                'gen-p-feat4': 'Guaranteed 24hr office response time',
+                
+                'gen-plan2-name': 'Gold',
+                'gen-p2-visits': '2 Visits Included',
+                'gen-p2-feat1': '1 spring maintenance visit',
+                'gen-p2-feat4': '10% parts discount',
+                
+                'gen-plan3-name': 'Platinum',
+                'gen-p3-visits': '3 Visits Included',
+                'gen-p3-feat1': '2 maintenance (1 spring, 1 when required)',
+                'gen-p3-feat2': '1 fall tune up visit',
+                'gen-p3-feat4': '15% parts discount',
+                'gen-p3-feat5': 'Guaranteed 12hr office response time',
+                'gen-p3-feat6': 'Generator remote monitoring INCLUDED',
+                
+                'gen-fine-title': 'Important Membership Details:',
+                'gen-fine-1': '<strong>Generator remote monitoring</strong> available for $29/month (can be added to any plan, included in Platinum).',
+                'gen-fine-2': 'Extra maintenance visit after 100hrs of runtime available for plan holders at $299 / extra visit required.',
+                'gen-fine-3': 'All maintenance and tune up visits to be scheduled Monday-Friday between 8am-5pm at our convenience.',
+                'gen-fine-4': '<strong>$189 Emergency call out fee</strong> (plus applicable charges for work).',
+                'gen-fine-5': 'Repairs are not included with maintenance plans unless covered by Generac warranty.',
+                
+                'gen-chk-title': 'What is Included in Our Visits?',
+                'gen-chk-subtitle': 'Comprehensive, certified care to keep your generator ready for anything.',
+                'gen-cl1-title': 'Generator Maintenance',
+                'gen-c1-1': 'Change oil & replace oil filter',
+                'gen-c1-2': 'Replace air filter & spark plugs',
+                'gen-c1-3': 'Check wiring for loose connections & corrosion',
+                'gen-c1-4': 'Clean and tighten battery terminals',
+                'gen-c1-5': 'Valve adjustments (if required)',
+                'gen-c1-6': 'Transfer power for 10 min (if ATS accessible)',
+                'gen-c1-7': 'Check battery state & cranking voltage',
+                'gen-c1-8': 'Gas pressure test',
+                'gen-c1-9': 'Check generator voltage and amperage output',
+                'gen-c1-10': 'Check fuel pressure under load',
+                'gen-c1-11': 'Clean interior and exterior of generator',
+                'gen-c1-12': 'Run generator 5 minutes off load',
+                
+                'gen-cl2-title': 'Generator Tune Up',
+                'gen-c2-1': 'Pre-winter inspection',
+                'gen-c2-2': 'Start-up',
+                'gen-c2-3': 'Check voltage',
+                'gen-c2-4': 'Check oil',
+                'gen-cl-note': '"Big G Electric offers professional installation and maintenance, ensuring your generator is correctly set up and functioning optimally, with ongoing support as needed."',
+
+                // Form & Footer
+                'contact-title': 'Request a Callback',
+                'contact-subtitle': 'Leave your details and we\'ll get back to you shortly to explore your generator options.',
+                'form-name': 'Full Name',
+                'form-phone': 'Phone Number',
+                'form-email': 'Email Address',
+                'form-city': 'City / Neighborhood',
+                'form-service': 'Service Needed',
+                'form-message': 'Project Details / Message',
+                'form-file': 'Upload Photos / Documents (Optional)',
+                'opt-res': 'Residential Repair',
+                'opt-com': 'Commercial Project',
+                'opt-ev': 'EV Charging Station',
+                'opt-other': 'Other',
+                'form-submit': 'Submit Request',
+                'form-success': 'Thank you! Your request has been sent.',
+                'footer-desc': 'Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.',
+                'footer-contact': 'Contact Info',
+                'footer-hours': 'Business Hours',
+                'hours-247': 'Open 24 Hours,<br>7 Days a Week',
+                'hours-desc': 'Available day and night for your electrical emergencies and scheduled projects.',
+                'footer-rights': '© 2026 Big G Electric. All rights reserved.'
+            },
+            fr: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Éclairage Extérieur et Paysager',
+                'nav-ev-install': 'Installation de Borne de Recharge VE',
+                'nav-spa': 'Spas et Piscines',
+                'nav-lighting': 'Éclairage',
+                'nav-elec-heat': 'Chauffage Électrique',
+                'nav-diag': 'Diagnostics et Réparations',
+                'nav-panel': 'Mise à Niveau de Panneaux Électriques',
+                'nav-rewire': 'Recâblage',
+                'nav-surge': 'Protection Contre les Surtensions',
+                'nav-auto': 'Domotique',
+                'nav-other': 'Autres Services',
+                'nav-hvac': 'Chauffage et Climatisation',
+                'nav-plan': 'Plan de Protection Domiciliaire',
+                'nav-gen': 'Génératrice',
+                'nav-grants': 'Programmes de Subventions et Crédits',
+                'nav-about': 'Pourquoi Nous',
+                'nav-ev': 'Recharge VE',
+                'nav-reviews': 'Avis',
+                'nav-contact': 'Contactez-nous',
+                'nav-call': 'Appelez',
+
+                // Generators Page Specific
+                'gen-hero-badge': 'Ne Soyez Plus Jamais Pris Dans Le Noir',
+                'gen-hero-title': 'Solutions de Génératrices de Secours à <span class="text-brand-accent">Montréal</span>',
+                'gen-hero-desc': 'Chez Big G Electric, nous constatons une demande croissante de systèmes d\'alimentation de secours en raison de l\'augmentation des pannes. Nous pouvons vous associer à la génératrice de la bonne taille pour votre tranquillité d\'esprit.',
+                'gen-cta-book': 'Obtenir un Devis Gratuit !',
+                
+                'gen-partner-text': 'Nous sommes fiers d\'être un',
+                'gen-partner-badge': 'Détaillant Generac Autorisé',
+                
+                'gen-ben-title': 'Avantages d\'une Nouvelle Génératrice de Secours Generac',
+                'gen-ben-subtitle': 'En choisissant une génératrice de secours Generac de Big G Electric, vous garantissez une alimentation fiable, un service professionnel et une valeur à long terme pour votre maison.',
+                'gen-b1-title': 'Fiabilité',
+                'gen-b1-desc': 'Les génératrices Generac sont connues pour leur fiabilité et leur capacité à fournir une alimentation continue pendant les pannes, garantissant que votre maison reste fonctionnelle.',
+                'gen-b2-title': 'Fonctionnement Automatique',
+                'gen-b2-desc': 'Ces génératrices détectent automatiquement les pannes de courant et démarrent en quelques secondes, assurant une transition en douceur et minimisant les perturbations.',
+                'gen-b3-title': 'Options de Carburant Flexibles',
+                'gen-b3-desc': 'Les génératrices Generac peuvent fonctionner au gaz naturel ou au propane liquide, offrant une flexibilité de choix de carburant et assurant une alimentation stable.',
+                'gen-b4-title': 'Protection des Appareils',
+                'gen-b4-desc': 'En fournissant une source d\'alimentation stable, ces génératrices protègent vos appareils ménagers et électroniques sensibles contre les dommages causés par les surtensions.',
+                'gen-b5-title': 'Valeur Accrue de la Maison',
+                'gen-b5-desc': 'L\'installation d\'une génératrice de secours peut considérablement améliorer la valeur et l\'attrait de votre maison pour les futurs acheteurs.',
+                'gen-b6-title': 'Tranquillité d\'Esprit Totale',
+                'gen-b6-desc': 'Ayez l\'esprit tranquille en sachant que votre maison restera alimentée lors d\'urgences météorologiques extrêmes, protégeant le confort et la sécurité de votre famille.',
+                
+                'gen-plans-title': 'Options d\'Adhésion et d\'Entretien',
+                'gen-plans-subtitle': 'Gardez votre génératrice en parfait état de marche toute l\'année grâce à nos plans de service Generac exclusifs.',
+                'gen-annually': '/ Annuellement',
+                'gen-btn-select': 'Sélectionner',
+                'gen-btn-select-plat': 'Sélectionner Platine',
+                'gen-plan-popular': 'Le Plus Complet',
+                
+                'gen-plan1-name': 'Argent',
+                'gen-p1-visits': '1 Visite Incluse',
+                'gen-p-feat1': '1 visite d\'entretien printanier',
+                'gen-p-feat2': '1 remplacement de batterie tous les 2 ans',
+                'gen-p1-feat3': '5% de rabais sur les pièces',
+                'gen-p-feat4': 'Temps de réponse garanti de 24h',
+                
+                'gen-plan2-name': 'Or',
+                'gen-p2-visits': '2 Visites Incluses',
+                'gen-p2-feat1': '1 visite d\'entretien printanier',
+                'gen-p2-feat4': '10% de rabais sur les pièces',
+                
+                'gen-plan3-name': 'Platine',
+                'gen-p3-visits': '3 Visites Incluses',
+                'gen-p3-feat1': '2 entretiens (1 printemps, 1 sur demande)',
+                'gen-p3-feat2': '1 visite de mise au point automnale',
+                'gen-p3-feat4': '15% de rabais sur les pièces',
+                'gen-p3-feat5': 'Temps de réponse garanti de 12h',
+                'gen-p3-feat6': 'Surveillance à distance de la génératrice INCLUSE',
+                
+                'gen-fine-title': 'Détails Importants de l\'Adhésion :',
+                'gen-fine-1': '<strong>Surveillance à distance de la génératrice</strong> disponible pour 29 $/mois (peut être ajoutée à n\'importe quel plan, incluse dans Platine).',
+                'gen-fine-2': 'Visite d\'entretien supplémentaire après 100h de fonctionnement disponible pour les détenteurs de plan à 299 $ / visite requise.',
+                'gen-fine-3': 'Toutes les visites d\'entretien et de mise au point doivent être planifiées du lundi au vendredi entre 8h et 17h, à notre convenance.',
+                'gen-fine-4': '<strong>Frais d\'appel d\'urgence de 189 $</strong> (plus les frais applicables pour les travaux).',
+                'gen-fine-5': 'Les réparations ne sont pas incluses dans les plans d\'entretien, sauf si elles sont couvertes par la garantie Generac.',
+                
+                'gen-chk-title': 'Qu\'est-ce qui est Inclus dans Nos Visites ?',
+                'gen-chk-subtitle': 'Des soins complets et certifiés pour garder votre génératrice prête à tout.',
+                'gen-cl1-title': 'Entretien de la Génératrice',
+                'gen-c1-1': 'Changement d\'huile et remplacement du filtre à huile',
+                'gen-c1-2': 'Remplacement du filtre à air et des bougies',
+                'gen-c1-3': 'Vérification du câblage (connexions desserrées, corrosion)',
+                'gen-c1-4': 'Nettoyage et serrage des bornes de la batterie',
+                'gen-c1-5': 'Réglages des soupapes (si nécessaire)',
+                'gen-c1-6': 'Transfert de puissance pendant 10 min (si accessible)',
+                'gen-c1-7': 'Vérification de l\'état et de la tension de la batterie',
+                'gen-c1-8': 'Test de pression de gaz',
+                'gen-c1-9': 'Vérification de la tension et de l\'ampérage de sortie',
+                'gen-c1-10': 'Vérification de la pression du carburant sous charge',
+                'gen-c1-11': 'Nettoyage intérieur et extérieur de la génératrice',
+                'gen-c1-12': 'Faire fonctionner la génératrice 5 minutes sans charge',
+                
+                'gen-cl2-title': 'Mise au Point',
+                'gen-c2-1': 'Inspection pré-hivernale',
+                'gen-c2-2': 'Démarrage',
+                'gen-c2-3': 'Vérification de la tension',
+                'gen-c2-4': 'Vérification de l\'huile',
+                'gen-cl-note': '"Big G Electric offre une installation et un entretien professionnels, s\'assurant que votre génératrice est correctement configurée et fonctionne de manière optimale, avec un soutien continu au besoin."',
+
+                // Form & Footer
+                'contact-title': 'Demander un Rappel',
+                'contact-subtitle': 'Laissez vos coordonnées et nous vous répondrons sous peu pour explorer vos options de génératrice.',
+                'form-name': 'Nom Complet',
+                'form-phone': 'Numéro de Téléphone',
+                'form-email': 'Adresse Courriel',
+                'form-city': 'Ville / Quartier',
+                'form-service': 'Service Requis',
+                'form-message': 'Détails du Projet / Message',
+                'form-file': 'Télécharger des Photos / Documents (Optionnel)',
+                'opt-res': 'Réparation Résidentielle',
+                'opt-com': 'Projet Commercial',
+                'opt-ev': 'Borne de Recharge VE',
+                'opt-other': 'Autre',
+                'form-submit': 'Soumettre la Demande',
+                'form-success': 'Merci ! Votre demande a été envoyée.',
+                'footer-desc': 'Services électriques professionnels, installation de recharge VE et solutions CVC (HVAC) desservant la région du Grand Montréal.',
+                'footer-contact': 'Coordonnées',
+                'footer-hours': 'Heures d\'Ouverture',
+                'hours-247': 'Ouvert 24 heures,<br>7 jours sur 7',
+                'hours-desc': 'Disponible jour et nuit pour vos urgences électriques et projets planifiés.',
+                'footer-rights': '© 2026 Big G Electric. Tous droits réservés.'
+            }
+        };
+
+        let currentLang = 'en';
+        const langBtn = document.getElementById('langToggle');
+
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'fr' : 'en';
+            langBtn.textContent = currentLang === 'en' ? 'FR' : 'EN';
+            document.documentElement.lang = currentLang;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+            // Re-initialize icons
+            lucide.createIcons();
+        });
+
+
+        // --- Theme Toggle Logic (Light/Dark Mode) ---
+        const themeBtn = document.getElementById('themeToggle');
+        const htmlEl = document.documentElement;
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlEl.classList.add('dark');
+            htmlEl.classList.remove('light');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            htmlEl.classList.toggle('light');
+        });
+
+
+        // --- Scroll Reveal Animation Logic ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
