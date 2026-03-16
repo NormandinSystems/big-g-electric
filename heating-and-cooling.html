@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Heating & Cooling | Oil to Electric Conversion | Big G Electric Montreal</title>
+    <meta name="description" content="Expert air conditioning, heating, and ventilation systems in Montreal. Upgrade your old oil furnace to a modern, efficient electric system with Big G Electric. Authorized Lennox Dealer.">
+    <meta name="keywords" content="HVAC Montreal, oil to electric conversion, Lennox dealer Montreal, heating and cooling Laval, air conditioning installation, Rénoclimat, Chauffez Vert, Big G Electric">
+    <meta name="author" content="Big G Electric">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Schema Markup for Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Heating, Cooling, and Oil-to-Electric Conversions",
+      "provider": {
+        "@type": "Electrician",
+        "name": "Big G Electric",
+        "image": "logomark.webp",
+        "telephone": "+15551234567",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dollard-Des Ormeaux",
+          "addressRegion": "QC",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": ["Montreal", "Laval", "West Island", "South Shore"],
+      "description": "Residential HVAC specialists. Maintenance, repair, and installation of heating, AC, and ventilation. Expert oil-to-electric heating conversions with government grant assistance."
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config & Custom CSS -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            light: '#e6f0fa',
+                            dark: '#003d82',
+                            accent: '#facc15'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass {
+            background: rgba(17, 24, 39, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 glass border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
+                    <span class="font-extrabold text-2xl md:text-3xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-500 dark:from-blue-400 dark:to-blue-200 drop-shadow-sm">Big G Electric</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors pb-2 -mb-2">
+                            <span data-i18n="nav-services">Services</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-2 w-[500px] rounded-xl shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-700 overflow-hidden">
+                            <div class="p-4 grid grid-cols-2 gap-x-6 gap-y-1">
+                                <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                                <a href="index.html#ev-charging" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                                <a href="spa-and-pools.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-lighting">Lighting</a>
+                                <a href="electrical-heating.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                                <a href="electrical-panel-upgrades.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                                <a href="surge-protection.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-auto">Home Automation</a>
+                                <a href="heating-and-cooling.html" class="block px-3 py-2 text-sm text-brand-blue dark:text-blue-400 bg-blue-50 dark:bg-gray-700/50 rounded transition-colors font-semibold" data-i18n="nav-hvac">Heating and Cooling</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-gen">Generator</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors col-span-2" data-i18n="nav-other">Other Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#about" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-about">Why Us</a>
+                    <a href="index.html#reviews" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-reviews">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-contact">Contact Us</a>
+                </nav>
+
+                <!-- Controls: Lang, Theme, Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="langToggle" class="text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors px-2 py-1 rounded border border-gray-300 dark:border-gray-700">
+                        FR
+                    </button>
+                    <button id="themeToggle" class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Dark Mode">
+                        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <a href="tel:+15551234567" class="hidden lg:flex items-center gap-2 bg-brand-blue hover:bg-brand-dark text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg hover:shadow-brand-blue/30">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span data-i18n="nav-call">Call Now</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 absolute w-full left-0 shadow-xl transition-colors duration-300 max-h-[85vh] overflow-y-auto">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <div class="px-3 pb-2">
+                    <span class="block text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2" data-i18n="nav-services">Services</span>
+                    <div class="pl-3 border-l-2 border-gray-100 dark:border-gray-800 space-y-1">
+                        <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                        <a href="index.html#ev-charging" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                        <a href="spa-and-pools.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                        <a href="electrical-heating.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                        <a href="electrical-panel-upgrades.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                        <a href="surge-protection.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                        <a href="heating-and-cooling.html" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-blue dark:text-blue-400 bg-blue-50 dark:bg-gray-800 transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                    </div>
+                </div>
+                <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-about">Why Us</a>
+                <a href="index.html#reviews" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-reviews">Reviews</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-contact">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-gray-900">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1527689638836-411945a2b57c?q=80&w=2066&auto=format&fit=crop" alt="Modern clean home with efficient HVAC system" class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight" data-i18n="hvac-hero-title">
+                    Convert from Oil to <span class="text-brand-accent">Electric</span> with Big G Electric
+                </h1>
+                <p class="text-xl md:text-2xl text-yellow-400 font-bold mb-4 uppercase tracking-wider" data-i18n="hvac-hero-subtitle">
+                    Still heating your home with a dinosaur?
+                </p>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 font-light" data-i18n="hvac-hero-desc">
+                    Your Residential Specialists for Air Conditioning, Heating and Ventilation Systems. Ditch the Dino and upgrade your home's comfort today!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:-translate-y-1" data-i18n="hvac-cta-book">
+                        Get a Free Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Law / Urgency Section -->
+        <section class="py-16 bg-brand-accent dark:bg-yellow-600 transition-colors duration-300">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 md:p-12 shadow-2xl reveal flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/3 text-center md:text-left">
+                        <div class="w-20 h-20 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center text-red-600 dark:text-red-500 mx-auto md:mx-0 mb-4">
+                            <i data-lucide="alert-triangle" class="w-10 h-10"></i>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white uppercase tracking-tight" data-i18n="hvac-law-title">Did You Know?</h2>
+                    </div>
+                    <div class="md:w-2/3 border-t md:border-t-0 md:border-l border-gray-200 dark:border-gray-700 pt-6 md:pt-0 md:pl-8">
+                        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium mb-4" data-i18n="hvac-law-p1">
+                            As of <strong class="text-red-600 dark:text-red-400">January 1st 2024</strong>, it is illegal to install fossil fuel heating equipment (Oil) in your home in Quebec.
+                        </p>
+                        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed" data-i18n="hvac-law-p2">
+                            The new decree also bans the repair of heating systems running on fuel that are more than 20-years-old. Don't wait for an emergency breakdown in the middle of winter!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to Expect Grid -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="hvac-expect-title">The Big G Electric Conversion Process</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="hvac-expect-subtitle">
+                        Making the switch from Oil to Electric can feel intimidating. We are dedicated to ensuring a seamless, budget-friendly, and safe experience from start to finish. Here is what to expect:
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                    <!-- Point 1 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <i data-lucide="users" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="hvac-p1-title">Personalized Consultation</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="hvac-p1-desc">You’ll receive a FREE Oil to Electric consultation in your home, perfectly tailored to your needs and layout.</p>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <i data-lucide="file-text" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="hvac-p2-title">Tailored Quotes</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="hvac-p2-desc">We’ll provide a transparent quote based exclusively on your home’s specific requirements for a seamless transition.</p>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <i data-lucide="zap" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="hvac-p3-title">Seamless Upgrades</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="hvac-p3-desc">As master electricians, your quote will include any electrical panel upgrades needed to ensure your new system is powered safely.</p>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <i data-lucide="shield-alert" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="hvac-p4-title">Safe Equipment Removal</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="hvac-p4-desc">We handle the safe removal of ALL your oil heating equipment, including the furnace, the tank, and the safe extraction of leftover oil.</p>
+                    </div>
+
+                    <!-- Point 5 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <i data-lucide="lightbulb" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="hvac-p5-title">Expert Insights</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="hvac-p5-desc">Ask us all your questions! We’ll guide you through the best heating, cooling, and air quality options on the market.</p>
+                    </div>
+
+                    <!-- Point 6 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <i data-lucide="award" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="hvac-p6-title">Authorized Lennox Dealer</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="hvac-p6-desc">We are proud to be an Authorized LENNOX Dealer, ensuring you receive premium quality products and flawless installations.</p>
+                    </div>
+
+                    <!-- Point 7 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <i data-lucide="banknote" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="hvac-p7-title">Flexible Financing</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="hvac-p7-desc">Partnered with Financeit, we offer flexible, affordable financing options for a hassle-free transition to electric heating.</p>
+                    </div>
+
+                    <!-- Point 8 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <i data-lucide="landmark" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="hvac-p8-title">Government Aid Assistance</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="hvac-p8-desc">We’ll help you complete and submit the paperwork for financial aid programs like <strong>Rénoclimat</strong> & <strong>Chauffez Vert</strong>.</p>
+                    </div>
+
+                    <!-- Point 9 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="hvac-p9-title">Extended Warranties</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm" data-i18n="hvac-p9-desc">Ask your consultant about the Lennox 12-year extended warranty to protect your investment for over a decade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us / Guarantees -->
+        <section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-16 text-gray-900 dark:text-white" data-i18n="hvac-guar-title">What Makes Us a Cut Above the Rest</h2>
+                
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div>
+                        <div class="w-16 h-16 mx-auto bg-brand-blue/10 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="calendar-days" class="w-8 h-8 text-brand-blue dark:text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white" data-i18n="hvac-g1-title">Serving Montreal Since 2004</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="hvac-g1-desc">With over 20 years of experience, you can trust our expertise. We efficiently serve clients in Montreal, the West Island, Laval, and the South Shore.</p>
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 mx-auto bg-brand-blue/10 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="thumbs-up" class="w-8 h-8 text-brand-blue dark:text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white" data-i18n="hvac-g2-title">100% Satisfaction Guarantee</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="hvac-g2-desc">We’re serious about customer service. Whether it is installation, repair, or maintenance, our diagnostic work is backed by our 100% guarantee.</p>
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 mx-auto bg-brand-blue/10 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="shield" class="w-8 h-8 text-brand-blue dark:text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white" data-i18n="hvac-g3-title">Industry Leading Warranties</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="hvac-g3-desc">Our premium products and labor are backed by our baseline warranties for at least 3 years, with options extending up to 12 years.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimal Contact Form Section -->
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="bg-white dark:bg-gray-900 p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact-title">Request a Callback</h2>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="contact-subtitle">Leave your details and we'll get back to you shortly to explore your grant and heating options.</p>
+                    </div>
+                    <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-6">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-name">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-phone">Phone Number</label>
+                                <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-email">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-city">City / Neighborhood</label>
+                                <input type="text" name="city" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-service">Service Needed</label>
+                            <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all appearance-none">
+                                <option data-i18n="nav-hvac" selected>Heating and Cooling</option>
+                                <option data-i18n="nav-surge">Surge Protection</option>
+                                <option data-i18n="nav-panel">Electrical Panel Upgrades</option>
+                                <option data-i18n="nav-elec-heat">Electrical Heating</option>
+                                <option data-i18n="nav-outdoor">Outdoor and Landscape Lighting</option>
+                                <option data-i18n="nav-spa">Spa and Pools</option>
+                                <option data-i18n="opt-ev">EV Charging Station</option>
+                                <option data-i18n="opt-res">Residential Repair</option>
+                                <option data-i18n="opt-other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-message">Project Details / Message</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-file">Upload Photos / Documents (Optional)</label>
+                            <input type="file" name="attachment" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-brand-blue file:text-white hover:file:bg-brand-dark cursor-pointer">
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold py-4 rounded-lg transition-colors" data-i18n="form-submit">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8 border-b border-gray-800 pb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <img src="logomark.webp" alt="Big G Electric Logo" class="w-8 h-8 rounded-lg object-contain bg-white">
+                        <span class="font-extrabold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Big G Electric</span>
+                    </div>
+                    <p class="text-sm mb-4" data-i18n="footer-desc">Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.</p>
+                    <p class="text-sm font-bold text-gray-300">RBQ : 8310-7342-46</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-contact">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Dollard-Des Ormeaux, QC</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (555) 123-4567</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> info@biggelectric.ca</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-hours">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-3 text-brand-accent font-bold mb-2">
+                            <i data-lucide="clock" class="w-5 h-5 shrink-0"></i>
+                            <span data-i18n="hours-247" class="leading-tight">Open 24 Hours,<br>7 Days a Week</span>
+                        </li>
+                        <li class="text-gray-400 mt-2 leading-relaxed" data-i18n="hours-desc">Available day and night for your electrical emergencies and scheduled projects.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                <p data-i18n="footer-rights">&copy; 2026 Big G Electric. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // --- Internationalization (i18n) Logic ---
+        const translations = {
+            en: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Outdoor and Landscape Lighting',
+                'nav-ev-install': 'Electric Car Charger Installation',
+                'nav-spa': 'Spa and Pools',
+                'nav-lighting': 'Lighting',
+                'nav-elec-heat': 'Electrical Heating',
+                'nav-diag': 'Diagnostics & Repairs',
+                'nav-panel': 'Electrical Panel Upgrades',
+                'nav-rewire': 'Rewiring',
+                'nav-surge': 'Surge Protection',
+                'nav-auto': 'Home Automation',
+                'nav-other': 'Other Services',
+                'nav-hvac': 'Heating and Cooling',
+                'nav-plan': 'Home Protection Plan',
+                'nav-gen': 'Generator',
+                'nav-grants': 'Grant and Tax Credit Programs',
+                'nav-about': 'Why Us',
+                'nav-ev': 'EV Charging',
+                'nav-reviews': 'Reviews',
+                'nav-contact': 'Contact Us',
+                'nav-call': 'Call Now',
+                
+                // Heating and Cooling Page Specific
+                'hvac-hero-title': 'Convert from Oil to <span class="text-brand-accent">Electric</span> with Big G Electric',
+                'hvac-hero-subtitle': 'Still heating your home with a dinosaur?',
+                'hvac-hero-desc': 'Your Residential Specialists for Air Conditioning, Heating and Ventilation Systems. Ditch the Dino and upgrade your home\'s comfort today!',
+                'hvac-cta-book': 'Get a Free Consultation',
+                
+                'hvac-law-title': 'Did You Know?',
+                'hvac-law-p1': 'As of <strong class="text-red-600 dark:text-red-400">January 1st 2024</strong>, it is illegal to install fossil fuel heating equipment (Oil) in your home in Quebec.',
+                'hvac-law-p2': 'The new decree also bans the repair of heating systems running on fuel that are more than 20-years-old. Don\'t wait for an emergency breakdown in the middle of winter!',
+                
+                'hvac-expect-title': 'The Big G Electric Conversion Process',
+                'hvac-expect-subtitle': 'Making the switch from Oil to Electric can feel intimidating. We are dedicated to ensuring a seamless, budget-friendly, and safe experience from start to finish. Here is what to expect:',
+                
+                'hvac-p1-title': 'Personalized Consultation',
+                'hvac-p1-desc': 'You’ll receive a FREE Oil to Electric consultation in your home, perfectly tailored to your needs and layout.',
+                'hvac-p2-title': 'Tailored Quotes',
+                'hvac-p2-desc': 'We’ll provide a transparent quote based exclusively on your home’s specific requirements for a seamless transition.',
+                'hvac-p3-title': 'Seamless Upgrades',
+                'hvac-p3-desc': 'As master electricians, your quote will include any electrical panel upgrades needed to ensure your new system is powered safely.',
+                'hvac-p4-title': 'Safe Equipment Removal',
+                'hvac-p4-desc': 'We handle the safe removal of ALL your oil heating equipment, including the furnace, the tank, and the safe extraction of leftover oil.',
+                'hvac-p5-title': 'Expert Insights',
+                'hvac-p5-desc': 'Ask us all your questions! We’ll guide you through the best heating, cooling, and air quality options on the market.',
+                'hvac-p6-title': 'Authorized Lennox Dealer',
+                'hvac-p6-desc': 'We are proud to be an Authorized LENNOX Dealer, ensuring you receive premium quality products and flawless installations.',
+                'hvac-p7-title': 'Flexible Financing',
+                'hvac-p7-desc': 'Partnered with Financeit, we offer flexible, affordable financing options for a hassle-free transition to electric heating.',
+                'hvac-p8-title': 'Government Aid Assistance',
+                'hvac-p8-desc': 'We’ll help you complete and submit the paperwork for financial aid programs like <strong>Rénoclimat</strong> & <strong>Chauffez Vert</strong>.',
+                'hvac-p9-title': 'Extended Warranties',
+                'hvac-p9-desc': 'Ask your consultant about the Lennox 12-year extended warranty to protect your investment for over a decade.',
+                
+                'hvac-guar-title': 'What Makes Us a Cut Above the Rest',
+                'hvac-g1-title': 'Serving Montreal Since 2004',
+                'hvac-g1-desc': 'With over 20 years of experience, you can trust our expertise. We efficiently serve clients in Montreal, the West Island, Laval, and the South Shore.',
+                'hvac-g2-title': '100% Satisfaction Guarantee',
+                'hvac-g2-desc': 'We’re serious about customer service. Whether it is installation, repair, or maintenance, our diagnostic work is backed by our 100% guarantee.',
+                'hvac-g3-title': 'Industry Leading Warranties',
+                'hvac-g3-desc': 'Our premium products and labor are backed by our baseline warranties for at least 3 years, with options extending up to 12 years.',
+
+                // Form & Footer
+                'contact-title': 'Request a Callback',
+                'contact-subtitle': 'Leave your details and we\'ll get back to you shortly to explore your grant and heating options.',
+                'form-name': 'Full Name',
+                'form-phone': 'Phone Number',
+                'form-email': 'Email Address',
+                'form-city': 'City / Neighborhood',
+                'form-service': 'Service Needed',
+                'form-message': 'Project Details / Message',
+                'form-file': 'Upload Photos / Documents (Optional)',
+                'opt-res': 'Residential Repair',
+                'opt-com': 'Commercial Project',
+                'opt-ev': 'EV Charging Station',
+                'opt-other': 'Other',
+                'form-submit': 'Submit Request',
+                'form-success': 'Thank you! Your request has been sent.',
+                'footer-desc': 'Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.',
+                'footer-contact': 'Contact Info',
+                'footer-hours': 'Business Hours',
+                'hours-247': 'Open 24 Hours,<br>7 Days a Week',
+                'hours-desc': 'Available day and night for your electrical emergencies and scheduled projects.',
+                'footer-rights': '© 2026 Big G Electric. All rights reserved.'
+            },
+            fr: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Éclairage Extérieur et Paysager',
+                'nav-ev-install': 'Installation de Borne de Recharge VE',
+                'nav-spa': 'Spas et Piscines',
+                'nav-lighting': 'Éclairage',
+                'nav-elec-heat': 'Chauffage Électrique',
+                'nav-diag': 'Diagnostics et Réparations',
+                'nav-panel': 'Mise à Niveau de Panneaux Électriques',
+                'nav-rewire': 'Recâblage',
+                'nav-surge': 'Protection Contre les Surtensions',
+                'nav-auto': 'Domotique',
+                'nav-other': 'Autres Services',
+                'nav-hvac': 'Chauffage et Climatisation',
+                'nav-plan': 'Plan de Protection Domiciliaire',
+                'nav-gen': 'Génératrice',
+                'nav-grants': 'Programmes de Subventions et Crédits',
+                'nav-about': 'Pourquoi Nous',
+                'nav-ev': 'Recharge VE',
+                'nav-reviews': 'Avis',
+                'nav-contact': 'Contactez-nous',
+                'nav-call': 'Appelez',
+
+                // Heating and Cooling Page Specific
+                'hvac-hero-title': 'Convertissez du Mazout à <span class="text-brand-accent">l\'Électrique</span> avec Big G Electric',
+                'hvac-hero-subtitle': 'Chauffez-vous encore votre maison avec un dinosaure ?',
+                'hvac-hero-desc': 'Vos spécialistes résidentiels pour les systèmes de climatisation, de chauffage et de ventilation. Abandonnez le dinosaure et améliorez le confort de votre maison dès aujourd\'hui !',
+                'hvac-cta-book': 'Obtenez une Consultation Gratuite',
+                
+                'hvac-law-title': 'Le Saviez-vous ?',
+                'hvac-law-p1': 'Depuis le <strong class="text-red-600 dark:text-red-400">1er janvier 2024</strong>, il est illégal d\'installer des équipements de chauffage aux combustibles fossiles (mazout) dans votre maison au Québec.',
+                'hvac-law-p2': 'Le nouveau décret interdit également la réparation des systèmes de chauffage fonctionnant au mazout qui ont plus de 20 ans. N\'attendez pas une panne d\'urgence en plein hiver !',
+                
+                'hvac-expect-title': 'Le Processus de Conversion de Big G Electric',
+                'hvac-expect-subtitle': 'Passer du mazout à l\'électrique peut sembler intimidant. Nous nous engageons à vous garantir une expérience transparente, économique et sécuritaire du début à la fin. Voici à quoi vous attendre :',
+                
+                'hvac-p1-title': 'Consultation Personnalisée',
+                'hvac-p1-desc': 'Vous recevrez une consultation GRATUITE de conversion de mazout à l\'électricité à domicile, parfaitement adaptée à vos besoins.',
+                'hvac-p2-title': 'Soumissions Sur Mesure',
+                'hvac-p2-desc': 'Nous fournirons une soumission transparente basée exclusivement sur les exigences spécifiques de votre maison pour une transition en douceur.',
+                'hvac-p3-title': 'Mises à Niveau Transparentes',
+                'hvac-p3-desc': 'En tant que maîtres électriciens, votre devis inclura toutes les mises à niveau de panneau électrique nécessaires pour alimenter votre nouveau système en toute sécurité.',
+                'hvac-p4-title': 'Enlèvement Sécuritaire de l\'Équipement',
+                'hvac-p4-desc': 'Nous nous occupons du retrait sécuritaire de TOUS vos équipements de chauffage au mazout, y compris la fournaise, le réservoir et l\'extraction de l\'huile.',
+                'hvac-p5-title': 'Conseils d\'Experts',
+                'hvac-p5-desc': 'Posez-nous toutes vos questions ! Nous vous guiderons à travers les meilleures options de chauffage, de climatisation et de qualité de l\'air sur le marché.',
+                'hvac-p6-title': 'Détaillant Lennox Autorisé',
+                'hvac-p6-desc': 'Nous sommes fiers d\'être un détaillant autorisé LENNOX, ce qui vous garantit de recevoir des produits de qualité supérieure et des installations impeccables.',
+                'hvac-p7-title': 'Financement Flexible',
+                'hvac-p7-desc': 'En partenariat avec Financeit, nous offrons des options de financement flexibles et abordables pour une transition sans tracas vers le chauffage électrique.',
+                'hvac-p8-title': 'Aide Gouvernementale',
+                'hvac-p8-desc': 'Nous vous aiderons à remplir et à soumettre les formulaires pour les programmes d\'aide financière tels que <strong>Rénoclimat</strong> et <strong>Chauffez Vert</strong>.',
+                'hvac-p9-title': 'Garanties Prolongées',
+                'hvac-p9-desc': 'Renseignez-vous auprès de votre consultant sur la garantie prolongée de 12 ans de Lennox pour protéger votre investissement pendant plus d\'une décennie.',
+                
+                'hvac-guar-title': 'Ce Qui Nous Démarque des Autres',
+                'hvac-g1-title': 'Au Service de Montréal Depuis 2004',
+                'hvac-g1-desc': 'Avec plus de 20 ans d\'expérience, vous pouvez faire confiance à notre expertise. Nous desservons efficacement nos clients à Montréal, dans l\'Ouest de l\'Île, à Laval et sur la Rive-Sud.',
+                'hvac-g2-title': 'Garantie de Satisfaction à 100%',
+                'hvac-g2-desc': 'Nous prenons le service à la clientèle au sérieux. Qu\'il s\'agisse d\'installation, de réparation ou d\'entretien, notre travail diagnostique est couvert par notre garantie à 100%.',
+                'hvac-g3-title': 'Les Meilleures Garanties de l\'Industrie',
+                'hvac-g3-desc': 'Nos produits de première qualité et notre main-d\'œuvre sont couverts par nos garanties de base pendant au moins 3 ans, avec des options allant jusqu\'à 12 ans.',
+
+                // Form & Footer
+                'contact-title': 'Demander un Rappel',
+                'contact-subtitle': 'Laissez vos coordonnées et nous vous répondrons sous peu pour explorer vos options de chauffage et de subventions.',
+                'form-name': 'Nom Complet',
+                'form-phone': 'Numéro de Téléphone',
+                'form-email': 'Adresse Courriel',
+                'form-city': 'Ville / Quartier',
+                'form-service': 'Service Requis',
+                'form-message': 'Détails du Projet / Message',
+                'form-file': 'Télécharger des Photos / Documents (Optionnel)',
+                'opt-res': 'Réparation Résidentielle',
+                'opt-com': 'Projet Commercial',
+                'opt-ev': 'Borne de Recharge VE',
+                'opt-other': 'Autre',
+                'form-submit': 'Soumettre la Demande',
+                'form-success': 'Merci ! Votre demande a été envoyée.',
+                'footer-desc': 'Services électriques professionnels, installation de recharge VE et solutions CVC (HVAC) desservant la région du Grand Montréal.',
+                'footer-contact': 'Coordonnées',
+                'footer-hours': 'Heures d\'Ouverture',
+                'hours-247': 'Ouvert 24 heures,<br>7 jours sur 7',
+                'hours-desc': 'Disponible jour et nuit pour vos urgences électriques et projets planifiés.',
+                'footer-rights': '© 2026 Big G Electric. Tous droits réservés.'
+            }
+        };
+
+        let currentLang = 'en';
+        const langBtn = document.getElementById('langToggle');
+
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'fr' : 'en';
+            langBtn.textContent = currentLang === 'en' ? 'FR' : 'EN';
+            document.documentElement.lang = currentLang;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+            // Re-initialize icons
+            lucide.createIcons();
+        });
+
+
+        // --- Theme Toggle Logic (Light/Dark Mode) ---
+        const themeBtn = document.getElementById('themeToggle');
+        const htmlEl = document.documentElement;
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlEl.classList.add('dark');
+            htmlEl.classList.remove('light');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            htmlEl.classList.toggle('light');
+        });
+
+
+        // --- Scroll Reveal Animation Logic ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
