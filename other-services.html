@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Smoke & Carbon Monoxide Detectors | Other Services | Big G Electric</title>
+    <meta name="description" content="Ensure your family's safety with Big G Electric. We offer expert installation and maintenance for interconnected smoke and carbon monoxide detectors in Montreal & Laval.">
+    <meta name="keywords" content="smoke detector installation Montreal, carbon monoxide alarm Laval, interconnected smoke alarms, home safety electrician, Big G Electric, electrical services">
+    <meta name="author" content="Big G Electric">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Schema Markup for Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Smoke and Carbon Monoxide Detector Installation",
+      "provider": {
+        "@type": "Electrician",
+        "name": "Big G Electric",
+        "image": "logomark.webp",
+        "telephone": "+15551234567",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dollard-Des Ormeaux",
+          "addressRegion": "QC",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": ["Montreal", "Laval", "West Island", "South Shore"],
+      "description": "Professional installation and maintenance of cutting-edge, interconnected smoke and carbon monoxide detection systems to ensure maximum home safety."
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config & Custom CSS -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            light: '#e6f0fa',
+                            dark: '#003d82',
+                            accent: '#facc15'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass {
+            background: rgba(17, 24, 39, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 glass border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
+                    <span class="font-extrabold text-2xl md:text-3xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-500 dark:from-blue-400 dark:to-blue-200 drop-shadow-sm">Big G Electric</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors pb-2 -mb-2">
+                            <span data-i18n="nav-services">Services</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-2 w-[500px] rounded-xl shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-700 overflow-hidden">
+                            <div class="p-4 grid grid-cols-2 gap-x-6 gap-y-1">
+                                <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                                <a href="index.html#ev-charging" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                                <a href="spa-and-pools.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-lighting">Lighting</a>
+                                <a href="electrical-heating.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                                <a href="electrical-panel-upgrades.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                                <a href="surge-protection.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-auto">Home Automation</a>
+                                <a href="heating-and-cooling.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
+                                <a href="generators.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-gen">Generator</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
+                                <a href="other-services.html" class="block px-3 py-2 text-sm text-brand-blue dark:text-blue-400 bg-blue-50 dark:bg-gray-700/50 rounded transition-colors col-span-2 font-semibold" data-i18n="nav-other">Other Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#about" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-about">Why Us</a>
+                    <a href="index.html#reviews" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-reviews">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-contact">Contact Us</a>
+                </nav>
+
+                <!-- Controls: Lang, Theme, Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="langToggle" class="text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors px-2 py-1 rounded border border-gray-300 dark:border-gray-700">
+                        FR
+                    </button>
+                    <button id="themeToggle" class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Dark Mode">
+                        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <a href="tel:+15551234567" class="hidden lg:flex items-center gap-2 bg-brand-blue hover:bg-brand-dark text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg hover:shadow-brand-blue/30">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span data-i18n="nav-call">Call Now</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 absolute w-full left-0 shadow-xl transition-colors duration-300 max-h-[85vh] overflow-y-auto">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <div class="px-3 pb-2">
+                    <span class="block text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2" data-i18n="nav-services">Services</span>
+                    <div class="pl-3 border-l-2 border-gray-100 dark:border-gray-800 space-y-1">
+                        <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                        <a href="index.html#ev-charging" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                        <a href="spa-and-pools.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                        <a href="electrical-heating.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                        <a href="electrical-panel-upgrades.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                        <a href="surge-protection.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                        <a href="heating-and-cooling.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                        <a href="generators.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-gen">Generator</a>
+                        <a href="other-services.html" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-blue dark:text-blue-400 bg-blue-50 dark:bg-gray-800 transition-colors" data-i18n="nav-other">Other Services</a>
+                    </div>
+                </div>
+                <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-about">Why Us</a>
+                <a href="index.html#reviews" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-reviews">Reviews</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-contact">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-gray-900">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070&auto=format&fit=crop" alt="Peaceful home interior representing safety" class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/50 text-red-200 font-semibold text-sm tracking-wider uppercase mb-6 backdrop-blur-sm">
+                    <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                    <span data-i18n="other-hero-badge">Your Family's Safety is Our Priority</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight" data-i18n="other-hero-title">
+                    We Do More For You and Your <span class="text-brand-accent">Family</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 font-light max-w-3xl mx-auto" data-i18n="other-hero-desc">
+                    Comprehensive installation and maintenance services for cutting-edge smoke and carbon monoxide detectors across Montreal and Laval.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:-translate-y-1" data-i18n="other-cta-book">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Content -->
+        <section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center reveal">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-1 bg-brand-accent rounded"></div>
+                            <h3 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider" data-i18n="other-intro-label">Don't Take Any Risks</h3>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="other-intro-title">Is Your Home Truly Protected?</h2>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="other-intro-p1">
+                            For the Big G Electric team, the safety of our customers is our top priority. That’s why we offer professional installation and maintenance services for smoke and carbon monoxide detectors in Montreal and Laval.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed font-semibold text-gray-800 dark:text-gray-200" data-i18n="other-intro-p2">
+                            You might think most homes are already equipped with a smoke detector, right? Many are, but not all are fully functional!
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mt-4" data-i18n="other-intro-p3">
+                            We strongly advise you to check yours and make sure it is perfectly operational. Indeed, many household chemicals do not emit smoke when they burn, and an old detector may not be able to detect these dangerous fumes.
+                        </p>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-brand-blue rounded-2xl transform translate-x-4 translate-y-4 opacity-20 dark:opacity-40"></div>
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" alt="Home safety and protection" class="relative rounded-2xl shadow-xl z-10 w-full h-[400px] object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detectors Information Grid -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 reveal">
+                    
+                    <!-- Carbon Monoxide -->
+                    <div class="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-red-50 dark:bg-red-900/20 rounded-2xl flex items-center justify-center text-red-500 mb-8">
+                            <i data-lucide="cloud-off" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="other-co-title">Carbon Monoxide Detectors</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4" data-i18n="other-co-p1">
+                            Carbon monoxide (also known as CO) is an invisible, tasteless, scentless gas that you could be exposed to at any time in your own home without knowing.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="other-co-p2">
+                            The most common source of CO gas is an improperly installed or damaged gas appliance, such as a gas-powered range or oven, a damaged water heater, or improper ventilation in your garage—especially in the colder winter months when warming up cars.
+                        </p>
+                        <div class="mt-auto bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2" data-i18n="other-co-rec-title">Big G Electric Recommends:</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="other-co-rec-desc">
+                                Installation of a carbon monoxide detector in each bedroom of your home. We also recommend installing alarms that provide both an audible <strong>and visual</strong> alert to ensure rapid, safe evacuation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Smoke Detectors -->
+                    <div class="bg-white dark:bg-gray-900 p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col h-full hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-orange-50 dark:bg-orange-900/20 rounded-2xl flex items-center justify-center text-orange-500 mb-8">
+                            <i data-lucide="flame" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="other-smoke-title">Smoke Detectors</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4" data-i18n="other-smoke-p1">
+                            Having a reliable smoke detector system is an extremely important addition to your family’s safety. Big G Electric offers installation and maintenance on cutting-edge smoke detection and alarm systems.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="other-smoke-p2">
+                            In decades past, smoke detectors were individual units. This meant a fire could easily cut off escape routes before the alarm nearest you went off.
+                        </p>
+                        <div class="mt-auto bg-orange-50 dark:bg-orange-900/10 p-6 rounded-xl border border-orange-100 dark:border-orange-900/30">
+                            <h4 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+                                <i data-lucide="radio-receiver" class="w-5 h-5 text-orange-500"></i>
+                                <span data-i18n="other-smoke-inter-title">Interconnected Alarms</span>
+                            </h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="other-smoke-inter-desc">
+                                With interconnected alarms, when one smoke detector is triggered, <strong>all the alarms in the network signal simultaneously</strong>, giving you the precious seconds you need to escape calmly and safely.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Maintenance Tips Banner -->
+        <section class="py-16 bg-brand-blue dark:bg-brand-dark transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 reveal text-white shadow-xl">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-8">
+                        <div class="md:w-1/3">
+                            <i data-lucide="wrench" class="w-16 h-16 text-brand-accent mb-4"></i>
+                            <h3 class="text-3xl font-extrabold mb-2" data-i18n="other-tips-title">Maintenance Tips</h3>
+                            <p class="text-blue-100 text-lg" data-i18n="other-tips-subtitle">Keep your home's defenses active.</p>
+                        </div>
+                        <div class="md:w-2/3 grid sm:grid-cols-2 gap-6">
+                            <div class="bg-black/20 p-6 rounded-2xl">
+                                <i data-lucide="calendar-clock" class="w-6 h-6 text-yellow-300 mb-3"></i>
+                                <h4 class="font-bold text-lg mb-2" data-i18n="other-t1-title">5-Year Lifespan</h4>
+                                <p class="text-sm text-blue-50 leading-relaxed" data-i18n="other-t1-desc">It is important to note that most smoke and carbon monoxide detectors have an average lifespan of just five (5) years.</p>
+                            </div>
+                            <div class="bg-black/20 p-6 rounded-2xl">
+                                <i data-lucide="battery-charging" class="w-6 h-6 text-yellow-300 mb-3"></i>
+                                <h4 class="font-bold text-lg mb-2" data-i18n="other-t2-title">Yearly & Monthly Checks</h4>
+                                <p class="text-sm text-blue-50 leading-relaxed" data-i18n="other-t2-desc">Detector batteries should be replaced yearly. We also highly recommend testing all your alarm and detection systems at least monthly.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-white/20 text-center">
+                        <p class="text-lg font-medium" data-i18n="other-tips-footer">
+                            We offer full combined carbon monoxide & smoke detection interconnected systems, tying both into one secure alarm network.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 relative bg-gray-900 overflow-hidden transition-colors duration-300">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+                <i data-lucide="phone-call" class="w-16 h-16 text-brand-blue mx-auto mb-6"></i>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white tracking-wide" data-i18n="other-bottom-cta">
+                    Speak With an Expert Electrician
+                </h2>
+                <p class="text-xl text-gray-400 leading-relaxed mb-10 font-light" data-i18n="other-bottom-p">
+                    Call us at any time to upgrade your home's safety network or to have your current system evaluated. Do not take any risks.
+                </p>
+                <a href="#contact" class="inline-block bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:-translate-y-1" data-i18n="other-cta-book">
+                    Book Appointment
+                </a>
+            </div>
+        </section>
+
+        <!-- Minimal Contact Form Section -->
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="bg-white dark:bg-gray-900 p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact-title">Request a Callback</h2>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="contact-subtitle">Leave your details and we'll get back to you shortly to explore your home safety options.</p>
+                    </div>
+                    <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-6">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-name">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-phone">Phone Number</label>
+                                <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-email">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-city">City / Neighborhood</label>
+                                <input type="text" name="city" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-service">Service Needed</label>
+                            <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all appearance-none">
+                                <option data-i18n="opt-other" selected>Other / Home Safety</option>
+                                <option data-i18n="nav-gen">Generator Installation / Maintenance</option>
+                                <option data-i18n="nav-hvac">Heating and Cooling</option>
+                                <option data-i18n="nav-surge">Surge Protection</option>
+                                <option data-i18n="nav-panel">Electrical Panel Upgrades</option>
+                                <option data-i18n="nav-elec-heat">Electrical Heating</option>
+                                <option data-i18n="nav-outdoor">Outdoor and Landscape Lighting</option>
+                                <option data-i18n="nav-spa">Spa and Pools</option>
+                                <option data-i18n="opt-ev">EV Charging Station</option>
+                                <option data-i18n="opt-res">Residential Repair</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-message">Project Details / Message</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-file">Upload Photos / Documents (Optional)</label>
+                            <input type="file" name="attachment" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-brand-blue file:text-white hover:file:bg-brand-dark cursor-pointer">
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold py-4 rounded-lg transition-colors" data-i18n="form-submit">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8 border-b border-gray-800 pb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <img src="logomark.webp" alt="Big G Electric Logo" class="w-8 h-8 rounded-lg object-contain bg-white">
+                        <span class="font-extrabold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Big G Electric</span>
+                    </div>
+                    <p class="text-sm mb-4" data-i18n="footer-desc">Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.</p>
+                    <p class="text-sm font-bold text-gray-300">RBQ : 8310-7342-46</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-contact">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Dollard-Des Ormeaux, QC</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (555) 123-4567</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> info@biggelectric.ca</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-hours">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-3 text-brand-accent font-bold mb-2">
+                            <i data-lucide="clock" class="w-5 h-5 shrink-0"></i>
+                            <span data-i18n="hours-247" class="leading-tight">Open 24 Hours,<br>7 Days a Week</span>
+                        </li>
+                        <li class="text-gray-400 mt-2 leading-relaxed" data-i18n="hours-desc">Available day and night for your electrical emergencies and scheduled projects.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                <p data-i18n="footer-rights">&copy; 2026 Big G Electric. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // --- Internationalization (i18n) Logic ---
+        const translations = {
+            en: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Outdoor and Landscape Lighting',
+                'nav-ev-install': 'Electric Car Charger Installation',
+                'nav-spa': 'Spa and Pools',
+                'nav-lighting': 'Lighting',
+                'nav-elec-heat': 'Electrical Heating',
+                'nav-diag': 'Diagnostics & Repairs',
+                'nav-panel': 'Electrical Panel Upgrades',
+                'nav-rewire': 'Rewiring',
+                'nav-surge': 'Surge Protection',
+                'nav-auto': 'Home Automation',
+                'nav-other': 'Other Services',
+                'nav-hvac': 'Heating and Cooling',
+                'nav-plan': 'Home Protection Plan',
+                'nav-gen': 'Generator',
+                'nav-grants': 'Grant and Tax Credit Programs',
+                'nav-about': 'Why Us',
+                'nav-ev': 'EV Charging',
+                'nav-reviews': 'Reviews',
+                'nav-contact': 'Contact Us',
+                'nav-call': 'Call Now',
+                
+                // Other Services Page Specific
+                'other-hero-badge': 'Your Family\'s Safety is Our Priority',
+                'other-hero-title': 'We Do More For You and Your <span class="text-brand-accent">Family</span>',
+                'other-hero-desc': 'Comprehensive installation and maintenance services for cutting-edge smoke and carbon monoxide detectors across Montreal and Laval.',
+                'other-cta-book': 'Book Appointment',
+                
+                'other-intro-label': 'Don\'t Take Any Risks',
+                'other-intro-title': 'Is Your Home Truly Protected?',
+                'other-intro-p1': 'For the Big G Electric team, the safety of our customers is our top priority. That’s why we offer professional installation and maintenance services for smoke and carbon monoxide detectors in Montreal and Laval.',
+                'other-intro-p2': 'You might think most homes are already equipped with a smoke detector, right? Many are, but not all are fully functional!',
+                'other-intro-p3': 'We strongly advise you to check yours and make sure it is perfectly operational. Indeed, many household chemicals do not emit smoke when they burn, and an old detector may not be able to detect these dangerous fumes.',
+                
+                'other-co-title': 'Carbon Monoxide Detectors',
+                'other-co-p1': 'Carbon monoxide (also known as CO) is an invisible, tasteless, scentless gas that you could be exposed to at any time in your own home without knowing.',
+                'other-co-p2': 'The most common source of CO gas is an improperly installed or damaged gas appliance, such as a gas-powered range or oven, a damaged water heater, or improper ventilation in your garage—especially in the colder winter months when warming up cars.',
+                'other-co-rec-title': 'Big G Electric Recommends:',
+                'other-co-rec-desc': 'Installation of a carbon monoxide detector in each bedroom of your home. We also recommend installing alarms that provide both an audible <strong>and visual</strong> alert to ensure rapid, safe evacuation.',
+                
+                'other-smoke-title': 'Smoke Detectors',
+                'other-smoke-p1': 'Having a reliable smoke detector system is an extremely important addition to your family’s safety. Big G Electric offers installation and maintenance on cutting-edge smoke detection and alarm systems.',
+                'other-smoke-p2': 'In decades past, smoke detectors were individual units. This meant a fire could easily cut off escape routes before the alarm nearest you went off.',
+                'other-smoke-inter-title': 'Interconnected Alarms',
+                'other-smoke-inter-desc': 'With interconnected alarms, when one smoke detector is triggered, <strong>all the alarms in the network signal simultaneously</strong>, giving you the precious seconds you need to escape calmly and safely.',
+                
+                'other-tips-title': 'Maintenance Tips',
+                'other-tips-subtitle': 'Keep your home\'s defenses active.',
+                'other-t1-title': '5-Year Lifespan',
+                'other-t1-desc': 'It is important to note that most smoke and carbon monoxide detectors have an average lifespan of just five (5) years.',
+                'other-t2-title': 'Yearly & Monthly Checks',
+                'other-t2-desc': 'Detector batteries should be replaced yearly. We also highly recommend testing all your alarm and detection systems at least monthly.',
+                'other-tips-footer': 'We offer full combined carbon monoxide & smoke detection interconnected systems, tying both into one secure alarm network.',
+                
+                'other-bottom-cta': 'Speak With an Expert Electrician',
+                'other-bottom-p': 'Call us at any time to upgrade your home\'s safety network or to have your current system evaluated. Do not take any risks.',
+
+                // Form & Footer
+                'contact-title': 'Request a Callback',
+                'contact-subtitle': 'Leave your details and we\'ll get back to you shortly to explore your home safety options.',
+                'form-name': 'Full Name',
+                'form-phone': 'Phone Number',
+                'form-email': 'Email Address',
+                'form-city': 'City / Neighborhood',
+                'form-service': 'Service Needed',
+                'form-message': 'Project Details / Message',
+                'form-file': 'Upload Photos / Documents (Optional)',
+                'opt-res': 'Residential Repair',
+                'opt-com': 'Commercial Project',
+                'opt-ev': 'EV Charging Station',
+                'opt-other': 'Other / Home Safety',
+                'form-submit': 'Submit Request',
+                'form-success': 'Thank you! Your request has been sent.',
+                'footer-desc': 'Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.',
+                'footer-contact': 'Contact Info',
+                'footer-hours': 'Business Hours',
+                'hours-247': 'Open 24 Hours,<br>7 Days a Week',
+                'hours-desc': 'Available day and night for your electrical emergencies and scheduled projects.',
+                'footer-rights': '© 2026 Big G Electric. All rights reserved.'
+            },
+            fr: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Éclairage Extérieur et Paysager',
+                'nav-ev-install': 'Installation de Borne de Recharge VE',
+                'nav-spa': 'Spas et Piscines',
+                'nav-lighting': 'Éclairage',
+                'nav-elec-heat': 'Chauffage Électrique',
+                'nav-diag': 'Diagnostics et Réparations',
+                'nav-panel': 'Mise à Niveau de Panneaux Électriques',
+                'nav-rewire': 'Recâblage',
+                'nav-surge': 'Protection Contre les Surtensions',
+                'nav-auto': 'Domotique',
+                'nav-other': 'Autres Services',
+                'nav-hvac': 'Chauffage et Climatisation',
+                'nav-plan': 'Plan de Protection Domiciliaire',
+                'nav-gen': 'Génératrice',
+                'nav-grants': 'Programmes de Subventions et Crédits',
+                'nav-about': 'Pourquoi Nous',
+                'nav-ev': 'Recharge VE',
+                'nav-reviews': 'Avis',
+                'nav-contact': 'Contactez-nous',
+                'nav-call': 'Appelez',
+
+                // Other Services Page Specific
+                'other-hero-badge': 'La sécurité de votre famille est notre priorité',
+                'other-hero-title': 'Nous En Faisons Plus Pour Vous Et Votre <span class="text-brand-accent">Famille</span>',
+                'other-hero-desc': 'Services complets d\'installation et d\'entretien pour des détecteurs de fumée et de monoxyde de carbone de pointe à travers Montréal et Laval.',
+                'other-cta-book': 'Prendre Rendez-vous',
+                
+                'other-intro-label': 'Ne Prenez Aucun Risque',
+                'other-intro-title': 'Votre Maison Est-Elle Vraiment Protégée ?',
+                'other-intro-p1': 'Pour l\'équipe de Big G Electric, la sécurité de nos clients est notre priorité absolue. C\'est pourquoi nous offrons des services professionnels d\'installation et d\'entretien de détecteurs de fumée et de monoxyde de carbone à Montréal et à Laval.',
+                'other-intro-p2': 'Vous pensez peut-être que la plupart des maisons sont déjà équipées d\'un détecteur de fumée, n\'est-ce pas ? Beaucoup le sont, mais tous ne sont pas entièrement fonctionnels !',
+                'other-intro-p3': 'Nous vous conseillons fortement de vérifier le vôtre et de vous assurer qu\'il est parfaitement opérationnel. En effet, de nombreux produits chimiques ménagers n\'émettent pas de fumée lorsqu\'ils brûlent, et un vieux détecteur peut ne pas être en mesure de détecter ces fumées dangereuses.',
+                
+                'other-co-title': 'Détecteurs de Monoxyde de Carbone',
+                'other-co-p1': 'Le monoxyde de carbone (également connu sous le nom de CO) est un gaz invisible, inodore et sans goût auquel vous pourriez être exposé à tout moment chez vous sans le savoir.',
+                'other-co-p2': 'La source la plus courante de gaz CO est un appareil à gaz mal installé ou endommagé, tel qu\'une cuisinière ou un four à gaz, un chauffe-eau endommagé ou une mauvaise ventilation dans votre garage—surtout pendant les mois d\'hiver plus froids lors du réchauffement des voitures.',
+                'other-co-rec-title': 'Big G Electric Recommande :',
+                'other-co-rec-desc': 'L\'installation d\'un détecteur de monoxyde de carbone dans chaque chambre de votre maison. Nous recommandons également l\'installation d\'alarmes fournissant une alerte à la fois sonore <strong>et visuelle</strong> pour assurer une évacuation rapide et sûre.',
+                
+                'other-smoke-title': 'Détecteurs de Fumée',
+                'other-smoke-p1': 'Disposer d\'un système de détection de fumée fiable est un ajout extrêmement important à la sécurité de votre famille. Big G Electric offre l\'installation et l\'entretien de systèmes de détection et d\'alarme de fumée de pointe.',
+                'other-smoke-p2': 'Au cours des décennies passées, les détecteurs de fumée étaient des unités individuelles. Cela signifiait qu\'un incendie pouvait facilement couper les voies d\'évacuation avant que l\'alarme la plus proche de vous ne se déclenche.',
+                'other-smoke-inter-title': 'Alarmes Interconnectées',
+                'other-smoke-inter-desc': 'Avec les alarmes interconnectées, lorsqu\'un détecteur de fumée se déclenche, <strong>toutes les alarmes du réseau signalent simultanément</strong>, vous donnant les précieuses secondes dont vous avez besoin pour vous échapper calmement et en toute sécurité.',
+                
+                'other-tips-title': 'Conseils d\'Entretien',
+                'other-tips-subtitle': 'Maintenez les défenses de votre maison actives.',
+                'other-t1-title': 'Durée de vie de 5 Ans',
+                'other-t1-desc': 'Il est important de noter que la plupart des détecteurs de fumée et de monoxyde de carbone ont une durée de vie moyenne de seulement cinq (5) ans.',
+                'other-t2-title': 'Vérifications Annuelles et Mensuelles',
+                'other-t2-desc': 'Les piles des détecteurs doivent être remplacées chaque année. Nous vous recommandons également fortement de tester tous vos systèmes d\'alarme et de détection au moins une fois par mois.',
+                'other-tips-footer': 'Nous proposons des systèmes interconnectés complets de détection de monoxyde de carbone et de fumée, reliant les deux en un seul réseau d\'alarme sécurisé.',
+                
+                'other-bottom-cta': 'Parlez Avec Un Électricien Expert',
+                'other-bottom-p': 'Appelez-nous en tout temps pour améliorer le réseau de sécurité de votre maison ou pour faire évaluer votre système actuel. Ne prenez aucun risque.',
+
+                // Form & Footer
+                'contact-title': 'Demander un Rappel',
+                'contact-subtitle': 'Laissez vos coordonnées et nous vous répondrons sous peu pour explorer vos options de sécurité domestique.',
+                'form-name': 'Nom Complet',
+                'form-phone': 'Numéro de Téléphone',
+                'form-email': 'Adresse Courriel',
+                'form-city': 'Ville / Quartier',
+                'form-service': 'Service Requis',
+                'form-message': 'Détails du Projet / Message',
+                'form-file': 'Télécharger des Photos / Documents (Optionnel)',
+                'opt-res': 'Réparation Résidentielle',
+                'opt-com': 'Projet Commercial',
+                'opt-ev': 'Borne de Recharge VE',
+                'opt-other': 'Autre / Sécurité Domestique',
+                'form-submit': 'Soumettre la Demande',
+                'form-success': 'Merci ! Votre demande a été envoyée.',
+                'footer-desc': 'Services électriques professionnels, installation de recharge VE et solutions CVC (HVAC) desservant la région du Grand Montréal.',
+                'footer-contact': 'Coordonnées',
+                'footer-hours': 'Heures d\'Ouverture',
+                'hours-247': 'Ouvert 24 heures,<br>7 jours sur 7',
+                'hours-desc': 'Disponible jour et nuit pour vos urgences électriques et projets planifiés.',
+                'footer-rights': '© 2026 Big G Electric. Tous droits réservés.'
+            }
+        };
+
+        let currentLang = 'en';
+        const langBtn = document.getElementById('langToggle');
+
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'fr' : 'en';
+            langBtn.textContent = currentLang === 'en' ? 'FR' : 'EN';
+            document.documentElement.lang = currentLang;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+            // Re-initialize icons
+            lucide.createIcons();
+        });
+
+
+        // --- Theme Toggle Logic (Light/Dark Mode) ---
+        const themeBtn = document.getElementById('themeToggle');
+        const htmlEl = document.documentElement;
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlEl.classList.add('dark');
+            htmlEl.classList.remove('light');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            htmlEl.classList.toggle('light');
+        });
+
+
+        // --- Scroll Reveal Animation Logic ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
