@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Home Protection Plan | Electrical & HVAC Maintenance | Big G Electric</title>
+    <meta name="description" content="Ensure the safety of your home and family with Big G Electric's Home Protection Plan in Montreal and Laval. Annual HVAC and electrical maintenance, priority service, and discounts.">
+    <meta name="keywords" content="home protection plan Montreal, electrical maintenance Laval, HVAC tune up, priority electrician service, AC maintenance plan, Big G Electric">
+    <meta name="author" content="Big G Electric">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Schema Markup for Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Home Protection Plan (Annual Maintenance)",
+      "provider": {
+        "@type": "Electrician",
+        "name": "Big G Electric",
+        "image": "logomark.webp",
+        "telephone": "+15551234567",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dollard-Des Ormeaux",
+          "addressRegion": "QC",
+          "addressCountry": "CA"
+        }
+      },
+      "areaServed": ["Montreal", "Laval", "West Island", "South Shore"],
+      "description": "Comprehensive annual maintenance plan for home electrical, heating, and cooling systems. Includes inspections, discounts, and priority emergency service.",
+      "offers": {
+        "@type": "Offer",
+        "price": "24.99",
+        "priceCurrency": "CAD",
+        "eligibleDuration": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitCode": "MON"
+        }
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config & Custom CSS -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            light: '#e6f0fa',
+                            dark: '#003d82',
+                            accent: '#facc15'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass {
+            background: rgba(17, 24, 39, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 glass border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
+                    <span class="font-extrabold text-2xl md:text-3xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-500 dark:from-blue-400 dark:to-blue-200 drop-shadow-sm">Big G Electric</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors pb-2 -mb-2">
+                            <span data-i18n="nav-services">Services</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-2 w-[500px] rounded-xl shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-700 overflow-hidden">
+                            <div class="p-4 grid grid-cols-2 gap-x-6 gap-y-1">
+                                <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                                <a href="electric-car-charger-installation.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                                <a href="spa-and-pools.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                                <a href="lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-lighting">Lighting</a>
+                                <a href="electrical-heating.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                                <a href="diagnostics-and-repairs.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                                <a href="electrical-panel-upgrades.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                                <a href="rewiring.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                                <a href="surge-protection.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                                <a href="home-automation.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-auto">Home Automation</a>
+                                <a href="heating-and-cooling.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                                <a href="home-protection-plan.html" class="block px-3 py-2 text-sm text-brand-blue dark:text-blue-400 bg-blue-50 dark:bg-gray-700/50 rounded transition-colors font-semibold" data-i18n="nav-plan">Home Protection Plan</a>
+                                <a href="generators.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-gen">Generator</a>
+                                <a href="index.html#services" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
+                                <a href="other-services.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors col-span-2" data-i18n="nav-other">Other Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#about" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-about">Why Us</a>
+                    <a href="index.html#reviews" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-reviews">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-contact">Contact Us</a>
+                </nav>
+
+                <!-- Controls: Lang, Theme, Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="langToggle" class="text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors px-2 py-1 rounded border border-gray-300 dark:border-gray-700">
+                        FR
+                    </button>
+                    <button id="themeToggle" class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Dark Mode">
+                        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <a href="tel:+15551234567" class="hidden lg:flex items-center gap-2 bg-brand-blue hover:bg-brand-dark text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg hover:shadow-brand-blue/30">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span data-i18n="nav-call">Call Now</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 absolute w-full left-0 shadow-xl transition-colors duration-300 max-h-[85vh] overflow-y-auto">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <div class="px-3 pb-2">
+                    <span class="block text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2" data-i18n="nav-services">Services</span>
+                    <div class="pl-3 border-l-2 border-gray-100 dark:border-gray-800 space-y-1">
+                        <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                        <a href="electric-car-charger-installation.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                        <a href="spa-and-pools.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                        <a href="lighting.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-lighting">Lighting</a>
+                        <a href="electrical-heating.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                        <a href="diagnostics-and-repairs.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                        <a href="electrical-panel-upgrades.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                        <a href="rewiring.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                        <a href="surge-protection.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                        <a href="home-automation.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-auto">Home Automation</a>
+                        <a href="heating-and-cooling.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                        <a href="home-protection-plan.html" class="block px-3 py-2 rounded-md text-sm font-semibold text-brand-blue dark:text-blue-400 bg-blue-50 dark:bg-gray-800 transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
+                        <a href="generators.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-gen">Generator</a>
+                        <a href="other-services.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-other">Other Services</a>
+                    </div>
+                </div>
+                <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-about">Why Us</a>
+                <a href="index.html#reviews" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-reviews">Reviews</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-contact">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-gray-900">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" alt="Safe and secure family home" class="w-full h-full object-cover opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/20 border border-brand-accent/50 text-yellow-300 font-semibold text-sm tracking-wider uppercase mb-6 backdrop-blur-sm">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    <span data-i18n="hpp-hero-badge">Your Home Is In Safe Hands</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight" data-i18n="hpp-hero-title">
+                    The Big G Electric <span class="text-brand-accent">Home Protection Plan</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 font-light max-w-3xl mx-auto" data-i18n="hpp-hero-desc">
+                    Ensure the safety of your home and family while saving money and increasing the quality of your electrical and HVAC service.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:-translate-y-1" data-i18n="hpp-cta-book">
+                        Become a Member Today
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What to expect & Pricing Section -->
+        <section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-16 items-center reveal">
+                    
+                    <!-- Left: Description -->
+                    <div class="lg:col-span-7">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-1 bg-brand-blue rounded"></div>
+                            <h3 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider" data-i18n="hpp-intro-label">Annual Checkup</h3>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="hpp-intro-title">What to Expect in Your Annual Visit</h2>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="hpp-intro-p1">
+                            As a member, each year one of our licensed technicians will visit and complete a thorough evaluation of your home's electrical, heating & cooling systems.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8" data-i18n="hpp-intro-p2">
+                            Our home safety checkup ensures that the most important electrical & HVAC equipment in your home is safe and in working order, so you can rest assured that your home and family are safe from the dangers of fire, damage, and sudden breakdowns.
+                        </p>
+
+                        <!-- Highlights Grid -->
+                        <div class="grid sm:grid-cols-2 gap-6 mt-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center shrink-0">
+                                    <i data-lucide="star" class="w-6 h-6 text-yellow-600 dark:text-yellow-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white mb-1" data-i18n="hpp-hl1-title">You Come First!</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="hpp-hl1-desc">When you call us, enjoy front-of-the-line priority service for you, including emergencies.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center shrink-0">
+                                    <i data-lucide="refresh-cw" class="w-6 h-6 text-yellow-600 dark:text-yellow-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white mb-1" data-i18n="hpp-hl2-title">Transferable Plan</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="hpp-hl2-desc">Your protection plan can be transferred to a new home or to a new homeowner if you sell. Your choice!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Pricing Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="absolute inset-0 bg-brand-blue rounded-3xl transform translate-x-4 translate-y-4 opacity-10 dark:opacity-20"></div>
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border-2 border-brand-blue relative z-10">
+                            <div class="absolute top-0 right-0 bg-brand-accent text-gray-900 font-bold text-xs uppercase px-4 py-1 rounded-bl-lg rounded-tr-xl tracking-wider">
+                                <span data-i18n="hpp-card-badge">First Class Service</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="hpp-card-title">Home Protection Plan</h3>
+                            <div class="flex items-end gap-1 mb-6">
+                                <span class="text-5xl font-extrabold text-brand-blue dark:text-blue-400">$24.99</span>
+                                <span class="text-gray-500 font-medium mb-1" data-i18n="hpp-card-price">/ monthly (+ tax)</span>
+                            </div>
+
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-600 dark:text-gray-300 text-sm leading-tight" data-i18n="hpp-f1">Annual Full Service Inspection on your HVAC system (Furnace, AC/Heat Pump, Humidifier, Air Exchangers, Mini Splits)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-600 dark:text-gray-300 text-sm leading-tight" data-i18n="hpp-f2">Main Electrical Service Panel Inspection</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="percent" class="w-5 h-5 text-brand-accent shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-900 dark:text-white font-bold text-sm" data-i18n="hpp-f3">10% discount on future service work & filters</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="percent" class="w-5 h-5 text-brand-accent shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-900 dark:text-white font-bold text-sm" data-i18n="hpp-f4">5% discount on new installations</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-brand-blue shrink-0 mt-0.5"></i>
+                                    <span class="text-gray-600 dark:text-gray-300 text-sm leading-tight" data-i18n="hpp-f5">Reduced Emergency Travel Rate: <strong>$189</strong> (Normally $349 - $489)</span>
+                                </li>
+                            </ul>
+
+                            <a href="#contact" class="block w-full bg-brand-blue hover:bg-brand-dark text-white text-center font-bold py-4 rounded-xl transition-colors shadow-lg" data-i18n="hpp-btn-join">Join the Plan</a>
+                            <p class="text-xs text-gray-400 text-center mt-4" data-i18n="hpp-card-note">*Plan covers 1 unit per address. Add-ons are available, ask your technician.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Promise Section -->
+        <section class="py-16 bg-gray-900 text-white transition-colors duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl font-bold mb-4" data-i18n="hpp-promise-title">Our Promise to You</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto" data-i18n="hpp-promise-sub">We stand behind everything we do, ensuring your complete satisfaction and safety.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center reveal">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                            <i data-lucide="shield" class="w-8 h-8 text-brand-accent"></i>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm md:text-base" data-i18n="hpp-prom1-t">Licensed & Insured</h4>
+                        <p class="text-xs text-gray-400" data-i18n="hpp-prom1-d">For your protection.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                            <i data-lucide="phone-call" class="w-8 h-8 text-brand-accent"></i>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm md:text-base" data-i18n="hpp-prom2-t">24/7 Emergency</h4>
+                        <p class="text-xs text-gray-400" data-i18n="hpp-prom2-d">There when you need us.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                            <i data-lucide="clock" class="w-8 h-8 text-brand-accent"></i>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm md:text-base" data-i18n="hpp-prom3-t">On Time Service</h4>
+                        <p class="text-xs text-gray-400" data-i18n="hpp-prom3-d">Your time is valuable.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                            <i data-lucide="file-check" class="w-8 h-8 text-brand-accent"></i>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm md:text-base" data-i18n="hpp-prom4-t">Written Warranty</h4>
+                        <p class="text-xs text-gray-400" data-i18n="hpp-prom4-d">You have our word.</p>
+                    </div>
+                    <div class="flex flex-col items-center col-span-2 md:col-span-1">
+                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                            <i data-lucide="tag" class="w-8 h-8 text-brand-accent"></i>
+                        </div>
+                        <h4 class="font-bold mb-1 text-sm md:text-base" data-i18n="hpp-prom5-t">Upfront Pricing</h4>
+                        <p class="text-xs text-gray-400" data-i18n="hpp-prom5-d">Know the price before we begin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Checklists Section -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white" data-i18n="hpp-chk-title">Comprehensive Inspection Checklists</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="hpp-chk-sub">See exactly what our licensed technicians evaluate during your annual visit to guarantee your system's performance and safety.</p>
+                </div>
+
+                <!-- HVAC Checklist -->
+                <div class="mb-16 reveal">
+                    <div class="flex items-center gap-4 mb-8 pb-4 border-b-2 border-brand-blue">
+                        <i data-lucide="wind" class="w-10 h-10 text-brand-blue"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="hpp-hvac-title">Heating – Air Conditioning – Ventilation</h3>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Furnaces -->
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-bold text-lg mb-4 text-brand-blue dark:text-blue-400" data-i18n="hpp-furnace-title">Furnaces</h4>
+                            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+                                <li><strong data-i18n="hpp-l-airflow">Airflow:</strong> <span data-i18n="hpp-f-1">Vacuum to remove any dust or debris on the motor and fan blades.</span></li>
+                                <li><strong data-i18n="hpp-l-electronics">Electronics:</strong> <span data-i18n="hpp-f-2">Test and inspect all electronic components including transformers, capacitors, limit switches and sequencers.</span></li>
+                                <li><strong data-i18n="hpp-l-filters">Filters:</strong> <span data-i18n="hpp-f-3">Wash reusable filters, or replace disposable filters.</span></li>
+                                <li><strong data-i18n="hpp-l-clean">Clean:</strong> <span data-i18n="hpp-f-4">Clean and vacuum cabinet to remove dust and debris.</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- AC/Heat Pump -->
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-bold text-lg mb-4 text-brand-blue dark:text-blue-400" data-i18n="hpp-ac-title">AC / Heat Pump</h4>
+                            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+                                <li><strong data-i18n="hpp-l-coils">Coils:</strong> <span data-i18n="hpp-ac-1">Wash indoor and outdoor coils.</span></li>
+                                <li><strong data-i18n="hpp-l-drains">Drains:</strong> <span data-i18n="hpp-ac-2">Clean and test all condensate drains, including pumps.</span></li>
+                                <li><strong data-i18n="hpp-l-electronics">Electronics:</strong> <span data-i18n="hpp-ac-3">Inspect and test components, contactors, capacitors & switches.</span></li>
+                                <li><strong data-i18n="hpp-l-compressor">Compressor:</strong> <span data-i18n="hpp-ac-4">Verify connections and performance.</span></li>
+                                <li><strong data-i18n="hpp-l-refrig">Refrigerant:</strong> <span data-i18n="hpp-ac-5">Verification of charge to optimize efficiency.</span></li>
+                                <li><strong data-i18n="hpp-l-disconnect">Disconnect:</strong> <span data-i18n="hpp-ac-6">Verify connections and functionality of outdoor disconnect.</span></li>
+                                <li><strong data-i18n="hpp-l-test">Test:</strong> <span data-i18n="hpp-ac-7">Make sure the unit is working correctly in all modes.</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Mini Splits -->
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-bold text-lg mb-4 text-brand-blue dark:text-blue-400" data-i18n="hpp-mini-title">Mini Split Units</h4>
+                            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+                                <li><strong data-i18n="hpp-l-indoor">Indoor Unit:</strong> <span data-i18n="hpp-ms-1">Remove/wash cover and filters. Install collection bag, fill with expanding cleaning foam to push out dirt from coil, fan, drain. Rinse, ensure drainage, dry and reassemble.</span></li>
+                                <li><strong data-i18n="hpp-l-outdoor">Outdoor Unit:</strong> <span data-i18n="hpp-ms-2">Wash coil and casing. Inspect electronics and connections. Verify refrigerant charge. Verify outdoor disconnect. Test in all modes.</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Air Exchangers -->
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-bold text-lg mb-4 text-brand-blue dark:text-blue-400" data-i18n="hpp-air-title">Air Exchangers</h4>
+                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc pl-4">
+                                <li data-i18n="hpp-ae-1">Wash the casing, drain pan and filters.</li>
+                                <li data-i18n="hpp-ae-2">Wash the heat recovery core.</li>
+                                <li data-i18n="hpp-ae-3">Vacuum to remove dust/debris in fan motors.</li>
+                                <li data-i18n="hpp-ae-4">Clean the condensate drain.</li>
+                                <li data-i18n="hpp-ae-5">Verify damper function, controller and fan operation.</li>
+                                <li data-i18n="hpp-ae-6">Verify inlet/outlet are clear of debris.</li>
+                                <li data-i18n="hpp-ae-7">Test – Verify all modes function correctly.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Humidifier -->
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-bold text-lg mb-4 text-brand-blue dark:text-blue-400" data-i18n="hpp-hum-title">Humidifier Tune Up</h4>
+                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc pl-4">
+                                <li data-i18n="hpp-hu-1">Cleaning interior to remove scale, dust and debris.</li>
+                                <li data-i18n="hpp-hu-2">Replace the filter.</li>
+                                <li data-i18n="hpp-hu-3">Verify accuracy and functionality of the humidistat.</li>
+                                <li data-i18n="hpp-hu-4">Verify functionality of the solenoid valve.</li>
+                                <li data-i18n="hpp-hu-5">Clean the condensate drain to ensure proper drainage.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4 italic" data-i18n="hpp-filter-note">*Any replacement filters not provided by the client are charged in addition, subject to discount for plan members.</p>
+                </div>
+
+                <!-- Electrical Checklist -->
+                <div class="reveal">
+                    <div class="flex items-center gap-4 mb-8 pb-4 border-b-2 border-brand-accent">
+                        <i data-lucide="zap" class="w-10 h-10 text-brand-accent"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="hpp-elec-title">Electrical Inspection</h3>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Detectors -->
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-bold text-lg mb-4 text-brand-accent dark:text-yellow-500" data-i18n="hpp-det-title">Smoke / CO Detectors</h4>
+                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc pl-4">
+                                <li data-i18n="hpp-d-1">Test Functionality</li>
+                                <li data-i18n="hpp-d-2">Check Expiry Date</li>
+                                <li data-i18n="hpp-d-3">Vacuum detectors to remove dust & debris</li>
+                                <li data-i18n="hpp-d-4">Replace batteries as required</li>
+                            </ul>
+                        </div>
+
+                        <!-- Pool & Spa -->
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                            <h4 class="font-bold text-lg mb-4 text-brand-accent dark:text-yellow-500" data-i18n="hpp-pool-title">Pool & Spa Equipment</h4>
+                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc pl-4">
+                                <li data-i18n="hpp-p-1">Check sub-panel connections and breakers</li>
+                                <li data-i18n="hpp-p-2">Test any GFCI protection</li>
+                                <li data-i18n="hpp-p-3">Verify bonding system</li>
+                            </ul>
+                        </div>
+
+                        <!-- Panel -->
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 lg:col-span-2">
+                            <h4 class="font-bold text-lg mb-4 text-brand-accent dark:text-yellow-500" data-i18n="hpp-pan-title">Main Service Panel Inspection</h4>
+                            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc pl-4">
+                                <li data-i18n="hpp-pn-1">Verify any surge protection devices attached.</li>
+                                <li data-i18n="hpp-pn-2">Verify breakers for signs of overheating.</li>
+                                <li data-i18n="hpp-pn-3">Verify functionality of all fault/ground fault breakers.</li>
+                                <li data-i18n="hpp-pn-4">Install duct seal to prevent condensation from outside meter base.</li>
+                                <li data-i18n="hpp-pn-5">Close openings to keep out fingers or "critters".</li>
+                                <li data-i18n="hpp-pn-6">Verify main grounding system.</li>
+                                <li data-i18n="hpp-pn-7">Tighten all breaker connections to manufacturer specs.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Receptacles -->
+                        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 lg:col-span-4">
+                            <h4 class="font-bold text-lg mb-4 text-brand-accent dark:text-yellow-500" data-i18n="hpp-rec-title">Heating, Lighting & Receptacles</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc pl-4">
+                                    <li data-i18n="hpp-r-1">Check heating, lighting and outlet functionality</li>
+                                    <li data-i18n="hpp-r-2">Test functionality of GFCI & AFCI plugs</li>
+                                </ul>
+                                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 list-disc pl-4">
+                                    <li data-i18n="hpp-r-3">Check heaters and thermostats for normal functionality</li>
+                                    <li data-i18n="hpp-r-4">Tension test performed on receptacles throughout the home</li>
+                                    <li data-i18n="hpp-r-5">Check functionality of all lights/dimmers/switches</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Report Note -->
+                <div class="bg-blue-50 dark:bg-gray-800 p-6 rounded-2xl border border-blue-100 dark:border-gray-700 text-center reveal mt-12">
+                    <p class="text-gray-700 dark:text-gray-300 font-medium" data-i18n="hpp-report-note">
+                        Once we have completed our maintenance, a detailed report will be provided listing any preventative recommendations, or suggestions to help you get the most out of your systems and prevent future issues.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimal Contact Form Section -->
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="bg-white dark:bg-gray-900 p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact-title">Request a Callback</h2>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="contact-subtitle">Leave your details and we'll get back to you to set up your Home Protection Plan.</p>
+                    </div>
+                    <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-6">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-name">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-phone">Phone Number</label>
+                                <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-email">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-city">City / Neighborhood</label>
+                                <input type="text" name="city" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-service">Service Needed</label>
+                            <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all appearance-none">
+                                <option data-i18n="nav-plan" selected>Home Protection Plan Enrollment</option>
+                                <option data-i18n="nav-hvac">Heating and Cooling</option>
+                                <option data-i18n="nav-diag">Diagnostics & Repairs</option>
+                                <option data-i18n="nav-rewire">Rewiring</option>
+                                <option data-i18n="nav-auto">Home Automation</option>
+                                <option data-i18n="nav-lighting">Lighting</option>
+                                <option data-i18n="nav-ev-install">Electric Car Charger Installation</option>
+                                <option data-i18n="opt-other">Other / Home Safety</option>
+                                <option data-i18n="nav-gen">Generator Installation / Maintenance</option>
+                                <option data-i18n="nav-surge">Surge Protection</option>
+                                <option data-i18n="nav-panel">Electrical Panel Upgrades</option>
+                                <option data-i18n="nav-elec-heat">Electrical Heating</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-message">Project Details / Message</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold py-4 rounded-lg transition-colors" data-i18n="form-submit">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8 border-b border-gray-800 pb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <img src="logomark.webp" alt="Big G Electric Logo" class="w-8 h-8 rounded-lg object-contain bg-white">
+                        <span class="font-extrabold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Big G Electric</span>
+                    </div>
+                    <p class="text-sm mb-4" data-i18n="footer-desc">Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.</p>
+                    <p class="text-sm font-bold text-gray-300">RBQ : 8310-7342-46</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-contact">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Dollard-Des Ormeaux, QC</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (555) 123-4567</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> info@biggelectric.ca</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-hours">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-3 text-brand-accent font-bold mb-2">
+                            <i data-lucide="clock" class="w-5 h-5 shrink-0"></i>
+                            <span data-i18n="hours-247" class="leading-tight">Open 24 Hours,<br>7 Days a Week</span>
+                        </li>
+                        <li class="text-gray-400 mt-2 leading-relaxed" data-i18n="hours-desc">Available day and night for your electrical emergencies and scheduled projects.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                <p data-i18n="footer-rights">&copy; 2026 Big G Electric. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // --- Internationalization (i18n) Logic ---
+        const translations = {
+            en: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Outdoor and Landscape Lighting',
+                'nav-ev-install': 'Electric Car Charger Installation',
+                'nav-spa': 'Spa and Pools',
+                'nav-lighting': 'Lighting',
+                'nav-elec-heat': 'Electrical Heating',
+                'nav-diag': 'Diagnostics & Repairs',
+                'nav-panel': 'Electrical Panel Upgrades',
+                'nav-rewire': 'Rewiring',
+                'nav-surge': 'Surge Protection',
+                'nav-auto': 'Home Automation',
+                'nav-other': 'Other Services',
+                'nav-hvac': 'Heating and Cooling',
+                'nav-plan': 'Home Protection Plan',
+                'nav-gen': 'Generator',
+                'nav-grants': 'Grant and Tax Credit Programs',
+                'nav-about': 'Why Us',
+                'nav-ev': 'EV Charging',
+                'nav-reviews': 'Reviews',
+                'nav-contact': 'Contact Us',
+                'nav-call': 'Call Now',
+                
+                // Home Protection Plan Specific
+                'hpp-hero-badge': 'Your Home Is In Safe Hands',
+                'hpp-hero-title': 'The Big G Electric <span class="text-brand-accent">Home Protection Plan</span>',
+                'hpp-hero-desc': 'Ensure the safety of your home and family while saving money and increasing the quality of your electrical and HVAC service.',
+                'hpp-cta-book': 'Become a Member Today',
+                
+                'hpp-intro-label': 'Annual Checkup',
+                'hpp-intro-title': 'What to Expect in Your Annual Visit',
+                'hpp-intro-p1': 'As a member, each year one of our licensed technicians will visit and complete a thorough evaluation of your home\'s electrical, heating & cooling systems.',
+                'hpp-intro-p2': 'Our home safety checkup ensures that the most important electrical & HVAC equipment in your home is safe and in working order, so you can rest assured that your home and family are safe from the dangers of fire, damage, and sudden breakdowns.',
+                
+                'hpp-hl1-title': 'You Come First!',
+                'hpp-hl1-desc': 'When you call us, enjoy front-of-the-line priority service for you, including emergencies.',
+                'hpp-hl2-title': 'Transferable Plan',
+                'hpp-hl2-desc': 'Your protection plan can be transferred to a new home or to a new homeowner if you sell. Your choice!',
+                
+                'hpp-card-badge': 'First Class Service',
+                'hpp-card-title': 'Home Protection Plan',
+                'hpp-card-price': '/ monthly (+ tax)',
+                'hpp-f1': 'Annual Full Service Inspection on your HVAC system (Furnace, AC/Heat Pump, Humidifier, Air Exchangers, Mini Splits)',
+                'hpp-f2': 'Main Electrical Service Panel Inspection',
+                'hpp-f3': '10% discount on future service work & filters',
+                'hpp-f4': '5% discount on new installations',
+                'hpp-f5': 'Reduced Emergency Travel Rate: <strong>$189</strong> (Normally $349 - $489)',
+                'hpp-btn-join': 'Join the Plan',
+                'hpp-card-note': '*Plan covers 1 unit per address. Add-ons are available, ask your technician.',
+                
+                'hpp-promise-title': 'Our Promise to You',
+                'hpp-promise-sub': 'We stand behind everything we do, ensuring your complete satisfaction and safety.',
+                'hpp-prom1-t': 'Licensed & Insured',
+                'hpp-prom1-d': 'For your protection.',
+                'hpp-prom2-t': '24/7 Emergency',
+                'hpp-prom2-d': 'There when you need us.',
+                'hpp-prom3-t': 'On Time Service',
+                'hpp-prom3-d': 'Your time is valuable.',
+                'hpp-prom4-t': 'Written Warranty',
+                'hpp-prom4-d': 'You have our word.',
+                'hpp-prom5-t': 'Upfront Pricing',
+                'hpp-prom5-d': 'Know the price before we begin.',
+                
+                'hpp-chk-title': 'Comprehensive Inspection Checklists',
+                'hpp-chk-sub': 'See exactly what our licensed technicians evaluate during your annual visit to guarantee your system\'s performance and safety.',
+                
+                'hpp-hvac-title': 'Heating – Air Conditioning – Ventilation',
+                'hpp-furnace-title': 'Furnaces',
+                'hpp-l-airflow': 'Airflow:',
+                'hpp-f-1': 'Vacuum to remove any dust or debris on the motor and fan blades.',
+                'hpp-l-electronics': 'Electronics:',
+                'hpp-f-2': 'Test and inspect all electronic components including transformers, capacitors, limit switches and sequencers.',
+                'hpp-l-filters': 'Filters:',
+                'hpp-f-3': 'Wash reusable filters, or replace disposable filters.',
+                'hpp-l-clean': 'Clean:',
+                'hpp-f-4': 'Clean and vacuum cabinet to remove dust and debris.',
+                
+                'hpp-ac-title': 'AC / Heat Pump',
+                'hpp-l-coils': 'Coils:',
+                'hpp-ac-1': 'Wash indoor and outdoor coils.',
+                'hpp-l-drains': 'Drains:',
+                'hpp-ac-2': 'Clean and test all condensate drains, including pumps.',
+                'hpp-l-compressor': 'Compressor:',
+                'hpp-ac-3': 'Inspect and test components, contactors, capacitors & switches.',
+                'hpp-ac-4': 'Verify connections and performance.',
+                'hpp-l-refrig': 'Refrigerant:',
+                'hpp-ac-5': 'Verification of charge to optimize efficiency.',
+                'hpp-l-disconnect': 'Disconnect:',
+                'hpp-ac-6': 'Verify connections and functionality of outdoor disconnect.',
+                'hpp-l-test': 'Test:',
+                'hpp-ac-7': 'Make sure the unit is working correctly in all modes.',
+                
+                'hpp-mini-title': 'Mini Split Units',
+                'hpp-l-indoor': 'Indoor Unit:',
+                'hpp-ms-1': 'Remove/wash cover and filters. Install collection bag, fill with expanding cleaning foam to push out dirt from coil, fan, drain. Rinse, ensure drainage, dry and reassemble.',
+                'hpp-l-outdoor': 'Outdoor Unit:',
+                'hpp-ms-2': 'Wash coil and casing. Inspect electronics and connections. Verify refrigerant charge. Verify outdoor disconnect. Test in all modes.',
+                
+                'hpp-air-title': 'Air Exchangers',
+                'hpp-ae-1': 'Wash the casing, drain pan and filters.',
+                'hpp-ae-2': 'Wash the heat recovery core.',
+                'hpp-ae-3': 'Vacuum to remove dust/debris in fan motors.',
+                'hpp-ae-4': 'Clean the condensate drain.',
+                'hpp-ae-5': 'Verify damper function, controller and fan operation.',
+                'hpp-ae-6': 'Verify inlet/outlet are clear of debris.',
+                'hpp-ae-7': 'Test – Verify all modes function correctly.',
+                
+                'hpp-hum-title': 'Humidifier Tune Up',
+                'hpp-hu-1': 'Cleaning interior to remove scale, dust and debris.',
+                'hpp-hu-2': 'Replace the filter.',
+                'hpp-hu-3': 'Verify accuracy and functionality of the humidistat.',
+                'hpp-hu-4': 'Verify functionality of the solenoid valve.',
+                'hpp-hu-5': 'Clean the condensate drain to ensure proper drainage.',
+                'hpp-filter-note': '*Any replacement filters not provided by the client are charged in addition, subject to discount for plan members.',
+                
+                'hpp-elec-title': 'Electrical Inspection',
+                'hpp-det-title': 'Smoke / CO Detectors',
+                'hpp-d-1': 'Test Functionality',
+                'hpp-d-2': 'Check Expiry Date',
+                'hpp-d-3': 'Vacuum detectors to remove dust & debris',
+                'hpp-d-4': 'Replace batteries as required',
+                
+                'hpp-pool-title': 'Pool & Spa Equipment',
+                'hpp-p-1': 'Check sub-panel connections and breakers',
+                'hpp-p-2': 'Test any GFCI protection',
+                'hpp-p-3': 'Verify bonding system',
+                
+                'hpp-pan-title': 'Main Service Panel Inspection',
+                'hpp-pn-1': 'Verify any surge protection devices attached.',
+                'hpp-pn-2': 'Verify breakers for signs of overheating.',
+                'hpp-pn-3': 'Verify functionality of all fault/ground fault breakers.',
+                'hpp-pn-4': 'Install duct seal to prevent condensation from outside meter base.',
+                'hpp-pn-5': 'Close openings to keep out fingers or "critters".',
+                'hpp-pn-6': 'Verify main grounding system.',
+                'hpp-pn-7': 'Tighten all breaker connections to manufacturer specs.',
+                
+                'hpp-rec-title': 'Heating, Lighting & Receptacles',
+                'hpp-r-1': 'Check heating, lighting and outlet functionality',
+                'hpp-r-2': 'Test functionality of GFCI & AFCI plugs',
+                'hpp-r-3': 'Check heaters and thermostats for normal functionality',
+                'hpp-r-4': 'Tension test performed on receptacles throughout the home',
+                'hpp-r-5': 'Check functionality of all lights/dimmers/switches',
+                
+                'hpp-report-note': 'Once we have completed our maintenance, a detailed report will be provided listing any preventative recommendations, or suggestions to help you get the most out of your systems and prevent future issues.',
+
+                // Form & Footer
+                'contact-title': 'Request a Callback',
+                'contact-subtitle': 'Leave your details and we\'ll get back to you to set up your Home Protection Plan.',
+                'form-name': 'Full Name',
+                'form-phone': 'Phone Number',
+                'form-email': 'Email Address',
+                'form-city': 'City / Neighborhood',
+                'form-service': 'Service Needed',
+                'form-message': 'Project Details / Message',
+                'form-file': 'Upload Photos / Documents (Optional)',
+                'form-submit': 'Submit Request',
+                'footer-desc': 'Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.',
+                'footer-contact': 'Contact Info',
+                'footer-hours': 'Business Hours',
+                'hours-247': 'Open 24 Hours,<br>7 Days a Week',
+                'hours-desc': 'Available day and night for your electrical emergencies and scheduled projects.',
+                'footer-rights': '© 2026 Big G Electric. All rights reserved.'
+            },
+            fr: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Éclairage Extérieur et Paysager',
+                'nav-ev-install': 'Installation de Borne de Recharge VE',
+                'nav-spa': 'Spas et Piscines',
+                'nav-lighting': 'Éclairage',
+                'nav-elec-heat': 'Chauffage Électrique',
+                'nav-diag': 'Diagnostics et Réparations',
+                'nav-panel': 'Mise à Niveau de Panneaux Électriques',
+                'nav-rewire': 'Recâblage',
+                'nav-surge': 'Protection Contre les Surtensions',
+                'nav-auto': 'Domotique',
+                'nav-other': 'Autres Services',
+                'nav-hvac': 'Chauffage et Climatisation',
+                'nav-plan': 'Plan de Protection Domiciliaire',
+                'nav-gen': 'Génératrice',
+                'nav-grants': 'Programmes de Subventions et Crédits',
+                'nav-about': 'Pourquoi Nous',
+                'nav-ev': 'Recharge VE',
+                'nav-reviews': 'Avis',
+                'nav-contact': 'Contactez-nous',
+                'nav-call': 'Appelez',
+
+                // Home Protection Plan Specific
+                'hpp-hero-badge': 'Votre maison est entre de bonnes mains',
+                'hpp-hero-title': 'Le <span class="text-brand-accent">Plan de Protection</span> Big G Electric',
+                'hpp-hero-desc': 'Assurez la sécurité de votre maison et de votre famille tout en économisant de l\'argent et en augmentant la qualité de votre service électrique et CVC.',
+                'hpp-cta-book': 'Devenez Membre Aujourd\'hui',
+                
+                'hpp-intro-label': 'Vérification Annuelle',
+                'hpp-intro-title': 'À quoi s\'attendre lors de votre visite annuelle',
+                'hpp-intro-p1': 'En tant que membre, chaque année, l\'un de nos techniciens agréés se rendra chez vous et effectuera une évaluation approfondie de vos systèmes électriques, de chauffage et de climatisation.',
+                'hpp-intro-p2': 'Notre vérification de sécurité garantit que l\'équipement le plus important de votre maison est sécuritaire et en bon état de marche, vous assurant ainsi une protection contre les dangers d\'incendie, les dommages et les pannes soudaines.',
+                
+                'hpp-hl1-title': 'Vous passez en premier !',
+                'hpp-hl1-desc': 'Lorsque vous nous appelez, profitez d\'un service prioritaire de premier plan, y compris pour les urgences.',
+                'hpp-hl2-title': 'Plan Transférable',
+                'hpp-hl2-desc': 'Votre plan de protection peut être transféré à une nouvelle maison ou à un nouveau propriétaire si vous vendez. À vous de choisir !',
+                
+                'hpp-card-badge': 'Service de Première Classe',
+                'hpp-card-title': 'Plan de Protection',
+                'hpp-card-price': '/ par mois (+ tx)',
+                'hpp-f1': 'Inspection annuelle complète de votre système CVC (Fournaise, Thermopompe, Humidificateur, Échangeurs d\'air, Unités murales)',
+                'hpp-f2': 'Inspection du panneau de service électrique principal',
+                'hpp-f3': 'Rabais de 10% sur les travaux de service futurs et les filtres',
+                'hpp-f4': 'Rabais de 5% sur les nouvelles installations',
+                'hpp-f5': 'Tarif de déplacement d\'urgence réduit : <strong>189 $</strong> (Normalement 349 $ - 489 $)',
+                'hpp-btn-join': 'Rejoindre le Plan',
+                'hpp-card-note': '*Le plan couvre 1 unité par adresse. Des ajouts sont possibles, demandez à votre technicien.',
+                
+                'hpp-promise-title': 'Notre Promesse envers Vous',
+                'hpp-promise-sub': 'Nous garantissons tout ce que nous faisons, assurant votre entière satisfaction et sécurité.',
+                'hpp-prom1-t': 'Licenciés et Assurés',
+                'hpp-prom1-d': 'Pour votre protection.',
+                'hpp-prom2-t': 'Urgence 24/7',
+                'hpp-prom2-d': 'Là quand vous avez besoin de nous.',
+                'hpp-prom3-t': 'Service Ponctuel',
+                'hpp-prom3-d': 'Votre temps est précieux.',
+                'hpp-prom4-t': 'Garantie Écrite',
+                'hpp-prom4-d': 'Vous avez notre parole.',
+                'hpp-prom5-t': 'Prix Transparents',
+                'hpp-prom5-d': 'Connaissez le prix avant le début.',
+                
+                'hpp-chk-title': 'Listes de Contrôle d\'Inspection Complètes',
+                'hpp-chk-sub': 'Voyez exactement ce que nos techniciens évaluent lors de votre visite annuelle pour garantir les performances et la sécurité de votre système.',
+                
+                'hpp-hvac-title': 'Chauffage – Climatisation – Ventilation',
+                'hpp-furnace-title': 'Fournaises',
+                'hpp-l-airflow': 'Débit d\'air :',
+                'hpp-f-1': 'Aspirer pour enlever la poussière/débris sur le moteur et les pales du ventilateur.',
+                'hpp-l-electronics': 'Électronique :',
+                'hpp-f-2': 'Tester/inspecter tous les composants (transformateurs, condensateurs, interrupteurs, séquenceurs).',
+                'hpp-l-filters': 'Filtres :',
+                'hpp-f-3': 'Laver les filtres réutilisables ou remplacer les jetables.',
+                'hpp-l-clean': 'Nettoyage :',
+                'hpp-f-4': 'Nettoyer et aspirer le boîtier.',
+                
+                'hpp-ac-title': 'Climatisation / Thermopompe',
+                'hpp-l-coils': 'Serpentins :',
+                'hpp-ac-1': 'Laver les serpentins intérieurs et extérieurs.',
+                'hpp-l-drains': 'Drains :',
+                'hpp-ac-2': 'Nettoyer et tester tous les drains de condensat.',
+                'hpp-l-compressor': 'Compresseur :',
+                'hpp-ac-3': 'Inspecter/tester les contacteurs, condensateurs et interrupteurs de sécurité.',
+                'hpp-ac-4': 'Vérifier les connexions et les performances.',
+                'hpp-l-refrig': 'Réfrigérant :',
+                'hpp-ac-5': 'Vérification de la charge pour optimiser l\'efficacité.',
+                'hpp-l-disconnect': 'Sectionneur :',
+                'hpp-ac-6': 'Vérifier les connexions et la fonctionnalité du sectionneur extérieur.',
+                'hpp-l-test': 'Test :',
+                'hpp-ac-7': 'S\'assurer que l\'unité fonctionne correctement dans tous les modes.',
+                
+                'hpp-mini-title': 'Unités Murales (Mini Splits)',
+                'hpp-l-indoor': 'Unité Intérieure :',
+                'hpp-ms-1': 'Retirer/laver le couvercle et filtres. Installer un sac collecteur, remplir de mousse nettoyante. Rincer, assurer le drainage, sécher et remonter.',
+                'hpp-l-outdoor': 'Unité Extérieure :',
+                'hpp-ms-2': 'Laver le serpentin et boîtier. Inspecter l\'électronique. Vérifier la charge de réfrigérant et le sectionneur. Tester tous les modes.',
+                
+                'hpp-air-title': 'Échangeurs d\'Air',
+                'hpp-ae-1': 'Laver le boîtier, le bac de récupération et les filtres.',
+                'hpp-ae-2': 'Laver le noyau de récupération de chaleur.',
+                'hpp-ae-3': 'Aspirer la poussière des moteurs de ventilateur.',
+                'hpp-ae-4': 'Nettoyer le drain de condensat.',
+                'hpp-ae-5': 'Vérifier la fonction du volet, du contrôleur et du ventilateur.',
+                'hpp-ae-6': 'Vérifier que l\'entrée/sortie sont libres de débris.',
+                'hpp-ae-7': 'Test – Vérifier le fonctionnement de tous les modes.',
+                
+                'hpp-hum-title': 'Mise au Point d\'Humidificateur',
+                'hpp-hu-1': 'Nettoyage intérieur pour enlever le tartre, la poussière et les débris.',
+                'hpp-hu-2': 'Remplacer le filtre.',
+                'hpp-hu-3': 'Vérifier la précision de l\'hygrostat.',
+                'hpp-hu-4': 'Vérifier la fonctionnalité de l\'électrovanne.',
+                'hpp-hu-5': 'Nettoyer le drain de condensat.',
+                'hpp-filter-note': '*Tout filtre de remplacement non fourni par le client est facturé en supplément (avec rabais pour les membres).',
+                
+                'hpp-elec-title': 'Inspection Électrique',
+                'hpp-det-title': 'Détecteurs de Fumée / CO',
+                'hpp-d-1': 'Tester la fonctionnalité',
+                'hpp-d-2': 'Vérifier la date d\'expiration',
+                'hpp-d-3': 'Aspirer les détecteurs (poussière et débris)',
+                'hpp-d-4': 'Remplacer les piles au besoin',
+                
+                'hpp-pool-title': 'Équipement de Piscine/Spa',
+                'hpp-p-1': 'Vérifier les connexions du sous-panneau et les disjoncteurs',
+                'hpp-p-2': 'Tester la protection GFCI (DDFT)',
+                'hpp-p-3': 'Vérifier le système de mise à la terre',
+                
+                'hpp-pan-title': 'Inspection du Panneau Principal',
+                'hpp-pn-1': 'Vérifier les dispositifs de protection contre les surtensions.',
+                'hpp-pn-2': 'Vérifier les disjoncteurs (signes de surchauffe).',
+                'hpp-pn-3': 'Vérifier la fonctionnalité de tous les disjoncteurs de fuite à la terre.',
+                'hpp-pn-4': 'Installer un joint de conduit pour empêcher la condensation de l\'extérieur.',
+                'hpp-pn-5': 'Fermer toute ouverture pour empêcher l\'entrée de doigts ou nuisibles.',
+                'hpp-pn-6': 'Vérifier le système de mise à la terre principal.',
+                'hpp-pn-7': 'Serrer toutes les connexions selon les spécifications du fabricant.',
+                
+                'hpp-rec-title': 'Chauffage, Éclairage et Prises',
+                'hpp-r-1': 'Vérifier le fonctionnement du chauffage, de l\'éclairage et des prises',
+                'hpp-r-2': 'Tester la fonctionnalité des prises GFCI et AFCI',
+                'hpp-r-3': 'Vérifier le fonctionnement normal des plinthes et thermostats',
+                'hpp-r-4': 'Test de tension effectué sur les prises à travers la maison',
+                'hpp-r-5': 'Vérifier la fonctionnalité de toutes les lumières/gradateurs',
+                
+                'hpp-report-note': 'Une fois notre entretien terminé, un rapport détaillé vous sera fourni avec nos recommandations préventives ou suggestions pour vous aider à tirer le meilleur parti de vos systèmes.',
+
+                // Form & Footer
+                'contact-title': 'Demander un Rappel',
+                'contact-subtitle': 'Laissez vos coordonnées et nous vous répondrons sous peu pour mettre en place votre Plan de Protection.',
+                'form-name': 'Nom Complet',
+                'form-phone': 'Numéro de Téléphone',
+                'form-email': 'Adresse Courriel',
+                'form-city': 'Ville / Quartier',
+                'form-service': 'Service Requis',
+                'form-message': 'Détails du Projet / Message',
+                'form-file': 'Télécharger des Photos / Documents (Optionnel)',
+                'form-submit': 'Soumettre la Demande',
+                'footer-desc': 'Services électriques professionnels, installation de recharge VE et solutions CVC (HVAC) desservant la région du Grand Montréal.',
+                'footer-contact': 'Coordonnées',
+                'footer-hours': 'Heures d\'Ouverture',
+                'hours-247': 'Ouvert 24 heures,<br>7 jours sur 7',
+                'hours-desc': 'Disponible jour et nuit pour vos urgences électriques et projets planifiés.',
+                'footer-rights': '© 2026 Big G Electric. Tous droits réservés.'
+            }
+        };
+
+        let currentLang = 'en';
+        const langBtn = document.getElementById('langToggle');
+
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'fr' : 'en';
+            langBtn.textContent = currentLang === 'en' ? 'FR' : 'EN';
+            document.documentElement.lang = currentLang;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+            // Re-initialize icons
+            lucide.createIcons();
+        });
+
+
+        // --- Theme Toggle Logic (Light/Dark Mode) ---
+        const themeBtn = document.getElementById('themeToggle');
+        const htmlEl = document.documentElement;
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlEl.classList.add('dark');
+            htmlEl.classList.remove('light');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            htmlEl.classList.toggle('light');
+        });
+
+
+        // --- Scroll Reveal Animation Logic ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
