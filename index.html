@@ -20,11 +20,13 @@
       "image": "logomark.webp",
       "description": "Top-tier residential and commercial electrical services in Montreal. Women-led business, open 24/7.",
       "url": "https://biggelectric.ca",
-      "telephone": "+15551234567",
+      "telephone": "+15149416061",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Dollard-Des Ormeaux",
+        "streetAddress": "318 Av. Anselme-Lavigne",
+        "addressLocality": "Pierrefonds",
         "addressRegion": "QC",
+        "postalCode": "H9A 1R3",
         "addressCountry": "CA"
       },
       "openingHoursSpecification": {
@@ -84,77 +86,105 @@
         
         /* Glassmorphism utility */
         .glass {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
         }
         .dark .glass {
-            background: rgba(17, 24, 39, 0.9);
+            background: rgba(17, 24, 39, 0.95);
             backdrop-filter: blur(10px);
+        }
+
+        /* Strobing text animation */
+        @keyframes strobeText {
+            0%, 100% { 
+                color: #facc15; /* Yellow */
+                text-shadow: 0 0 10px rgba(250, 204, 21, 0.8), 0 0 20px rgba(250, 204, 21, 0.4); 
+            }
+            50% { 
+                color: #ffffff; /* White */
+                text-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.6); 
+            }
+        }
+        .animate-strobe {
+            animation: strobeText 2.5s ease-in-out infinite alternate;
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
 
 <!-- Navigation -->
-    <header class="fixed w-full top-0 z-50 glass border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
-                    <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
-                    <span class="font-extrabold text-2xl md:text-3xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-500 dark:from-blue-400 dark:to-blue-200 drop-shadow-sm">Big G Electric</span>
+    <header class="fixed w-full top-0 z-50 transition-colors duration-300">
+        <!-- New Top Contact Bar (Strobing) -->
+        <div class="bg-gray-900 border-b border-gray-800 py-2 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex justify-center items-center">
+                <a href="tel:+15149416061" class="animate-strobe font-black uppercase text-sm md:text-base flex items-center gap-2 py-0.5 tracking-wider">
+                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                    <span data-i18n="top-phone-text">Emergency Service 24/7:</span> (514) 941-6061
                 </a>
+            </div>
+        </div>
 
-                <!-- Desktop Menu -->
-                <nav class="hidden md:flex space-x-8 items-center">
-                    <div class="relative group">
-                        <button class="flex items-center gap-1 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors pb-2 -mb-2">
-                            <span data-i18n="nav-services">Services</span>
-                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
-                        </button>
-                        <div class="absolute left-0 top-full mt-2 w-[500px] rounded-xl shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-700 overflow-hidden">
-                            <div class="p-4 grid grid-cols-2 gap-x-6 gap-y-1">
-                                <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
-                                <a href="electric-car-charger-installation.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
-                                <a href="spa-and-pools.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-spa">Spa and Pools</a>
-                                <a href="lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-lighting">Lighting</a>
-                                <a href="electrical-heating.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
-                                <a href="diagnostics-and-repairs.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
-                                <a href="electrical-panel-upgrades.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
-                                <a href="rewiring.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-rewire">Rewiring</a>
-                                <a href="surge-protection.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-surge">Surge Protection</a>
-                                <a href="heating-and-cooling.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
-                                <a href="home-protection-plan.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
-                                <a href="generators.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-gen">Generator</a>
-                                <a href="grants-and-tax-credits.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
-                                <a href="other-services.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors col-span-2" data-i18n="nav-other">Other Services</a>
+        <!-- Main Nav Glass Layer -->
+        <div class="glass border-b border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                        <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
+                        <span class="font-extrabold text-2xl md:text-3xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-500 dark:from-blue-400 dark:to-blue-200 drop-shadow-sm">Big G Electric</span>
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <nav class="hidden md:flex space-x-8 items-center">
+                        <div class="relative group">
+                            <button class="flex items-center gap-1 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors pb-2 -mb-2">
+                                <span data-i18n="nav-services">Services</span>
+                                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                            </button>
+                            <div class="absolute left-0 top-full mt-2 w-[500px] rounded-xl shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-700 overflow-hidden">
+                                <div class="p-4 grid grid-cols-2 gap-x-6 gap-y-1">
+                                    <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                                    <a href="electric-car-charger-installation.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                                    <a href="spa-and-pools.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                                    <a href="lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-lighting">Lighting</a>
+                                    <a href="electrical-heating.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                                    <a href="diagnostics-and-repairs.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                                    <a href="electrical-panel-upgrades.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                                    <a href="rewiring.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                                    <a href="surge-protection.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                                    <a href="heating-and-cooling.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                                    <a href="home-protection-plan.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
+                                    <a href="generators.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-gen">Generator</a>
+                                    <a href="grants-and-tax-credits.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
+                                    <a href="other-services.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors col-span-2" data-i18n="nav-other">Other Services</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <a href="servicesareas.html" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-areas">Service Areas</a>
-                    <a href="index.html#about" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-about">Why Us</a>
-                    <a href="index.html#reviews" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-reviews">Reviews</a>
-                    <a href="#contact" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-contact">Contact Us</a>
-                </nav>
+                        <a href="servicesareas.html" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-areas">Service Areas</a>
+                        <a href="index.html#about" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-about">Why Us</a>
+                        <a href="index.html#reviews" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-reviews">Reviews</a>
+                        <a href="#contact" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-contact">Contact Us</a>
+                    </nav>
 
-                <!-- Controls: Lang, Theme, Mobile Menu -->
-                <div class="flex items-center space-x-4">
-                    <button id="langToggle" class="text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors px-2 py-1 rounded border border-gray-300 dark:border-gray-700">
-                        FR
-                    </button>
-                    <button id="themeToggle" class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Dark Mode">
-                        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
-                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-                    </button>
-                    <a href="tel:+15551234567" class="hidden lg:flex items-center gap-2 bg-brand-blue hover:bg-brand-dark text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg hover:shadow-brand-blue/30">
-                        <i data-lucide="phone" class="w-4 h-4"></i>
-                        <span data-i18n="nav-call">Call Now</span>
-                    </a>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors">
-                        <i data-lucide="menu" class="w-6 h-6"></i>
-                    </button>
+                    <!-- Controls: Lang, Theme, Mobile Menu -->
+                    <div class="flex items-center space-x-4">
+                        <button id="langToggle" class="text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors px-2 py-1 rounded border border-gray-300 dark:border-gray-700">
+                            FR
+                        </button>
+                        <button id="themeToggle" class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Dark Mode">
+                            <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                        </button>
+                        <a href="tel:+15149416061" class="hidden lg:flex items-center gap-2 bg-brand-blue hover:bg-brand-dark text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg hover:shadow-brand-blue/30">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            <span data-i18n="nav-call">Call Now</span>
+                        </a>
+                        
+                        <!-- Mobile Menu Button -->
+                        <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors">
+                            <i data-lucide="menu" class="w-6 h-6"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -189,7 +219,7 @@
         </div>
     </header>
 
-    <main class="pt-20">
+    <main class="pt-28"> <!-- Adjusted padding for the taller header (top bar + nav) -->
         <!-- Hero Section -->
         <section class="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
             <!-- Background Image with Overlay -->
@@ -204,7 +234,7 @@
                     Powering Your World <br><span class="text-brand-accent">Safely & Efficiently</span>
                 </h1>
                 <p class="mt-4 text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10 font-light" data-i18n="hero-subtitle">
-                    Top-tier residential, commercial, and electrification solutions tailored for your needs.
+                    Top-tier residential, commercial, industrial, and electrification solutions tailored for your needs.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <a href="#contact" class="bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:-translate-y-1" data-i18n="hero-cta">
@@ -226,10 +256,10 @@
                             <div class="w-12 h-1 bg-brand-accent rounded"></div>
                             <h3 class="text-sm font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider" data-i18n="rc-label">Who We Serve</h3>
                         </div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="rc-title">Residential and Commercial Services</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="rc-title">Residential, Commercial & Industrial Services</h2>
                         <h4 class="text-xl text-gray-600 dark:text-gray-300 font-medium mb-4 italic" data-i18n="rc-subtitle">"We're here for you, no matter who you are."</h4>
                         <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-lg" data-i18n="rc-desc">
-                            Whether it's a multi-day large-scale commercial job, or a simple one-day residential home repair, we at Big G Electric are more than willing to find a way to fit you into our schedule. Our team is equipped to handle complex wiring systems for business properties as well as delicate upgrades to your personal living space.
+                            Whether it's a multi-day large-scale commercial or industrial job, or a simple one-day residential home repair, we at Big G Electric are more than willing to find a way to fit you into our schedule. Our team is equipped to handle complex wiring systems for business and industrial properties as well as delicate upgrades to your personal living space.
                         </p>
                     </div>
                     <div class="relative">
@@ -254,14 +284,47 @@
                             <h3 class="text-sm font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider" data-i18n="about-label">Why Us</h3>
                         </div>
                         <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="about-title">Meet the Experts Behind the Power</h2>
+                        
+                        <!-- Certifications & Insurance Info Bar -->
+                        <div class="bg-gradient-to-r from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 p-6 rounded-2xl border-l-4 border-brand-accent shadow-sm mb-6 relative overflow-hidden">
+                            <div class="flex flex-col md:flex-row md:items-start gap-5">
+                                <div class="bg-white dark:bg-gray-800 p-3 rounded-full shadow-sm shrink-0 border border-gray-100 dark:border-gray-700 hidden sm:block">
+                                    <i data-lucide="shield-check" class="w-8 h-8 text-brand-blue dark:text-blue-400"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-extrabold text-gray-900 dark:text-white flex items-center gap-2 mb-2">
+                                        <i data-lucide="shield-check" class="w-5 h-5 sm:hidden text-brand-blue"></i>
+                                        <span data-i18n="about-cert-title">Fully Licensed & Insured</span>
+                                    </h4>
+                                    
+                                    <div class="flex flex-col mb-4">
+                                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+                                            <span class="font-bold text-brand-blue dark:text-blue-400 text-lg" data-i18n="about-master-elec">Marissa Timmler — Master Electrician</span>
+                                            <span class="bg-brand-accent text-gray-900 font-mono font-bold px-3 py-1 rounded-md text-sm shadow-sm">RBQ: 5723-9014-01</span>
+                                        </div>
+                                        <span class="text-sm font-semibold text-gray-600 dark:text-gray-400 mt-1" data-i18n="about-scope">Residential • Commercial • Industrial</span>
+                                    </div>
+                                    
+                                    <div class="grid sm:grid-cols-1 gap-3 mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                                        <div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300 font-medium">
+                                            <img src="cmeq_logo.webp" alt="CMEQ Logo" class="h-8 object-contain bg-white rounded shadow-sm px-1 hidden sm:block" onerror="this.style.display='none'">
+                                            <i data-lucide="award" class="w-5 h-5 text-brand-accent shrink-0 sm:hidden"></i>
+                                            <span data-i18n="about-cmeq">Corporation des maîtres électriciens du Québec (CMEQ)</span>
+                                        </div>
+                                        <div class="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300 font-medium">
+                                            <i data-lucide="zap" class="w-5 h-5 text-brand-accent shrink-0"></i>
+                                            <span data-i18n="about-champion">We're proud to be a Champion Standby Authorized Dealer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-lg mb-6" data-i18n="about-desc">
                             Our dedicated team of certified electricians and project managers work tirelessly to ensure your projects are completed safely, on time, and up to code. We pride ourselves on transparent communication, exceptional craftsmanship, and a commitment to customer satisfaction.
                         </p>
+                        
                         <ul class="space-y-3">
-                            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-blue dark:text-blue-400"></i>
-                                <span data-i18n="about-point1">Fully Licensed & Insured</span>
-                            </li>
                             <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
                                 <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-blue dark:text-blue-400"></i>
                                 <span data-i18n="about-point2">Transparent Pricing</span>
@@ -305,7 +368,7 @@
                                 <img src="novair_logo.webp" alt="Novair Logo" class="w-full h-full object-contain">
                             </div>
                             <div>
-                                <h4 class="text-xl font-bold mb-3 text-gray-900 dark:text-white" data-i18n="part-novair-title">Novair Heat Pumps</h4>
+                                <h4 class="text-xl font-bold mb-3 text-gray-900 dark:text-white" data-i18n="part-novair-title">Novair Heat Pumps and AC</h4>
                                 <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" data-i18n="part-novair-desc">
                                     We're proud to partner with Novair to offer high-efficiency heat pumps built for Quebec winters. Their reliable, energy-saving systems paired with our expert installation will deliver dependable comfort all season long.
                                 </p>
@@ -338,7 +401,7 @@
                     </div>
                     <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="ev-title">Specialists in Electrification</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="ev-desc">
-                        As <strong class="text-gray-900 dark:text-gray-200">Tesla certified installers</strong>, Big G Electric's electricians are able to offer you customized solutions, no matter the brand of the charging station you need:
+                        As <strong class="text-gray-900 dark:text-gray-200">Tesla certified installers</strong>, Big G Electric's electricians are able to offer you customized solutions for residential, commercial, and industrial needs, no matter the brand of the charging station you need:
                     </p>
                 </div>
 
@@ -361,14 +424,199 @@
                         <p class="text-gray-600 dark:text-gray-400" data-i18n="ev-condo-desc">Installation in condo parking lots, carefully coordinated and executed after approval by the syndicate of co-ownership.</p>
                     </div>
 
-                    <!-- Business Property -->
+                    <!-- Commercial & Industrial Property -->
                     <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow reveal" style="transition-delay: 200ms;">
                         <div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center mb-6 text-brand-blue dark:text-blue-400">
                             <i data-lucide="briefcase" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white" data-i18n="ev-bus-title">Business Property</h3>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="ev-bus-desc">Setup in business locations, which may qualify for government subsidies. Contact us for more information to future-proof your business.</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white" data-i18n="ev-bus-title">Commercial & Industrial</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="ev-bus-desc">Setup in business and industrial locations, which may qualify for government subsidies. Contact us for more information to future-proof your business.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5-Year Warranty Section -->
+        <section id="warranty" class="py-20 bg-gradient-to-br from-brand-light to-white dark:from-gray-800 dark:to-gray-900 transition-colors duration-300 border-t border-gray-200 dark:border-gray-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-accent/20 text-brand-accent mb-6 shadow-sm ring-4 ring-white dark:ring-gray-800">
+                        <i data-lucide="shield-check" class="w-10 h-10 text-yellow-500"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white" data-i18n="war-title">5-Year Warranty on All Our Electrical Services</h2>
+                    <h3 class="text-xl md:text-2xl font-bold text-brand-blue dark:text-blue-400 mb-6" data-i18n="war-subtitle">The Longest Warranty in the Industry!</h3>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed" data-i18n="war-intro">
+                        Did you know that the minimum legal warranty offered by merchants in Quebec is only one year? At Big G Electric, we go far beyond this standard to provide you with unmatched peace of mind.
+                    </p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 p-8 md:p-12">
+                    <div class="mb-10">
+                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3">
+                            <i data-lucide="help-circle" class="w-6 h-6 text-brand-blue"></i>
+                            <span data-i18n="war-why-title">Why a 5-Year Warranty?</span>
+                        </h4>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="war-why-desc">
+                            Quality is at the core of everything we do. That's why we guarantee our work and services for a full 5 years. This warranty reflects our commitment to durable and reliable installations.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-100 dark:border-gray-700 pb-4 flex items-center gap-3">
+                            <i data-lucide="list-checks" class="w-6 h-6 text-brand-blue"></i>
+                            <span data-i18n="war-det-title">Details of Our Warranty</span>
+                        </h4>
+                        
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="bg-gray-50 dark:bg-gray-900/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+                                <h5 class="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                                    <span class="bg-brand-blue text-white w-6 h-6 rounded-full flex items-center justify-center text-sm">1</span>
+                                    <span data-i18n="war-work-title">Work Coverage</span>
+                                </h5>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm mb-4 list-disc list-inside">
+                                    <li data-i18n="war-work-1">All our work (contract-based or hourly) comes with a 5-year non-transferable warranty.</li>
+                                    <li data-i18n="war-work-2">This warranty covers only our workmanship and installations, not the materials.</li>
+                                </ul>
+                                <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-xl text-sm border border-blue-100 dark:border-blue-800/30 text-gray-700 dark:text-gray-300">
+                                    <strong class="text-brand-blue dark:text-blue-400" data-i18n="war-ex-label">Example:</strong> <span data-i18n="war-ex-text">If an electrical connection comes loose after our work, we'll repair it free of charge under the warranty.</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 dark:bg-gray-900/50 p-6 rounded-2xl border border-gray-100 dark:border-gray-700">
+                                <h5 class="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                                    <span class="bg-brand-blue text-white w-6 h-6 rounded-full flex items-center justify-center text-sm">2</span>
+                                    <span data-i18n="war-mat-title">Material Warranty</span>
+                                </h5>
+                                <ul class="space-y-2 text-gray-600 dark:text-gray-400 text-sm list-disc list-inside">
+                                    <li data-i18n="war-mat-1">Installed materials are covered by the manufacturer's warranty.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Areas Section -->
+        <section id="service-areas" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 border-t border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Intro Header -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16 reveal">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-1 bg-brand-accent rounded"></div>
+                            <h3 class="text-sm font-bold text-brand-blue dark:text-blue-400 uppercase tracking-wider" data-i18n="nav-areas">Service Areas</h3>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="service-area-title">Master Electricians Across the Greater Montreal Area</h2>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service-area-desc">
+                            Whether you are in the West Island, Laval, or the South Shore, our fleet of fully stocked trucks is ready to dispatch. We proudly provide fast, reliable, and certified electrical services to your neighborhood.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700">
+                        <div class="flex items-center gap-3 mb-4 text-brand-blue dark:text-blue-400">
+                            <i data-lucide="map" class="w-6 h-6"></i>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white" data-i18n="service-area-reach-title">Local Experts, Regional Reach</h3>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" data-i18n="service-area-reach-desc">
+                            Finding a dependable electrician near you shouldn't be a hassle. Big G Electric has dedicated teams servicing multiple regions to ensure we arrive promptly when you need us most. From complete home rewiring in heritage homes in Westmount to commercial lighting upgrades in Laval, and EV charger installations in Vaudreuil-Dorion, our licensed professionals understand the unique electrical codes and needs of your specific municipality.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Locations Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12 reveal">
+                    <!-- West Island -->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-brand-blue dark:text-blue-400 mb-4 flex items-center gap-2 border-b border-gray-100 dark:border-gray-800 pb-3">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span data-i18n="region-west">West Island</span>
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li>Dollard-des-Ormeaux (DDO)</li>
+                            <li>Kirkland</li>
+                            <li>Beaconsfield</li>
+                            <li>Dorval</li>
+                            <li>Pierrefonds-Roxboro</li>
+                            <li>Sainte-Anne-de-Bellevue</li>
+                            <li>Baie-D'Urfé</li>
+                            <li>Senneville</li>
+                            <li>Île-Bizard</li>
+                        </ul>
+                    </div>
+
+                    <!-- Montreal Area -->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-brand-blue dark:text-blue-400 mb-4 flex items-center gap-2 border-b border-gray-100 dark:border-gray-800 pb-3">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span data-i18n="region-mtl">Montreal Area</span>
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li>Greater Montreal</li>
+                            <li>Saint-Laurent</li>
+                            <li>Westmount</li>
+                            <li>Outremont</li>
+                            <li>Town of Mount Royal (TMR)</li>
+                            <li>Côte Saint-Luc</li>
+                            <li>Lachine</li>
+                            <li>LaSalle</li>
+                            <li>Verdun</li>
+                        </ul>
+                    </div>
+
+                    <!-- Laval & North Shore -->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-brand-blue dark:text-blue-400 mb-4 flex items-center gap-2 border-b border-gray-100 dark:border-gray-800 pb-3">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span data-i18n="region-laval">Laval & North Shore</span>
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li>Laval</li>
+                            <li>Chomedey</li>
+                            <li>Sainte-Dorothée</li>
+                            <li>Fabreville</li>
+                            <li>Sainte-Rose</li>
+                            <li>Boisbriand</li>
+                            <li>Saint-Eustache</li>
+                            <li>Deux-Montagnes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Vaudreuil & Off-Island -->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-brand-blue dark:text-blue-400 mb-4 flex items-center gap-2 border-b border-gray-100 dark:border-gray-800 pb-3">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span data-i18n="region-vaudreuil">Vaudreuil & Off-Island</span>
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li>Vaudreuil-Dorion</li>
+                            <li>L'Île-Perrot</li>
+                            <li>Saint-Lazare</li>
+                        </ul>
+                    </div>
+
+                    <!-- South Shore -->
+                    <div class="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-700 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <h4 class="font-bold text-brand-blue dark:text-blue-400 mb-4 flex items-center gap-2 border-b border-gray-100 dark:border-gray-800 pb-3">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                            <span data-i18n="region-south">South Shore</span>
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                            <li>Longueuil</li>
+                            <li>Brossard</li>
+                            <li>Boucherville</li>
+                            <li>Châteauguay</li>
+                            <li>Kahnawake</li>
+                            <li>Saint-Constant</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Missing City CTA -->
+                <div class="bg-brand-light dark:bg-brand-dark/20 p-6 rounded-2xl border border-brand-blue/20 dark:border-brand-blue/30 text-center reveal">
+                    <h4 class="text-xl font-bold text-brand-blue dark:text-blue-300 mb-2" data-i18n="service-area-footer-title">Don't See Your City Listed?</h4>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm max-w-2xl mx-auto" data-i18n="service-area-footer-desc">
+                        If you live near any of the areas listed above, there is a very high chance we can still help you! Reach out to our team to confirm service availability for your exact address.
+                    </p>
                 </div>
             </div>
         </section>
@@ -511,9 +759,9 @@
                         <i data-lucide="mail" class="w-5 h-5"></i>
                         <span data-i18n="btn-email">Email Us</span>
                     </a>
-                    <a href="tel:+15551234567" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2">
+                    <a href="tel:+15149416061" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2">
                         <i data-lucide="phone-call" class="w-5 h-5"></i>
-                        <span>(555) 123-4567</span>
+                        <span>(514) 941-6061</span>
                     </a>
                 </div>
             </div>
@@ -550,11 +798,19 @@
                         <div>
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-service">Service Needed</label>
                             <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all appearance-none">
+                                <option data-i18n="opt-diag">Diagnostics & Repairs</option>
+                                <option data-i18n="opt-lighting">Lighting</option>
+                                <option data-i18n="opt-ev">Electric Car Charger Installation</option>
+                                <option data-i18n="opt-safety">Other / Home Safety</option>
+                                <option data-i18n="opt-gen">Generator Installation / Maintenance</option>
+                                <option data-i18n="opt-hvac">Heating and Cooling</option>
+                                <option data-i18n="opt-surge">Surge Protection</option>
+                                <option data-i18n="opt-panel">Electrical Panel Upgrades</option>
+                                <option data-i18n="opt-elec-heat">Electrical Heating</option>
+                                <option data-i18n="opt-outdoor">Outdoor and Landscape Lighting</option>
+                                <option data-i18n="opt-spa">Spa and Pools</option>
                                 <option data-i18n="opt-res">Residential Repair</option>
-                                <option data-i18n="opt-com">Commercial Project</option>
-                                <option data-i18n="opt-ev">EV Charging Station</option>
-                                <option data-i18n="opt-heat">Heat Pump Installation</option>
-                                <option data-i18n="opt-other">Other</option>
+                                <option data-i18n="opt-com">Commercial / Industrial Project</option>
                             </select>
                         </div>
                         <div>
@@ -588,8 +844,8 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4" data-i18n="footer-contact">Contact Info</h4>
                     <ul class="space-y-2 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Dollard-Des Ormeaux, QC</li>
-                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (555) 123-4567</li>
+                        <li class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 shrink-0 mt-0.5"></i> 318 Av. Anselme-Lavigne,<br>Pierrefonds, QC H9A 1R3</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (514) 941-6061</li>
                         <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> info@biggelectric.ca</li>
                     </ul>
                 </div>
@@ -644,38 +900,68 @@
                 'nav-reviews': 'Reviews',
                 'nav-contact': 'Contact Us',
                 'nav-call': 'Call Now',
+                'top-phone-text': 'Emergency Service 24/7:',
                 'hero-tag': 'Serving Greater Montreal',
                 'hero-title': 'Powering Your World <br><span class="text-brand-accent">Safely & Efficiently</span>',
-                'hero-subtitle': 'Top-tier residential, commercial, and electrification solutions tailored for your needs.',
+                'hero-subtitle': 'Top-tier residential, commercial, industrial, and electrification solutions tailored for your needs.',
                 'hero-cta': 'Get a Free Quote',
                 'hero-cta-2': 'Explore Services',
+                'nav-areas': 'Service Areas',
                 'about-label': 'Why Us',
                 'about-title': 'Meet the Experts Behind the Power',
+                'about-cert-title': 'Fully Licensed & Insured',
+                'about-master-elec': 'Marissa Timmler — Master Electrician',
+                'about-scope': 'Residential • Commercial • Industrial',
+                'about-cmeq': 'Corporation des maîtres électriciens du Québec (CMEQ)',
+                'about-champion': "We're proud to be a Champion Standby Authorized Dealer",
                 'about-desc': 'Our dedicated team of certified electricians and project managers work tirelessly to ensure your projects are completed safely, on time, and up to code. We pride ourselves on transparent communication, exceptional craftsmanship, and a commitment to customer satisfaction.',
-                'about-point1': 'Fully Licensed & Insured',
                 'about-point2': 'Transparent Pricing',
                 'about-point3': 'Quality Craftsmanship',
                 'about-point4': '24/7 Emergency Service',
                 'rc-label': 'Who We Serve',
-                'rc-title': 'Residential and Commercial Services',
+                'rc-title': 'Residential, Commercial & Industrial Services',
                 'rc-subtitle': '"We\'re here for you, no matter who you are."',
-                'rc-desc': 'Whether it\'s a multi-day large-scale commercial job, or a simple one-day residential home repair, we at Big G Electric are more than willing to find a way to fit you into our schedule. Our team is equipped to handle complex wiring systems for business properties as well as delicate upgrades to your personal living space.',
+                'rc-desc': 'Whether it\'s a multi-day large-scale commercial or industrial job, or a simple one-day residential home repair, we at Big G Electric are more than willing to find a way to fit you into our schedule. Our team is equipped to handle complex wiring systems for business and industrial properties as well as delicate upgrades to your personal living space.',
                 'ev-title': 'Specialists in Electrification',
-                'ev-desc': 'As <strong class="text-gray-900 dark:text-gray-200">Tesla certified installers</strong>, Big G Electric\'s electricians are able to offer you customized solutions, no matter the brand of the charging station you need:',
+                'ev-desc': 'As <strong class="text-gray-900 dark:text-gray-200">Tesla certified installers</strong>, Big G Electric\'s electricians are able to offer you customized solutions for residential, commercial, and industrial needs, no matter the brand of the charging station you need:',
                 'ev-ind-title': 'Individual Housing',
                 'ev-ind-desc': 'Installation of charging stations in individual housing ensuring safety and optimal charging speeds for your daily commute.',
                 'ev-condo-title': 'Condo Parking Lot',
                 'ev-condo-desc': 'Installation in condo parking lots, carefully coordinated and executed after approval by the syndicate of co-ownership.',
-                'ev-bus-title': 'Business Property',
-                'ev-bus-desc': 'Setup in business locations, which may qualify for government subsidies. Contact us for more information to future-proof your business.',
+                'ev-bus-title': 'Commercial & Industrial',
+                'ev-bus-desc': 'Setup in business and industrial locations, which may qualify for government subsidies. Contact us for more information to future-proof your business.',
+                'service-area-title': 'Master Electricians Across the Greater Montreal Area',
+                'service-area-desc': 'Whether you are in the West Island, Laval, or the South Shore, our fleet of fully stocked trucks is ready to dispatch. We proudly provide fast, reliable, and certified electrical services to your neighborhood.',
+                'service-area-reach-title': 'Local Experts, Regional Reach',
+                'service-area-reach-desc': 'Finding a dependable electrician near you shouldn\'t be a hassle. Big G Electric has dedicated teams servicing multiple regions to ensure we arrive promptly when you need us most. From complete home rewiring in heritage homes in Westmount to commercial lighting upgrades in Laval, and EV charger installations in Vaudreuil-Dorion, our licensed professionals understand the unique electrical codes and needs of your specific municipality.',
+                'region-west': 'West Island',
+                'region-mtl': 'Montreal Area',
+                'region-laval': 'Laval & North Shore',
+                'region-vaudreuil': 'Vaudreuil & Off-Island',
+                'region-south': 'South Shore',
+                'service-area-footer-title': 'Don\'t See Your City Listed?',
+                'service-area-footer-desc': 'If you live near any of the areas listed above, there is a very high chance we can still help you! Reach out to our team to confirm service availability for your exact address.',
                 'part-title': 'Our Premier Partnerships',
                 'part-subtitle': 'Collaborating with industry leaders to bring you the best materials, technology, and savings.',
                 'part-hydro-title': 'Hydro Quebec',
                 'part-hydro-desc': 'Through our Hydro Quebec partnership, we are able to receive subventions, allowing for additional tasks completed or materials to be purchased at a discount and shipped directly to our warehouse in Dollard-Des Ormeaux.',
-                'part-novair-title': 'Novair AC & Heat Pumps',
+                'part-novair-title': 'Novair Heat Pumps and AC',
                 'part-novair-desc': 'We\'re proud to partner with Novair to offer high-efficiency split units, AC, and heat pumps built for Quebec winters. Their reliable, energy-saving systems paired with our expert installation will deliver dependable comfort all season long.',
                 'part-finance-title': 'Financeit',
                 'part-finance-desc': 'We understand that electrical upgrades are an investment. We\'ve partnered with Financeit to offer flexible, affordable payment plans so you can get your project done today and pay over time.',
+                'war-title': '5-Year Warranty on All Our Electrical Services',
+                'war-subtitle': 'The Longest Warranty in the Industry!',
+                'war-intro': 'Did you know that the minimum legal warranty offered by merchants in Quebec is only one year? At Big G Electric, we go far beyond this standard to provide you with unmatched peace of mind.',
+                'war-why-title': 'Why a 5-Year Warranty?',
+                'war-why-desc': 'Quality is at the core of everything we do. That\'s why we guarantee our work and services for a full 5 years. This warranty reflects our commitment to durable and reliable installations.',
+                'war-det-title': 'Details of Our Warranty',
+                'war-work-title': 'Work Coverage',
+                'war-work-1': 'All our work (contract-based or hourly) comes with a 5-year non-transferable warranty.',
+                'war-work-2': 'This warranty covers only our workmanship and installations, not the materials.',
+                'war-ex-label': 'Example:',
+                'war-ex-text': 'If an electrical connection comes loose after our work, we\'ll repair it free of charge under the warranty.',
+                'war-mat-title': 'Material Warranty',
+                'war-mat-1': 'Installed materials are covered by the manufacturer\'s warranty.',
                 'rev-title': 'What Our Community Says',
                 'rev-subtitle': 'Don\'t just take our word for it. Read the experiences of our satisfied customers.',
                 'rev-1': '"Professional, detail-oriented, and easy to communicate with. It’s refreshing to see a woman-led business bringing such care, precision, and professionalism to a traditionally male-dominated trade. Highly recommended."',
@@ -696,11 +982,19 @@
                 'form-service': 'Service Needed',
                 'form-message': 'Project Details / Message',
                 'form-file': 'Upload Photos / Documents (Optional)',
+                'opt-diag': 'Diagnostics & Repairs',
+                'opt-lighting': 'Lighting',
+                'opt-ev': 'Electric Car Charger Installation',
+                'opt-safety': 'Other / Home Safety',
+                'opt-gen': 'Generator Installation / Maintenance',
+                'opt-hvac': 'Heating and Cooling',
+                'opt-surge': 'Surge Protection',
+                'opt-panel': 'Electrical Panel Upgrades',
+                'opt-elec-heat': 'Electrical Heating',
+                'opt-outdoor': 'Outdoor and Landscape Lighting',
+                'opt-spa': 'Spa and Pools',
                 'opt-res': 'Residential Repair',
-                'opt-com': 'Commercial Project',
-                'opt-ev': 'EV Charging Station',
-                'opt-heat': 'Split Unit / AC / Heat Pump',
-                'opt-other': 'Other',
+                'opt-com': 'Commercial / Industrial Project',
                 'form-submit': 'Submit Request',
                 'form-success': 'Thank you! Your request has been sent.',
                 'footer-desc': 'Professional electrical services, EV charging installation, and heat pump solutions serving the Greater Montreal area.',
@@ -732,38 +1026,68 @@
                 'nav-reviews': 'Avis',
                 'nav-contact': 'Contactez-nous',
                 'nav-call': 'Appelez',
+                'top-phone-text': 'Service d\'urgence 24/7 :',
                 'hero-tag': 'Desservant le Grand Montréal',
                 'hero-title': 'Alimenter Votre Monde <br><span class="text-brand-accent">En Toute Sécurité</span>',
-                'hero-subtitle': 'Des solutions résidentielles, commerciales et d\'électrification de premier ordre adaptées à vos besoins.',
+                'hero-subtitle': 'Des solutions résidentielles, commerciales, industrielles et d\'électrification de premier ordre adaptées à vos besoins.',
                 'hero-cta': 'Obtenir un Devis Gratuit',
                 'hero-cta-2': 'Explorer nos Services',
+                'nav-areas': 'Zones de Service',
                 'about-label': 'Pourquoi Nous',
                 'about-title': 'Rencontrez les Experts Derrière l\'Énergie',
+                'about-cert-title': 'Entièrement Agréé et Assuré',
+                'about-master-elec': 'Marissa Timmler — Maître Électricien',
+                'about-scope': 'Résidentiel • Commercial • Industriel',
+                'about-cmeq': 'Corporation des maîtres électriciens du Québec (CMEQ)',
+                'about-champion': 'Nous sommes fiers d\'être un concessionnaire autorisé Champion Standby',
                 'about-desc': 'Notre équipe dévouée d\'électriciens certifiés et de gestionnaires de projets travaille sans relâche pour s\'assurer que vos projets sont réalisés en toute sécurité, dans les délais et selon les normes. Nous sommes fiers de notre communication transparente, de notre savoir-faire exceptionnel et de notre engagement envers la satisfaction de la clientèle.',
-                'about-point1': 'Entièrement Agréé et Assuré',
                 'about-point2': 'Tarification Transparente',
                 'about-point3': 'Savoir-Faire de Qualité',
                 'about-point4': 'Service d\'Urgence 24/7',
                 'rc-label': 'Qui Nous Servons',
-                'rc-title': 'Services Résidentiels et Commerciaux',
+                'rc-title': 'Services Résidentiels, Commerciaux et Industriels',
                 'rc-subtitle': '"Nous sommes là pour vous, peu importe qui vous êtes."',
-                'rc-desc': 'Qu\'il s\'agisse d\'un travail commercial à grande échelle sur plusieurs jours ou d\'une simple réparation résidentielle d\'une journée, chez Big G Electric, nous sommes plus que disposés à trouver un moyen de vous intégrer à notre horaire. Notre équipe est équipée pour gérer les systèmes de câblage complexes pour les propriétés commerciales ainsi que les mises à niveau délicates de votre espace de vie personnel.',
+                'rc-desc': 'Qu\'il s\'agisse d\'un travail commercial ou industriel à grande échelle sur plusieurs jours ou d\'une simple réparation résidentielle d\'une journée, chez Big G Electric, nous sommes plus que disposés à trouver un moyen de vous intégrer à notre horaire. Notre équipe est équipée pour gérer les systèmes de câblage complexes pour les propriétés commerciales et industrielles ainsi que les mises à niveau délicates de votre espace de vie personnel.',
                 'ev-title': 'Spécialistes en Électrification',
-                'ev-desc': 'En tant qu\'<strong class="text-gray-900 dark:text-gray-200">installateurs certifiés Tesla</strong>, les électriciens de Big G Electric sont en mesure de vous proposer des solutions sur mesure, peu importe la marque de la borne de recharge dont vous avez besoin :',
+                'ev-desc': 'En tant qu\'<strong class="text-gray-900 dark:text-gray-200">installateurs certifiés Tesla</strong>, les électriciens de Big G Electric sont en mesure de vous proposer des solutions sur mesure pour les besoins résidentiels, commerciaux et industriels, peu importe la marque de la borne de recharge dont vous avez besoin :',
                 'ev-ind-title': 'Logement Individuel',
                 'ev-ind-desc': 'Installation de bornes de recharge dans les logements individuels assurant sécurité et vitesses de recharge optimales.',
                 'ev-condo-title': 'Stationnement de Condo',
                 'ev-condo-desc': 'Dans un stationnement de condo, soigneusement coordonné et exécuté après approbation par le syndicat de copropriété.',
-                'ev-bus-title': 'Propriété Commerciale',
-                'ev-bus-desc': 'Installation dans une entreprise, pouvant être admissible à une subvention. Contactez-nous pour plus d\'informations.',
+                'ev-bus-title': 'Commercial et Industriel',
+                'ev-bus-desc': 'Installation dans des emplacements commerciaux et industriels, pouvant être admissible à une subvention. Contactez-nous pour plus d\'informations.',
+                'service-area-title': 'Maîtres Électriciens à Travers le Grand Montréal',
+                'service-area-desc': 'Que vous soyez dans l\'Ouest-de-l\'Île, à Laval ou sur la Rive-Sud, notre flotte de camions entièrement équipés est prête à être déployée. Nous sommes fiers de fournir des services électriques rapides, fiables et certifiés à votre quartier.',
+                'service-area-reach-title': 'Experts Locaux, Portée Régionale',
+                'service-area-reach-desc': 'Trouver un électricien fiable près de chez vous ne devrait pas être un tracas. Big G Electric dispose d\'équipes dédiées desservant plusieurs régions pour s\'assurer que nous arrivons rapidement quand vous avez le plus besoin de nous. Du recâblage complet de maisons patrimoniales à Westmount aux améliorations d\'éclairage commercial à Laval, en passant par les installations de chargeurs de VE à Vaudreuil-Dorion, nos professionnels agréés comprennent les codes et les besoins électriques uniques de votre municipalité spécifique.',
+                'region-west': 'Ouest-de-l\'Île',
+                'region-mtl': 'Région de Montréal',
+                'region-laval': 'Laval et Rive-Nord',
+                'region-vaudreuil': 'Vaudreuil et Hors-Île',
+                'region-south': 'Rive-Sud',
+                'service-area-footer-title': 'Votre Ville n\'est pas Listée ?',
+                'service-area-footer-desc': 'Si vous habitez près de l\'une des régions listées ci-dessus, il y a de très fortes chances que nous puissions toujours vous aider ! Contactez notre équipe pour confirmer la disponibilité du service pour votre adresse exacte.',
                 'part-title': 'Nos Partenariats de Premier Plan',
                 'part-subtitle': 'Collaborer avec les leaders de l\'industrie pour vous apporter les meilleurs matériaux, technologies et économies.',
                 'part-hydro-title': 'Hydro-Québec',
                 'part-hydro-desc': 'Grâce à notre partenariat avec Hydro-Québec, nous sommes en mesure de recevoir des subventions, permettant d\'accomplir des tâches supplémentaires ou d\'acheter des matériaux à prix réduit et expédiés directement à notre entrepôt de Dollard-Des Ormeaux.',
-                'part-novair-title': 'Climatisation et Thermopompes Novair',
+                'part-novair-title': 'Thermopompes et Climatisation Novair',
                 'part-novair-desc': 'Nous sommes fiers de nous associer à Novair pour offrir des unités murales (split), de la climatisation et des thermopompes à haute efficacité conçues pour les hivers québécois. Leurs systèmes fiables et économes en énergie, associés à notre installation experte, offriront un confort fiable toute la saison.',
                 'part-finance-title': 'Financeit',
                 'part-finance-desc': 'Nous comprenons que les rénovations électriques sont un investissement. C\'est pourquoi nous nous sommes associés à Financeit pour offrir des plans de paiement flexibles et abordables afin que vous puissiez réaliser votre projet aujourd\'hui et payer au fil du temps.',
+                'war-title': 'Garantie de 5 ans sur tous nos services électriques',
+                'war-subtitle': 'La garantie la plus longue de l\'industrie !',
+                'war-intro': 'Saviez-vous que la garantie légale minimale offerte par les commerçants au Québec n\'est que d\'un an ? Chez Big G Electric, nous allons bien au-delà de cette norme pour vous offrir une tranquillité d\'esprit inégalée.',
+                'war-why-title': 'Pourquoi une garantie de 5 ans ?',
+                'war-why-desc': 'La qualité est au cœur de tout ce que nous faisons. C\'est pourquoi nous garantissons notre travail et nos services pendant 5 années complètes. Cette garantie reflète notre engagement envers des installations durables et fiables.',
+                'war-det-title': 'Détails de notre garantie',
+                'war-work-title': 'Couverture de la main-d\'œuvre',
+                'war-work-1': 'Tout notre travail (à forfait ou à taux horaire) est assorti d\'une garantie non transférable de 5 ans.',
+                'war-work-2': 'Cette garantie couvre uniquement notre main-d\'œuvre et nos installations, pas les matériaux.',
+                'war-ex-label': 'Exemple :',
+                'war-ex-text': 'Si une connexion électrique se desserre après notre intervention, nous la réparerons gratuitement sous garantie.',
+                'war-mat-title': 'Garantie sur les matériaux',
+                'war-mat-1': 'Les matériaux installés sont couverts par la garantie du fabricant.',
                 'rev-title': 'Ce Que Dit Notre Communauté',
                 'rev-subtitle': 'Ne vous fiez pas seulement à notre parole. Lisez les expériences de nos clients satisfaits.',
                 'rev-1': '"Professionnel, soucieux du détail et facile à communiquer. Il est rafraîchissant de voir une entreprise dirigée par des femmes apporter autant de soin, de précision et de professionnalisme dans un métier traditionnellement dominé par les hommes. Fortement recommandé."',
@@ -784,11 +1108,19 @@
                 'form-service': 'Service Requis',
                 'form-message': 'Détails du Projet / Message',
                 'form-file': 'Télécharger des Photos / Documents (Optionnel)',
+                'opt-diag': 'Diagnostics et Réparations',
+                'opt-lighting': 'Éclairage',
+                'opt-ev': 'Installation de Borne de Recharge VE',
+                'opt-safety': 'Autre / Sécurité à Domicile',
+                'opt-gen': 'Installation / Entretien de Génératrice',
+                'opt-hvac': 'Chauffage et Climatisation',
+                'opt-surge': 'Protection Contre les Surtensions',
+                'opt-panel': 'Mise à Niveau de Panneau Électrique',
+                'opt-elec-heat': 'Chauffage Électrique',
+                'opt-outdoor': 'Éclairage Extérieur et Paysager',
+                'opt-spa': 'Spas et Piscines',
                 'opt-res': 'Réparation Résidentielle',
-                'opt-com': 'Projet Commercial',
-                'opt-ev': 'Borne de Recharge VE',
-                'opt-heat': 'Unité Murale / Clim / Thermopompe',
-                'opt-other': 'Autre',
+                'opt-com': 'Projet Commercial / Industriel',
                 'form-submit': 'Soumettre la Demande',
                 'form-success': 'Merci ! Votre demande a été envoyée.',
                 'footer-desc': 'Services électriques professionnels, installation de recharge VE et solutions de thermopompes desservant la région du Grand Montréal.',
