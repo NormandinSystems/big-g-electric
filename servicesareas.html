@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Service Areas | Master Electrician in Montreal, Laval & West Island</title>
+    <meta name="description" content="Big G Electric provides Master Electrician services across the Greater Montreal Area, including the West Island, Laval, Vaudreuil-Dorion, and the South Shore.">
+    <meta name="keywords" content="Montreal Electrician, Laval Electrician, West Island Electrician, Vaudreuil, Longueuil, Master Electrician, DDO electrician, Kirkland, Beaconsfield, local electrician">
+    <meta name="author" content="Big G Electric">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Schema Markup for Local Business / Areas Served -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Big G Electric",
+      "image": "logomark.webp",
+      "telephone": "+15551234567",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dollard-Des Ormeaux",
+        "addressRegion": "QC",
+        "addressCountry": "CA"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Montreal"},
+        {"@type": "City", "name": "Laval"},
+        {"@type": "City", "name": "Longueuil"},
+        {"@type": "City", "name": "Brossard"},
+        {"@type": "City", "name": "Boucherville"},
+        {"@type": "City", "name": "Saint-Constant"},
+        {"@type": "City", "name": "Châteauguay"},
+        {"@type": "City", "name": "Kahnawake"},
+        {"@type": "City", "name": "Vaudreuil-Dorion"},
+        {"@type": "City", "name": "L'Ile-Perrot"},
+        {"@type": "City", "name": "Saint-Lazare"},
+        {"@type": "City", "name": "Sainte-Anne-de-Bellevue"},
+        {"@type": "City", "name": "Baie-D'Urfe"},
+        {"@type": "City", "name": "Senneville"},
+        {"@type": "City", "name": "Kirkland"},
+        {"@type": "City", "name": "Beaconsfield"},
+        {"@type": "City", "name": "Dorval"},
+        {"@type": "City", "name": "Pierrefonds-Roxboro"},
+        {"@type": "City", "name": "Lachine"},
+        {"@type": "City", "name": "LaSalle"},
+        {"@type": "City", "name": "Verdun"},
+        {"@type": "City", "name": "Westmount"},
+        {"@type": "City", "name": "Cote Saint-Luc"},
+        {"@type": "City", "name": "Town of Mount Royal"},
+        {"@type": "City", "name": "Saint-Laurent"},
+        {"@type": "City", "name": "Sainte-Dorothee"},
+        {"@type": "City", "name": "Fabreville"},
+        {"@type": "City", "name": "Sainte-Rose"},
+        {"@type": "City", "name": "Boisbriand"},
+        {"@type": "City", "name": "Saint-Eustache"},
+        {"@type": "City", "name": "Deux-Montagnes"},
+        {"@type": "City", "name": "Dollard-des-Ormeaux"},
+        {"@type": "City", "name": "Ile Bizard"},
+        {"@type": "City", "name": "Chomedey"},
+        {"@type": "City", "name": "Outremont"}
+      ],
+      "description": "Master Electricians serving Residential, Commercial, and Industrial sectors across the Greater Montreal Area. Fully Insured and certified.",
+      "sameAs": ["https://biggelectric.ca"]
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config & Custom CSS -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            light: '#e6f0fa',
+                            dark: '#003d82',
+                            accent: '#facc15'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass {
+            background: rgba(17, 24, 39, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
+
+<!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 glass border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
+                    <span class="font-extrabold text-2xl md:text-3xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-500 dark:from-blue-400 dark:to-blue-200 drop-shadow-sm">Big G Electric</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors pb-2 -mb-2">
+                            <span data-i18n="nav-services">Services</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-2 w-[500px] rounded-xl shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 dark:border-gray-700 overflow-hidden">
+                            <div class="p-4 grid grid-cols-2 gap-x-6 gap-y-1">
+                                <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                                <a href="electric-car-charger-installation.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                                <a href="spa-and-pools.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                                <a href="lighting.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-lighting">Lighting</a>
+                                <a href="electrical-heating.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                                <a href="diagnostics-and-repairs.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                                <a href="electrical-panel-upgrades.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                                <a href="rewiring.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                                <a href="surge-protection.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                                <a href="heating-and-cooling.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                                <a href="home-protection-plan.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
+                                <a href="generators.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-gen">Generator</a>
+                                <a href="grants-and-tax-credits.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
+                                <a href="other-services.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors col-span-2" data-i18n="nav-other">Other Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="service-areas.html" class="text-brand-blue dark:text-blue-400 font-bold transition-colors" data-i18n="nav-areas">Service Areas</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-about">Why Us</a>
+                    <a href="index.html#reviews" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-reviews">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-blue-400 font-medium transition-colors" data-i18n="nav-contact">Contact Us</a>
+                </nav>
+
+                <!-- Controls: Lang, Theme, Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="langToggle" class="text-sm font-bold text-gray-700 dark:text-gray-300 hover:text-brand-blue transition-colors px-2 py-1 rounded border border-gray-300 dark:border-gray-700">
+                        FR
+                    </button>
+                    <button id="themeToggle" class="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Dark Mode">
+                        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <a href="tel:+15551234567" class="hidden lg:flex items-center gap-2 bg-brand-blue hover:bg-brand-dark text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg hover:shadow-brand-blue/30">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        <span data-i18n="nav-call">Call Now</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 absolute w-full left-0 shadow-xl transition-colors duration-300 max-h-[85vh] overflow-y-auto">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <div class="px-3 pb-2">
+                    <span class="block text-sm font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2" data-i18n="nav-services">Services</span>
+                    <div class="pl-3 border-l-2 border-gray-100 dark:border-gray-800 space-y-1">
+                        <a href="outdoor-landscape-lighting.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-outdoor">Outdoor and Landscape Lighting</a>
+                        <a href="electric-car-charger-installation.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-ev-install">Electric Car Charger Installation</a>
+                        <a href="spa-and-pools.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-spa">Spa and Pools</a>
+                        <a href="lighting.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-lighting">Lighting</a>
+                        <a href="electrical-heating.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-elec-heat">Electrical Heating</a>
+                        <a href="diagnostics-and-repairs.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-diag">Diagnostics & Repairs</a>
+                        <a href="electrical-panel-upgrades.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-panel">Electrical Panel Upgrades</a>
+                        <a href="rewiring.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-rewire">Rewiring</a>
+                        <a href="surge-protection.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-surge">Surge Protection</a>
+                        <a href="heating-and-cooling.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
+                        <a href="home-protection-plan.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
+                        <a href="generators.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-gen">Generator</a>
+                        <a href="grants-and-tax-credits.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
+                        <a href="other-services.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-other">Other Services</a>
+                    </div>
+                </div>
+                <a href="service-areas.html" class="block px-3 py-2 rounded-md text-base font-bold text-brand-blue dark:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-areas">Service Areas</a>
+                <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-about">Why Us</a>
+                <a href="index.html#reviews" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-reviews">Reviews</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" data-i18n="nav-contact">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-gray-900">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1590117409249-142277d3445d?q=80&w=2070&auto=format&fit=crop" alt="Map of Greater Montreal" class="w-full h-full object-cover opacity-30 mix-blend-luminosity">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-blue/20 border border-brand-blue/50 text-blue-200 font-semibold text-sm tracking-wider uppercase mb-6 backdrop-blur-sm">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    <span data-i18n="sa-hero-badge">Serving Your Community</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight" data-i18n="sa-hero-title">
+                    Master Electricians Across the <span class="text-brand-accent">Greater Montreal Area</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 font-light" data-i18n="sa-hero-subtitle">
+                    Whether you are in the West Island, Laval, or the South Shore, our fleet of fully stocked trucks is ready to dispatch. We proudly provide fast, reliable, and certified electrical services to your neighborhood.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:-translate-y-1" data-i18n="sa-cta-book">
+                        Request a Callout Today
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Intro Text -->
+        <section class="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="sa-intro-title">Local Experts, Regional Reach</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6" data-i18n="sa-intro-p1">
+                    Finding a dependable electrician near you shouldn't be a hassle. Big G Electric has dedicated teams servicing multiple regions to ensure we arrive promptly when you need us most. From complete home rewiring in heritage homes in Westmount to commercial lighting upgrades in Laval, and EV charger installations in Vaudreuil-Dorion, our licensed professionals understand the unique electrical codes and needs of your specific municipality.
+                </p>
+            </div>
+        </section>
+
+        <!-- Locations Grid Section -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white" data-i18n="sa-grid-title">Where We Work</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="sa-grid-subtitle">Below is a detailed list of the cities and communities we actively serve.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                    
+                    <!-- West Island -->
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center gap-3 mb-6 border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-brand-blue">
+                                <i data-lucide="navigation" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="sa-region-west">West Island</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-400 font-medium">
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Dollard-des-Ormeaux (DDO)</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Kirkland</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Beaconsfield</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Dorval</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Pierrefonds-Roxboro</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Sainte-Anne-de-Bellevue</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Baie-D'Urfé</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Senneville</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Île-Bizard</li>
+                        </ul>
+                    </div>
+
+                    <!-- Greater Montreal Area -->
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center gap-3 mb-6 border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-brand-blue">
+                                <i data-lucide="map" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="sa-region-mtl">Montreal Area</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-400 font-medium">
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Greater Montreal</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Saint-Laurent</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Westmount</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Outremont</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Town of Mount Royal (TMR)</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Côte Saint-Luc</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Lachine</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> LaSalle</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Verdun</li>
+                        </ul>
+                    </div>
+
+                    <!-- Laval & North Shore -->
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center gap-3 mb-6 border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-brand-blue">
+                                <i data-lucide="compass" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="sa-region-laval">Laval & North Shore</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-400 font-medium">
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Laval</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Chomedey</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Sainte-Dorothée</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Fabreville</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Sainte-Rose</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Boisbriand</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Saint-Eustache</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Deux-Montagnes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Vaudreuil & Off-Island -->
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow lg:col-start-2">
+                        <div class="flex items-center gap-3 mb-6 border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-brand-blue">
+                                <i data-lucide="route" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="sa-region-vaudreuil">Vaudreuil & Off-Island</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-400 font-medium">
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Vaudreuil-Dorion</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> L'Île-Perrot</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Saint-Lazare</li>
+                        </ul>
+                    </div>
+
+                    <!-- South Shore -->
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center gap-3 mb-6 border-b border-gray-100 dark:border-gray-800 pb-4">
+                            <div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-brand-blue">
+                                <i data-lucide="building-2" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="sa-region-south">South Shore</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600 dark:text-gray-400 font-medium">
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Longueuil</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Brossard</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Boucherville</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Châteauguay</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Kahnawake</li>
+                            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-green-500 shrink-0"></i> Saint-Constant</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 relative bg-brand-blue dark:bg-brand-dark overflow-hidden transition-colors duration-300">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-white opacity-5 mix-blend-overlay"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brand-accent opacity-10"></div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+                <i data-lucide="truck" class="w-16 h-16 text-brand-accent mx-auto mb-6"></i>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white tracking-wide" data-i18n="sa-bottom-cta">
+                    Don't See Your City Listed?
+                </h2>
+                <p class="text-xl text-blue-100 leading-relaxed mb-10 font-light" data-i18n="sa-bottom-p">
+                    If you live near any of the areas listed above, there is a very high chance we can still help you! Reach out to our team to confirm service availability for your exact address.
+                </p>
+                <a href="#contact" class="inline-block bg-brand-accent hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:-translate-y-1" data-i18n="sa-cta-book">
+                    Request a Callout Today
+                </a>
+            </div>
+        </section>
+
+        <!-- Minimal Contact Form Section -->
+        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+                <div class="bg-white dark:bg-gray-900 p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact-title">Request an Electrician in Your Area</h2>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="contact-subtitle">Leave your details and we'll dispatch our nearest professional to you shortly.</p>
+                    </div>
+                    <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-6">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-name">Full Name</label>
+                                <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-phone">Phone Number</label>
+                                <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-email">Email Address</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-city">City / Neighborhood</label>
+                                <input type="text" name="city" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-service">Service Needed</label>
+                            <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all appearance-none">
+                                <option data-i18n="nav-diag" selected>Diagnostics & Repairs</option>
+                                <option data-i18n="nav-lighting">Lighting</option>
+                                <option data-i18n="nav-ev-install">Electric Car Charger Installation</option>
+                                <option data-i18n="opt-other">Other / Home Safety</option>
+                                <option data-i18n="nav-gen">Generator Installation / Maintenance</option>
+                                <option data-i18n="nav-hvac">Heating and Cooling</option>
+                                <option data-i18n="nav-surge">Surge Protection</option>
+                                <option data-i18n="nav-panel">Electrical Panel Upgrades</option>
+                                <option data-i18n="nav-elec-heat">Electrical Heating</option>
+                                <option data-i18n="nav-outdoor">Outdoor and Landscape Lighting</option>
+                                <option data-i18n="nav-spa">Spa and Pools</option>
+                                <option data-i18n="opt-res">Residential Repair</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-message">Project Details / Message</label>
+                            <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-file">Upload Photos / Documents (Optional)</label>
+                            <input type="file" name="attachment" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-brand-blue file:text-white hover:file:bg-brand-dark cursor-pointer">
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold py-4 rounded-lg transition-colors" data-i18n="form-submit">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8 border-b border-gray-800 pb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <img src="logomark.webp" alt="Big G Electric Logo" class="w-8 h-8 rounded-lg object-contain bg-white">
+                        <span class="font-extrabold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Big G Electric</span>
+                    </div>
+                    <p class="text-sm mb-4" data-i18n="footer-desc">Professional electrical services, EV charging installation, and heat pump solutions serving the Greater Montreal area.</p>
+                    <p class="text-sm font-bold text-gray-300">RBQ : 8310-7342-46</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-contact">Contact Info</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Dollard-Des Ormeaux, QC</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (555) 123-4567</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> info@biggelectric.ca</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4" data-i18n="footer-hours">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-3 text-brand-accent font-bold mb-2">
+                            <i data-lucide="clock" class="w-5 h-5 shrink-0"></i>
+                            <span data-i18n="hours-247" class="leading-tight">Open 24 Hours,<br>7 Days a Week</span>
+                        </li>
+                        <li class="text-gray-400 mt-2 leading-relaxed" data-i18n="hours-desc">Available day and night for your electrical emergencies and scheduled projects.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm">
+                <p data-i18n="footer-rights">&copy; 2026 Big G Electric. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // --- Internationalization (i18n) Logic ---
+        const translations = {
+            en: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Outdoor and Landscape Lighting',
+                'nav-ev-install': 'Electric Car Charger Installation',
+                'nav-spa': 'Spa and Pools',
+                'nav-lighting': 'Lighting',
+                'nav-elec-heat': 'Electrical Heating',
+                'nav-diag': 'Diagnostics & Repairs',
+                'nav-panel': 'Electrical Panel Upgrades',
+                'nav-rewire': 'Rewiring',
+                'nav-surge': 'Surge Protection',
+                'nav-other': 'Other Services',
+                'nav-hvac': 'Heating and Cooling',
+                'nav-plan': 'Home Protection Plan',
+                'nav-gen': 'Generator',
+                'nav-grants': 'Grant and Tax Credit Programs',
+                'nav-areas': 'Service Areas',
+                'nav-about': 'Why Us',
+                'nav-reviews': 'Reviews',
+                'nav-contact': 'Contact Us',
+                'nav-call': 'Call Now',
+                
+                // Service Areas Page Specific
+                'sa-hero-badge': 'Serving Your Community',
+                'sa-hero-title': 'Master Electricians Across the <span class="text-brand-accent">Greater Montreal Area</span>',
+                'sa-hero-subtitle': 'Whether you are in the West Island, Laval, or the South Shore, our fleet of fully stocked trucks is ready to dispatch. We proudly provide fast, reliable, and certified electrical services to your neighborhood.',
+                'sa-cta-book': 'Request a Callout Today',
+                
+                'sa-intro-title': 'Local Experts, Regional Reach',
+                'sa-intro-p1': 'Finding a dependable electrician near you shouldn\'t be a hassle. Big G Electric has dedicated teams servicing multiple regions to ensure we arrive promptly when you need us most. From complete home rewiring in heritage homes in Westmount to commercial lighting upgrades in Laval, and EV charger installations in Vaudreuil-Dorion, our licensed professionals understand the unique electrical codes and needs of your specific municipality.',
+                
+                'sa-grid-title': 'Where We Work',
+                'sa-grid-subtitle': 'Below is a detailed list of the cities and communities we actively serve.',
+                'sa-region-mtl': 'Montreal Area',
+                'sa-region-west': 'West Island',
+                'sa-region-laval': 'Laval & North Shore',
+                'sa-region-vaudreuil': 'Vaudreuil & Off-Island',
+                'sa-region-south': 'South Shore',
+                
+                'sa-bottom-cta': 'Don\'t See Your City Listed?',
+                'sa-bottom-p': 'If you live near any of the areas listed above, there is a very high chance we can still help you! Reach out to our team to confirm service availability for your exact address.',
+
+                // Form & Footer
+                'contact-title': 'Request an Electrician in Your Area',
+                'contact-subtitle': 'Leave your details and we\'ll dispatch our nearest professional to you shortly.',
+                'form-name': 'Full Name',
+                'form-phone': 'Phone Number',
+                'form-email': 'Email Address',
+                'form-city': 'City / Neighborhood',
+                'form-service': 'Service Needed',
+                'form-message': 'Project Details / Message',
+                'form-file': 'Upload Photos / Documents (Optional)',
+                'opt-res': 'Residential Repair',
+                'opt-com': 'Commercial Project',
+                'opt-ev': 'EV Charging Station',
+                'opt-heat': 'Split Unit / AC / Heat Pump',
+                'opt-other': 'Other',
+                'form-submit': 'Submit Request',
+                'form-success': 'Thank you! Your request has been sent.',
+                'footer-desc': 'Professional electrical services, EV charging installation, and heat pump solutions serving the Greater Montreal area.',
+                'footer-contact': 'Contact Info',
+                'footer-hours': 'Business Hours',
+                'hours-247': 'Open 24 Hours,<br>7 Days a Week',
+                'hours-desc': 'Available day and night for your electrical emergencies and scheduled projects.',
+                'footer-rights': '© 2026 Big G Electric. All rights reserved.'
+            },
+            fr: {
+                'nav-services': 'Services',
+                'nav-outdoor': 'Éclairage Extérieur et Paysager',
+                'nav-ev-install': 'Installation de Borne de Recharge VE',
+                'nav-spa': 'Spas et Piscines',
+                'nav-lighting': 'Éclairage',
+                'nav-elec-heat': 'Chauffage Électrique',
+                'nav-diag': 'Diagnostics et Réparations',
+                'nav-panel': 'Mise à Niveau de Panneaux Électriques',
+                'nav-rewire': 'Recâblage',
+                'nav-surge': 'Protection Contre les Surtensions',
+                'nav-other': 'Autres Services',
+                'nav-hvac': 'Chauffage et Climatisation',
+                'nav-plan': 'Plan de Protection Domiciliaire',
+                'nav-gen': 'Génératrice',
+                'nav-grants': 'Programmes de Subventions et Crédits',
+                'nav-areas': 'Zones de Service',
+                'nav-about': 'Pourquoi Nous',
+                'nav-reviews': 'Avis',
+                'nav-contact': 'Contactez-nous',
+                'nav-call': 'Appelez',
+
+                // Service Areas Page Specific
+                'sa-hero-badge': 'Au Service de Votre Communauté',
+                'sa-hero-title': 'Maîtres Électriciens dans la <span class="text-brand-accent">Grande Région de Montréal</span>',
+                'sa-hero-subtitle': 'Que vous soyez dans l\'Ouest-de-l\'Île, à Laval ou sur la Rive-Sud, notre flotte de camions est prête à être déployée. Nous fournissons fièrement des services électriques rapides, fiables et certifiés dans votre quartier.',
+                'sa-cta-book': 'Demander une Intervention',
+                
+                'sa-intro-title': 'Experts Locaux, Portée Régionale',
+                'sa-intro-p1': 'Trouver un électricien fiable près de chez vous ne devrait pas être un casse-tête. Big G Electric dispose d\'équipes dédiées desservant plusieurs régions pour s\'assurer que nous arrivons rapidement quand vous avez le plus besoin de nous. Du recâblage complet de maisons patrimoniales à Westmount aux modernisations d\'éclairage commercial à Laval, en passant par l\'installation de bornes VE à Vaudreuil-Dorion, nos professionnels certifiés comprennent les codes électriques uniques et les besoins de votre municipalité spécifique.',
+                
+                'sa-grid-title': 'Où Nous Travaillons',
+                'sa-grid-subtitle': 'Voici une liste détaillée des villes et communautés que nous desservons activement.',
+                'sa-region-mtl': 'Région de Montréal',
+                'sa-region-west': 'Ouest-de-l\'Île (West Island)',
+                'sa-region-laval': 'Laval & Rive-Nord',
+                'sa-region-vaudreuil': 'Vaudreuil & Hors-Île',
+                'sa-region-south': 'Rive-Sud',
+                
+                'sa-bottom-cta': 'Votre Ville N\'est Pas Listée ?',
+                'sa-bottom-p': 'Si vous habitez près de l\'une des zones énumérées ci-dessus, il y a de très fortes chances que nous puissions quand même vous aider ! Contactez notre équipe pour confirmer la disponibilité du service pour votre adresse exacte.',
+
+                // Form & Footer
+                'contact-title': 'Demander un Électricien Dans Votre Région',
+                'contact-subtitle': 'Laissez vos coordonnées et nous enverrons notre professionnel le plus proche vers vous sous peu.',
+                'form-name': 'Nom Complet',
+                'form-phone': 'Numéro de Téléphone',
+                'form-email': 'Adresse Courriel',
+                'form-city': 'Ville / Quartier',
+                'form-service': 'Service Requis',
+                'form-message': 'Détails du Projet / Message',
+                'form-file': 'Télécharger des Photos / Documents (Optionnel)',
+                'opt-res': 'Réparation Résidentielle',
+                'opt-com': 'Projet Commercial',
+                'opt-ev': 'Borne de Recharge VE',
+                'opt-heat': 'Unité Murale / Clim / Thermopompe',
+                'opt-other': 'Autre',
+                'form-submit': 'Soumettre la Demande',
+                'form-success': 'Merci ! Votre demande a été envoyée.',
+                'footer-desc': 'Services électriques professionnels, installation de recharge VE et solutions de thermopompes desservant la région du Grand Montréal.',
+                'footer-contact': 'Coordonnées',
+                'footer-hours': 'Heures d\'Ouverture',
+                'hours-247': 'Ouvert 24 heures,<br>7 jours sur 7',
+                'hours-desc': 'Disponible jour et nuit pour vos urgences électriques et projets planifiés.',
+                'footer-rights': '© 2026 Big G Electric. Tous droits réservés.'
+            }
+        };
+
+        let currentLang = 'en';
+        const langBtn = document.getElementById('langToggle');
+
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'fr' : 'en';
+            langBtn.textContent = currentLang === 'en' ? 'FR' : 'EN';
+            document.documentElement.lang = currentLang;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+            // Re-initialize icons
+            lucide.createIcons();
+        });
+
+
+        // --- Theme Toggle Logic (Light/Dark Mode) ---
+        const themeBtn = document.getElementById('themeToggle');
+        const htmlEl = document.documentElement;
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            htmlEl.classList.add('dark');
+            htmlEl.classList.remove('light');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            htmlEl.classList.toggle('light');
+        });
+
+
+        // --- Scroll Reveal Animation Logic ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
