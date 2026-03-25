@@ -25,3 +25,22 @@ also make it say home standby generators
 we're proud to be a Champion standby authorized dealer. 
 
 remove the mention of electrika 
+add certifications and insurance area and mention corporation des maitres des electriciens du quebec.
+
+ 5 year warranty image that murray texted you. 
+
+ add in an area of work location. 
+
+ she works in vaudreuil dorion, dorion or daurion, encore, ile perot, st anne de bellevue, baie durfe, senneville, kirkland, beaconsfield, dorval, pierrefonds - roxboro, lachine, lasalle, verdun, westmont, cote st luc, royalmount, st laurent, st dorthey, fabreville, st rose, boisdrand, st eustach, deux montagnes, ddo dollar des ormeaux, ile bizard, roxboro, chomedy, outremont, st lazare, greater montreal area, laval, montreal, longueil.
+
+murray wants to also put in that she's a master electrician and we need the rdq number there as well next to it. 
+
+add the number for her telephone number for big g and make it strobing like we did for murray but put it above the header and make it an eye catching color. 
+
+change the why us and mention that we're fully licensed and insured, like the groupe quenville put a bar or something that says certified and insurance and all the info. 
+
+RBQ:5723-9014-01 is the rbq number and instead of rdq. 
+
+and mention that they do residential, commercial and industrial as she says it on her trucks as well. 
+
+add in service area tab.
