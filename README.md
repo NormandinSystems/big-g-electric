@@ -1,9 +1,3 @@
-get logo for hydro Quebec, finance air and nova air heat pumps and ac, 
-
-mention tesla certified installers, 
-
-remove home automation
-
 make sure all images are files on the site and are functional
 
 her generators aren't generac they're champion generators she's also an authorized resell and repairer of the generators. murray will tell you which models she runs and we can get everything from their website, manuals, picturs, details, etc. 
@@ -28,10 +22,6 @@ remove the mention of electrika
 add certifications and insurance area and mention corporation des maitres des electriciens du quebec.
 
  5 year warranty image that murray texted you. 
-
- add in an area of work location. 
-
- she works in vaudreuil dorion, dorion or daurion, encore, ile perot, st anne de bellevue, baie durfe, senneville, kirkland, beaconsfield, dorval, pierrefonds - roxboro, lachine, lasalle, verdun, westmont, cote st luc, royalmount, st laurent, st dorthey, fabreville, st rose, boisdrand, st eustach, deux montagnes, ddo dollar des ormeaux, ile bizard, roxboro, chomedy, outremont, st lazare, greater montreal area, laval, montreal, longueil.
 
 murray wants to also put in that she's a master electrician and we need the rdq number there as well next to it. 
 
