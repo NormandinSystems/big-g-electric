@@ -32,5 +32,3 @@ change the why us and mention that we're fully licensed and insured, like the gr
 RBQ:5723-9014-01 is the rbq number and instead of rdq. 
 
 and mention that they do residential, commercial and industrial as she says it on her trucks as well. 
-
-add in service area tab.
