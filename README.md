@@ -18,6 +18,4 @@ also make it say home standby generators
 
 we're proud to be a Champion standby authorized dealer. 
 
-remove the mention of electrika 
-
 make sure phone numbers are all correct on the click call nows for the entire site. 
