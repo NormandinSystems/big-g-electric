@@ -1,4 +1,3 @@
-make sure all images are files on the site and are functional
 
 her generators aren't generac they're champion generators she's also an authorized resell and repairer of the generators. murray will tell you which models she runs and we can get everything from their website, manuals, picturs, details, etc. 
 
@@ -17,8 +16,6 @@ she also needs pictures of the generators
 also make it say home standby generators
 
 we're proud to be a Champion standby authorized dealer. 
-
-make sure phone numbers are all correct on the click call nows for the entire site. 
 
 mention she has like the 5 million dollr insurance fully insured up to 5 million dollars, murray sent it. 
 
