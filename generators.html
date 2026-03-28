@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
-    <title>Backup Generator Solutions | Generac Dealer | Big G Electric Montreal</title>
-    <meta name="description" content="Never be caught in the dark again. Big G Electric offers professional installation and maintenance of Generac home standby generators in Montreal and Laval.">
-    <meta name="keywords" content="Generac dealer Montreal, home backup generators, standby generator installation, generator maintenance Laval, power outage protection, Big G Electric">
+    <!-- SEO Meta Tags & Keywords -->
+    <title>Home Standby Generators | Champion Authorized Dealer | Big G Electric</title>
+    <meta name="description" content="Never be caught in the dark again. Big G Electric is your authorized Champion Power Equipment dealer, reseller, and repair center for home standby generators in Montreal and Laval.">
+    <meta name="keywords" content="Champion home standby generators, Champion Power Equipment, authorized generator dealer Montreal, generator reseller, generator repairer, home backup generators, standby generator installation, generator maintenance Laval, whole-home generator, power outage protection, flexible financing generator, Big G Electric">
     <meta name="author" content="Big G Electric">
     <meta name="robots" content="index, follow">
     
@@ -16,12 +16,12 @@
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "Backup Generator Installation and Maintenance",
+      "name": "Champion Home Standby Generator Installation and Repair",
       "provider": {
         "@type": "Electrician",
         "name": "Big G Electric",
         "image": "logomark.webp",
-        "telephone": "+15551234567",
+        "telephone": "+15149416061",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dollard-Des Ormeaux",
@@ -30,7 +30,7 @@
         }
       },
       "areaServed": ["Montreal", "Laval", "West Island", "South Shore"],
-      "description": "Authorized Generac Service Dealer providing partial and whole-home backup power systems, including installation, tune-ups, and comprehensive maintenance plans."
+      "description": "Authorized Champion Power Equipment Service Dealer, Reseller, and Repair Center providing partial and whole-home standby backup power systems, including flexible payment options, installation, tune-ups, and comprehensive maintenance plans."
     }
     </script>
 
@@ -59,7 +59,8 @@
                             blue: '#0056b3',
                             light: '#e6f0fa',
                             dark: '#003d82',
-                            accent: '#facc15'
+                            accent: '#facc15',
+                            champion: '#ffc107' // Champion yellow/gold
                         }
                     }
                 }
@@ -84,6 +85,51 @@
             background: rgba(17, 24, 39, 0.9);
             backdrop-filter: blur(10px);
         }
+        /* Modal Transitions */
+        .modal-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            transform: scale(0.95) translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        .modal-overlay.open .modal-content {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+        /* Custom Scrollbar for large modals */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.2);
+        }
+        /* Hide scrollbar for gallery but allow scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-300">
@@ -94,7 +140,7 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
                 <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
-                    <img src="logomark.webp" alt="Big G Electric Logo" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
+                    <img src="logomark.webp" alt="Big G Electric Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%230056b3\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><path d=\'M13 2L3 14h9l-1 8 10-12h-9l1-8z\'/></svg>'" class="w-10 h-10 rounded-lg object-contain bg-white shadow-sm group-hover:shadow-md transition-shadow">
                     <span class="font-extrabold text-2xl md:text-3xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-500 dark:from-blue-400 dark:to-blue-200 drop-shadow-sm">Big G Electric</span>
                 </a>
 
@@ -118,7 +164,7 @@
                                 <a href="surge-protection.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-surge">Surge Protection</a>
                                 <a href="heating-and-cooling.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
                                 <a href="home-protection-plan.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
-                                <a href="generators.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-gen">Generator</a>
+                                <a href="generators.html" class="block px-3 py-2 text-sm text-brand-blue dark:text-blue-400 bg-brand-light dark:bg-gray-700/50 hover:bg-brand-light dark:hover:bg-gray-700 font-semibold rounded transition-colors" data-i18n="nav-gen">Home Standby Generators</a>
                                 <a href="grants-and-tax-credits.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
                                 <a href="other-services.html" class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-brand-blue dark:hover:text-blue-400 rounded transition-colors col-span-2" data-i18n="nav-other">Other Services</a>
                             </div>
@@ -169,7 +215,7 @@
                         <a href="surge-protection.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-surge">Surge Protection</a>
                         <a href="heating-and-cooling.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-hvac">Heating and Cooling</a>
                         <a href="home-protection-plan.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-plan">Home Protection Plan</a>
-                        <a href="generators.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-gen">Generator</a>
+                        <a href="generators.html" class="block px-3 py-2 rounded-md text-sm font-medium text-brand-blue dark:text-blue-400 bg-brand-light dark:bg-gray-800 transition-colors" data-i18n="nav-gen">Home Standby Generators</a>
                         <a href="grants-and-tax-credits.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-grants">Grant and Tax Credit Programs</a>
                         <a href="other-services.html" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-blue dark:hover:text-blue-400 transition-colors" data-i18n="nav-other">Other Services</a>
                     </div>
@@ -187,20 +233,20 @@
         <section class="relative py-24 lg:py-32 flex items-center justify-center overflow-hidden bg-gray-900">
             <!-- Background Image -->
             <div class="absolute inset-0 z-0">
-                <img src="homeduringapoweroutage.jpg" alt="Home during a dark storm" class="w-full h-full object-cover opacity-40">
+                <img src="homeduringapoweroutage.jpg" onerror="this.src='https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2070&auto=format&fit=crop'" alt="Home during a dark storm" class="w-full h-full object-cover opacity-40">
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-gray-900/40"></div>
             </div>
 
-            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-accent/20 border border-brand-accent/50 text-yellow-400 font-semibold text-sm tracking-wider uppercase mb-6 backdrop-blur-sm">
                     <i data-lucide="zap" class="w-4 h-4"></i>
                     <span data-i18n="gen-hero-badge">Never Be Caught In The Dark Again</span>
                 </div>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight" data-i18n="gen-hero-title">
-                    Backup Generator Solutions in <span class="text-brand-accent">Montreal</span>
+                    Home Standby Generators in <span class="text-brand-accent">Montreal</span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-8 font-light" data-i18n="gen-hero-desc">
-                    At Big G Electric, we are seeing a growing demand for partial and whole-home backup power systems due to increased power outages. We can match you with the right size generator for your peace of mind.
+                <p class="text-lg md:text-xl text-gray-300 mb-8 font-light max-w-3xl mx-auto" data-i18n="gen-hero-desc">
+                    At Big G Electric, we are seeing a growing demand for partial and whole-home standby backup power systems due to increased power outages. We can match you with the right size Champion Power Equipment generator for your peace of mind, from installation to comprehensive repair.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <a href="#contact" class="bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:-translate-y-1" data-i18n="gen-cta-book">
@@ -210,16 +256,18 @@
             </div>
         </section>
 
-        <!-- Partner Banner -->
-        <section class="py-8 bg-brand-blue dark:bg-brand-dark transition-colors duration-300 border-b border-gray-200 dark:border-gray-800">
+        <!-- Partner Banner (Champion Specific) -->
+        <section class="py-10 bg-gray-900 dark:bg-black transition-colors duration-300 border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 reveal">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 reveal">
                     <h3 class="text-xl md:text-2xl font-bold text-white tracking-wide text-center" data-i18n="gen-partner-text">
                         We are proud to be a
                     </h3>
-                    <div class="bg-white px-6 py-3 rounded-lg shadow-md flex items-center gap-3">
-                        <i data-lucide="shield-check" class="w-8 h-8 text-brand-blue"></i>
-                        <span class="text-gray-900 font-extrabold text-xl tracking-tight uppercase" data-i18n="gen-partner-badge">Generac Authorized Service Dealer</span>
+                    <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 px-6 py-4 rounded-xl shadow-lg flex items-center gap-3 border border-yellow-400">
+                        <i data-lucide="award" class="w-8 h-8 text-gray-900"></i>
+                        <span class="text-gray-900 font-extrabold text-lg md:text-xl tracking-tight uppercase" data-i18n="gen-partner-badge">
+                            Champion Standby Authorized Dealer, Reseller & Repair Center
+                        </span>
                     </div>
                 </div>
             </div>
@@ -229,9 +277,9 @@
         <section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="gen-ben-title">Benefits of a New Generac Standby Generator</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="gen-ben-title">Benefits of a Champion Home Standby Generator</h2>
                     <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="gen-ben-subtitle">
-                        By choosing a Generac standby generator from Big G Electric, you ensure reliable power backup, professional service, and long-term value for your home.
+                        By choosing a Champion Power Equipment standby generator from Big G Electric, you ensure reliable power backup, professional installation, authorized repair services, and long-term value for your home.
                     </p>
                 </div>
 
@@ -239,66 +287,307 @@
                     <!-- Reliability -->
                     <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
                         <i data-lucide="shield" class="w-8 h-8 text-brand-blue mb-4"></i>
-                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b1-title">Reliability</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b1-desc">Generac generators are known for their reliability and ability to provide continuous power during outages, ensuring your home remains functional.</p>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b1-title">Unmatched Reliability</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b1-desc">Champion standby generators are engineered for absolute reliability, providing continuous whole-home power during outages to keep your life running smoothly.</p>
                     </div>
 
                     <!-- Automatic Operation -->
                     <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
                         <i data-lucide="power" class="w-8 h-8 text-brand-blue mb-4"></i>
                         <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b2-title">Automatic Operation</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b2-desc">These generators automatically detect power outages and start up within seconds, providing a seamless transition and minimizing disruption.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b2-desc">Champion generators automatically detect grid power outages and start up within seconds, providing a seamless transition with zero manual intervention required.</p>
                     </div>
 
-                    <!-- Fuel Options -->
+                    <!-- Factory Authorized -->
                     <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
-                        <i data-lucide="flame" class="w-8 h-8 text-brand-blue mb-4"></i>
-                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b3-title">Flexible Fuel Options</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b3-desc">Generac generators can run on natural gas or liquid propane, providing flexibility in fuel choice and ensuring a steady supply of power.</p>
+                        <i data-lucide="tool" class="w-8 h-8 text-brand-blue mb-4"></i>
+                        <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b3-title">Authorized Repair & Service</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b3-desc">As an official reseller and repairer, Big G Electric guarantees factory-certified parts, professional tune-ups, and expert repairs for your Champion equipment.</p>
                     </div>
 
                     <!-- Protection -->
                     <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
                         <i data-lucide="monitor" class="w-8 h-8 text-brand-blue mb-4"></i>
                         <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b4-title">Protection for Appliances</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b4-desc">By providing a stable power source, these generators protect your sensitive home appliances and electronics from damage caused by power surges.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b4-desc">Providing clean, stable power, Champion standby systems protect your sensitive electronics, HVAC systems, and home appliances from damaging power surges.</p>
                     </div>
 
                     <!-- Increased Value -->
                     <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
                         <i data-lucide="trending-up" class="w-8 h-8 text-brand-blue mb-4"></i>
                         <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b5-title">Increased Home Value</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b5-desc">Installing a standby generator can dramatically enhance your home’s value and appeal to future buyers, making it a valuable long-term investment.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b5-desc">Installing a permanent home standby generator dramatically enhances your property's value and appeal to future buyers, making it a smart long-term investment.</p>
                     </div>
 
                     <!-- Peace of Mind -->
                     <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
                         <i data-lucide="heart" class="w-8 h-8 text-brand-blue mb-4"></i>
                         <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2" data-i18n="gen-b6-title">Total Peace of Mind</h4>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b6-desc">Have peace of mind knowing your home will remain powered during extreme weather emergencies, protecting your family’s comfort and safety.</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed" data-i18n="gen-b6-desc">Rest easy knowing your family will remain warm, safe, and connected during severe winter storms and extreme weather emergencies in Montreal and Laval.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Generator Models Section (Cards) -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300 border-t border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white" data-i18n="models-title">Our Champion Generator Lineup</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="models-subtitle">
+                        Explore our selection of industry-leading Champion standby generators. Find the perfect fit for your home's power needs.
+                    </p>
+                </div>
+
+                <!-- 
+                  TO ADD OR REMOVE CARDS:
+                  1. Copy or delete the block starting from "<!-- Model X... " to its closing </div>.
+                  2. Ensure the openModal('modal-X') matches the ID of the modal at the bottom.
+                  3. Add or remove the matching 'modX-title', 'modX-desc', etc. in the JS translation dictionary. 
+                -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                    
+                    <!-- Model 1: 22kW aXis -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
+                        <div class="h-48 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center p-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="zap" class="w-20 h-20 text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full">22 kW</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod1-title">22-kW Home Standby w/ 200A Switch</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod1-desc">Includes a 200A aXis automatic transfer switch. Highly efficient, manages high-demand appliances easily with advanced technology.</p>
+                            <div class="space-y-3">
+                                <button onclick="openModal('modal-1')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-more-info">More Info</span>
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                </button>
+                                <a href="https://drive.google.com/file/d/1QOlQKhH8IwFyAfs8ZY2Vd_00w1H4ZJ7O/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-manual">View Manual</span>
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 2: 10kW -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
+                        <div class="h-48 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center p-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="zap" class="w-20 h-20 text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full">10 kW</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod2-title">10-kW Home Standby</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod2-desc">A great starter unit for small homes, easily protecting your kitchen appliances, heating system, and living spaces.</p>
+                            <div class="space-y-3">
+                                <button onclick="openModal('modal-2')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-more-info">More Info</span>
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                </button>
+                                <a href="https://drive.google.com/your-manual-link-2" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-manual">View Manual</span>
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 3: 12.5kW -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
+                        <div class="h-48 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center p-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="zap" class="w-20 h-20 text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full">12.5 kW</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod3-title">12.5-kW Home Standby</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod3-desc">Expanded coverage for medium homes. Runs multiple high-draw appliances simultaneously without overloading.</p>
+                            <div class="space-y-3">
+                                <button onclick="openModal('modal-3')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-more-info">More Info</span>
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                </button>
+                                <a href="https://drive.google.com/your-manual-link-3" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-manual">View Manual</span>
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 4: 14kW (Most Popular) -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group relative">
+                        <div class="absolute top-0 left-0 w-full bg-brand-accent text-gray-900 text-xs font-bold text-center py-1 z-10 uppercase tracking-widest" data-i18n="badge-popular">Most Popular</div>
+                        <div class="h-48 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center p-6 border-b border-gray-200 dark:border-gray-700 mt-6">
+                            <i data-lucide="zap" class="w-20 h-20 text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full">14 kW</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod4-title">14-kW Home Standby</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod4-desc">The ideal mid-size solution. Powers most of the home including heavy loads like central A/C units and electric water heaters.</p>
+                            <div class="space-y-3">
+                                <button onclick="openModal('modal-4')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-more-info">More Info</span>
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                </button>
+                                <a href="https://drive.google.com/your-manual-link-4" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-manual">View Manual</span>
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 5: 16kW -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
+                        <div class="h-48 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center p-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="zap" class="w-20 h-20 text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full">16 kW</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod5-title">16-kW Home Standby</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod5-desc">Advanced mid-size power. Delivers the extra push needed to support larger homes without jumping to a massive unit.</p>
+                            <div class="space-y-3">
+                                <button onclick="openModal('modal-5')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-more-info">More Info</span>
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                </button>
+                                <a href="https://drive.google.com/your-manual-link-5" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-manual">View Manual</span>
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 6: 18kW -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
+                        <div class="h-48 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center p-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="zap" class="w-20 h-20 text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full">18 kW</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod6-title">18-kW Home Standby</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod6-desc">The entry point for large homes. Easily handles multiple large electrical loads seamlessly during an outage.</p>
+                            <div class="space-y-3">
+                                <button onclick="openModal('modal-6')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-more-info">More Info</span>
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                </button>
+                                <a href="https://drive.google.com/your-manual-link-6" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-manual">View Manual</span>
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 7: 20kW -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
+                        <div class="h-48 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center p-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="zap" class="w-20 h-20 text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full">20 kW</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod7-title">20-kW Home Standby</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod7-desc">Premium power for demanding households. Keeps your luxury appliances and dual HVAC systems running perfectly.</p>
+                            <div class="space-y-3">
+                                <button onclick="openModal('modal-7')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-more-info">More Info</span>
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                </button>
+                                <a href="https://drive.google.com/your-manual-link-7" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-manual">View Manual</span>
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 8: 22kW -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
+                        <div class="h-48 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center p-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="zap" class="w-20 h-20 text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full">22 kW</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod8-title">22-kW Home Standby</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod8-desc">Maximum whole-home power. Designed to handle everything seamlessly, keeping your large home fully operational.</p>
+                            <div class="space-y-3">
+                                <button onclick="openModal('modal-8')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-more-info">More Info</span>
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                </button>
+                                <a href="https://drive.google.com/your-manual-link-8" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-manual">View Manual</span>
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model 9: 24kW -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
+                        <div class="h-48 bg-gray-100 dark:bg-gray-800 relative flex items-center justify-center p-6 border-b border-gray-200 dark:border-gray-700">
+                            <i data-lucide="zap" class="w-20 h-20 text-gray-300 dark:text-gray-600 group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full">24 kW</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod9-title">24-kW Home Standby</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod9-desc">The ultimate backup solution. Absolute maximum capacity to support sprawling properties and commercial-grade needs.</p>
+                            <div class="space-y-3">
+                                <button onclick="openModal('modal-9')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-more-info">More Info</span>
+                                    <i data-lucide="info" class="w-4 h-4"></i>
+                                </button>
+                                <a href="https://drive.google.com/your-manual-link-9" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-manual">View Manual</span>
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Flexible Payment / Financing Section -->
+        <section class="py-16 bg-brand-light dark:bg-brand-dark/30 border-y border-brand-blue/10 dark:border-gray-800 transition-colors duration-300">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col md:flex-row items-center gap-8 reveal">
+                    <div class="flex-shrink-0 bg-brand-blue/10 dark:bg-brand-blue/20 p-6 rounded-full">
+                        <i data-lucide="credit-card" class="w-16 h-16 text-brand-blue dark:text-blue-400"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4" data-i18n="finance-title">Flexible Payment Options Available</h2>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 mb-6" data-i18n="finance-desc">
+                            Don't let budget constraints leave you in the dark. We have partnered with top financial institutions to offer flexible payment options and financing plans for your new Champion home standby generator. Get the backup power you need today, and pay over time!
+                        </p>
+                        <a href="#contact" class="inline-flex items-center gap-2 text-brand-blue dark:text-blue-400 font-bold hover:underline" data-i18n="finance-cta">
+                            Ask about our financing plans <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Maintenance Pricing Plans -->
-        <section class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+        <section class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white" data-i18n="gen-plans-title">Membership & Maintenance Options</h2>
-                    <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="gen-plans-subtitle">Keep your generator running perfectly year-round with our exclusive Generac service plans.</p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400" data-i18n="gen-plans-subtitle">Keep your Champion generator running perfectly year-round with our authorized service plans.</p>
                 </div>
 
                 <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto reveal">
                     <!-- Silver Plan -->
-                    <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col h-full hover:shadow-lg transition-shadow">
+                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col h-full hover:shadow-lg transition-shadow">
                         <div class="mb-6">
-                            <h3 class="text-2xl font-bold text-gray-400 dark:text-gray-500 mb-2" data-i18n="gen-plan1-name">Silver</h3>
+                            <h3 class="text-2xl font-bold text-gray-400 dark:text-gray-400 mb-2" data-i18n="gen-plan1-name">Silver</h3>
                             <div class="flex items-baseline gap-1">
                                 <span class="text-4xl font-extrabold text-gray-900 dark:text-white">$389</span>
                                 <span class="text-gray-500 font-medium" data-i18n="gen-annually">/ Annually</span>
                             </div>
-                            <p class="text-sm font-semibold text-brand-blue mt-2" data-i18n="gen-p1-visits">1 Visit Included</p>
+                            <p class="text-sm font-semibold text-brand-blue dark:text-blue-400 mt-2" data-i18n="gen-p1-visits">1 Visit Included</p>
                         </div>
                         <ul class="space-y-4 mb-8 flex-grow">
                             <li class="flex items-start gap-3">
@@ -318,7 +607,7 @@
                                 <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p-feat4">Guaranteed 24hr office response time</span>
                             </li>
                         </ul>
-                        <a href="#contact" class="w-full block text-center bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold py-3 rounded-xl transition-colors" data-i18n="gen-btn-select">Select Silver</a>
+                        <a href="#contact" class="w-full block text-center bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-bold py-3 rounded-xl transition-colors" data-i18n="gen-btn-select">Select Silver</a>
                     </div>
 
                     <!-- Platinum Plan (Featured) -->
@@ -364,14 +653,14 @@
                     </div>
 
                     <!-- Gold Plan -->
-                    <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col h-full hover:shadow-lg transition-shadow">
+                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-sm border border-gray-200 dark:border-gray-700 flex flex-col h-full hover:shadow-lg transition-shadow">
                         <div class="mb-6">
                             <h3 class="text-2xl font-bold text-yellow-600 dark:text-yellow-500 mb-2" data-i18n="gen-plan2-name">Gold</h3>
                             <div class="flex items-baseline gap-1">
                                 <span class="text-4xl font-extrabold text-gray-900 dark:text-white">$529</span>
                                 <span class="text-gray-500 font-medium" data-i18n="gen-annually">/ Annually</span>
                             </div>
-                            <p class="text-sm font-semibold text-brand-blue mt-2" data-i18n="gen-p2-visits">2 Visits Included</p>
+                            <p class="text-sm font-semibold text-brand-blue dark:text-blue-400 mt-2" data-i18n="gen-p2-visits">2 Visits Included</p>
                         </div>
                         <ul class="space-y-4 mb-8 flex-grow">
                             <li class="flex items-start gap-3">
@@ -395,7 +684,7 @@
                                 <span class="text-gray-600 dark:text-gray-300 text-sm" data-i18n="gen-p-feat4">Guaranteed 24hr office response time</span>
                             </li>
                         </ul>
-                        <a href="#contact" class="w-full block text-center bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-bold py-3 rounded-xl transition-colors" data-i18n="gen-btn-select">Select Gold</a>
+                        <a href="#contact" class="w-full block text-center bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-bold py-3 rounded-xl transition-colors" data-i18n="gen-btn-select">Select Gold</a>
                     </div>
                 </div>
 
@@ -407,14 +696,14 @@
                         <li data-i18n="gen-fine-2">Extra maintenance visit after 100hrs of runtime available for plan holders at $299 / extra visit required.</li>
                         <li data-i18n="gen-fine-3">All maintenance and tune up visits to be scheduled Monday-Friday between 8am-5pm at our convenience.</li>
                         <li data-i18n="gen-fine-4"><strong>$189 Emergency call out fee</strong> (plus applicable charges for work).</li>
-                        <li data-i18n="gen-fine-5">Repairs are not included with maintenance plans unless covered by Generac warranty.</li>
+                        <li data-i18n="gen-fine-5">Repairs are not included with maintenance plans unless covered by Champion warranty.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- Checklists -->
-        <section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
+        <section class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300 border-t border-gray-200 dark:border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white" data-i18n="gen-chk-title">What is Included in Our Visits?</h2>
@@ -425,41 +714,41 @@
                     <!-- Maintenance Checklist -->
                     <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700">
                         <div class="flex items-center gap-4 mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
-                            <i data-lucide="settings" class="w-8 h-8 text-brand-blue"></i>
+                            <i data-lucide="settings" class="w-8 h-8 text-brand-blue dark:text-blue-400"></i>
                             <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="gen-cl1-title">Generator Maintenance</h3>
                         </div>
                         <ul class="space-y-3">
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-1">Change oil & replace oil filter</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-2">Replace air filter & spark plugs</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-3">Check wiring for loose connections & corrosion</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-4">Clean and tighten battery terminals</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-5">Valve adjustments (if required)</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-6">Transfer power for 10 min (if ATS accessible)</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-7">Check battery state & cranking voltage</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-8">Gas pressure test</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-9">Check generator voltage and amperage output</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-10">Check fuel pressure under load</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-11">Clean interior and exterior of generator</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-12">Run generator 5 minutes off load</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-1">Change oil & replace oil filter</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-2">Replace air filter & spark plugs</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-3">Check wiring for loose connections & corrosion</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-4">Clean and tighten battery terminals</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-5">Valve adjustments (if required)</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-6">Transfer power for 10 min (if ATS accessible)</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-7">Check battery state & cranking voltage</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-8">Gas pressure test</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-9">Check generator voltage and amperage output</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-10">Check fuel pressure under load</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-11">Clean interior and exterior of generator</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c1-12">Run generator 5 minutes off load</span></li>
                         </ul>
                     </div>
 
                     <!-- Tune Up Checklist -->
-                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 flex flex-col">
                         <div class="flex items-center gap-4 mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
-                            <i data-lucide="wrench" class="w-8 h-8 text-brand-blue"></i>
+                            <i data-lucide="wrench" class="w-8 h-8 text-brand-blue dark:text-blue-400"></i>
                             <h3 class="text-2xl font-bold text-gray-900 dark:text-white" data-i18n="gen-cl2-title">Generator Tune Up</h3>
                         </div>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-1">Pre-winter inspection</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-2">Start-up</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-3">Check voltage</span></li>
-                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-4">Check oil</span></li>
+                        <ul class="space-y-3 flex-grow">
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-1">Pre-winter inspection</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-2">Start-up testing</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-3">Check voltage</span></li>
+                            <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="gen-c2-4">Check oil levels</span></li>
                         </ul>
                         
                         <div class="mt-8 p-6 bg-brand-blue/10 dark:bg-brand-blue/5 rounded-2xl border border-brand-blue/20">
                             <p class="text-sm text-gray-700 dark:text-gray-300 italic" data-i18n="gen-cl-note">
-                                "Big G Electric offers professional installation and maintenance, ensuring your generator is correctly set up and functioning optimally, with ongoing support as needed."
+                                "Big G Electric offers professional installation, authorized repair, and ongoing maintenance, ensuring your Champion generator is correctly set up and functioning optimally for years to come."
                             </p>
                         </div>
                     </div>
@@ -467,16 +756,23 @@
             </div>
         </section>
 
-        <!-- Minimal Contact Form Section -->
+        <!-- Netlify-Ready Contact Form Section -->
         <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300 border-t border-gray-200 dark:border-gray-700">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
                 <div class="bg-white dark:bg-gray-900 p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700">
                     <div class="text-center mb-8">
                         <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="contact-title">Request a Callback</h2>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="contact-subtitle">Leave your details and we'll get back to you shortly to explore your generator options.</p>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="contact-subtitle">Leave your details and we'll get back to you shortly to explore your home standby generator and financing options.</p>
                     </div>
-                    <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-6">
+                    
+                    <!-- Netlify Form Definition (Fully Configured) -->
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="space-y-6">
+                        <!-- Hidden Inputs for Netlify -->
                         <input type="hidden" name="form-name" value="contact" />
+                        <p class="hidden">
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-name">Full Name</label>
@@ -498,7 +794,7 @@
                         <div>
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-service">Service Needed</label>
                             <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all appearance-none">
-                                <option data-i18n="nav-gen" selected>Generator Installation / Maintenance</option>
+                                <option data-i18n="nav-gen" selected>Home Standby Generators</option>
                                 <option data-i18n="nav-hvac">Heating and Cooling</option>
                                 <option data-i18n="nav-surge">Surge Protection</option>
                                 <option data-i18n="nav-panel">Electrical Panel Upgrades</option>
@@ -518,7 +814,7 @@
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-i18n="form-file">Upload Photos / Documents (Optional)</label>
                             <input type="file" name="attachment" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-brand-blue file:text-white hover:file:bg-brand-dark cursor-pointer">
                         </div>
-                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold py-4 rounded-lg transition-colors" data-i18n="form-submit">
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-bold py-4 rounded-lg transition-colors shadow-lg hover:shadow-xl" data-i18n="form-submit">
                             Submit Request
                         </button>
                     </form>
@@ -533,10 +829,10 @@
             <div class="grid md:grid-cols-3 gap-8 mb-8 border-b border-gray-800 pb-8">
                 <div>
                     <div class="flex items-center gap-2 mb-4 text-white">
-                        <img src="logomark.webp" alt="Big G Electric Logo" class="w-8 h-8 rounded-lg object-contain bg-white">
+                        <img src="logomark.webp" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23ffffff\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><path d=\'M13 2L3 14h9l-1 8 10-12h-9l1-8z\'/></svg>'" alt="Big G Electric Logo" class="w-8 h-8 rounded-lg object-contain bg-brand-blue p-1">
                         <span class="font-extrabold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Big G Electric</span>
                     </div>
-                    <p class="text-sm mb-4" data-i18n="footer-desc">Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.</p>
+                    <p class="text-sm mb-4" data-i18n="footer-desc">Professional electrical services, home standby generator installation and repair, EV charging, and HVAC solutions serving the Greater Montreal area.</p>
                     <p class="text-sm font-bold text-gray-300">RBQ : 8310-7342-46</p>
                 </div>
                 <div>
@@ -554,7 +850,7 @@
                             <i data-lucide="clock" class="w-5 h-5 shrink-0"></i>
                             <span data-i18n="hours-247" class="leading-tight">Open 24 Hours,<br>7 Days a Week</span>
                         </li>
-                        <li class="text-gray-400 mt-2 leading-relaxed" data-i18n="hours-desc">Available day and night for your electrical emergencies and scheduled projects.</li>
+                        <li class="text-gray-400 mt-2 leading-relaxed" data-i18n="hours-desc">Available day and night for your electrical emergencies, generator repairs, and scheduled projects.</li>
                     </ul>
                 </div>
             </div>
@@ -568,6 +864,352 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAL CONTAINERS (Hidden by default) -->
+    
+    <!-- Modal 1: 22kW aXis Detailed -->
+    <div id="modal-1" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-1')">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
+            
+            <!-- Sticky Header / Close -->
+            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
+                <div class="bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod1">Whole House Power</div>
+                <button onclick="closeModal(event, 'modal-1', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Content Body -->
+            <div class="p-6 md:p-8">
+                <!-- SCROLLING GALLERY -->
+                <div class="w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 mb-8">
+                    <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" alt="22kW Champion Generator View 1" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" alt="22kW Champion Generator View 2" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <img src="22kwhomestandby3.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+3'" alt="22kW Champion Generator View 3" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <img src="22kwhomestandby4.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+4'" alt="22kW Champion Generator View 4" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <img src="22kwhomestandby5.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+5'" alt="22kW Champion Generator View 5" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <img src="22kwhomestandby6.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+6'" alt="22kW Champion Generator View 6" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                </div>
+
+                <!-- Title & Short Desc -->
+                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod1-title">22 kW Whole House Home Standby Generator and 200A Switch with aXis Technology</h3>
+                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod1-short-desc">Champion’s 22 kW aXis Home Standby Generator System includes a 200-amp aXis automatic transfer switch. This fully automatic system manages your home’s loads while reducing costs and increasing efficiency. Designed with advanced sound dampening, never needs refueling, works in extreme temperatures, and has an industry leading 10-year limited warranty.</p>
+
+                <!-- Features -->
+                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
+                <div class="grid md:grid-cols-2 gap-4 mb-10">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m1-f1-t">Whole House Power</span></h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m1-f1-d">Up to 20% more fuel efficient than leading competitors, this 22-kilowatt generator provides 22,000 watts of continuous power on propane and 19,800 watts on natural gas, with no refueling, no manual operation, and no extension cords needed.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m1-f2-t">Efficient</span></h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m1-f2-d">With less wiring and lower installation costs thanks to our Power Line Carrier technology, you’ll save time and money installing your new HSB, easily manage your high-demand appliances with aXis technology, plus advanced airflow design extends engine life.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m1-f3-t">Quiet Operation</span></h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m1-f3-d">Thanks to advanced sound dampening and a specially designed low-tone muffler, this generator operates at a residential-friendly 67 dB[A] noise level and performs self-diagnostic tests.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m1-f4-t">Reliable & Champion Support</span></h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m1-f4-d">24-volt starting system operates in sub-zero temperatures down to -22 °F with aluminum-zinc coated steel. Includes 10-year limited warranty with FREE lifetime technical support from dedicated experts.</p>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
+                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m1-long-desc">
+                    <p class="font-bold text-gray-900 dark:text-white">Model #201221</p>
+                    <p class="font-bold text-brand-blue dark:text-blue-400">22 kW Whole House Home Standby Generator and 200A Switch with aXis Technology</p>
+                    <p class="font-semibold text-gray-900 dark:text-gray-300">10 Year Warranty</p>
+                    <p>Champion’s 22 kW aXis Home Standby Generator System includes a 200-amp aXis automatic transfer switch. This fully automatic system manages your home’s loads while reducing costs and increasing efficiency. Designed with advanced sound dampening, never needs refueling, works in extreme temperatures, and has an industry leading 10-year limited warranty.</p>
+                    <p>The Champion Power Equipment 201221 Home Standby Generator System includes 22 kW aXis Home Standby Generator and 200A aXis ATS Whole House Automatic Transfer Switch. Equipped with aXis technology for reduced costs, increases efficiency, and peace of mind while ensuring security and convenience for your family during an emergency. Enjoy totally automatic, seamless power to your home during an outage.</p>
+                    <p>Champion aXis 22 kW generator features aXis Controller™ with 4-inch color display and Power Line Carrier technology, which uses your home’s existing wiring so your generator can talk to the automatic transfer switch and other components without needing to run separate wires, saving you money and time on installation.</p>
+                    <p>With aXis Wi-Fi Direct your installer can use a tablet or cell phone to program your generator meaning less hassle, faster setup, and lower cost.</p>
+                    <p>Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with CSA standards for Canada.</p>
+                    <p>The Whole House automatic transfer switch backs up your home’s 200-amp distribution panel and has the ability to manage your high-demand appliances by using our aXis Load Management Modules model 100868 (sold separately). Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with UL standards for the US.</p>
+                    <p>The innovative advanced airflow design stands out from the competition and allows your HSB to operate at cooler temperatures which extends the life of your engine. Your HSB is up to 20% more fuel efficient than leading competitors with 3.6 gal/hr using propane and 270.2 ft3/hr using natural gas at rated load.</p>
+                    <p>Be confident your HSB will hold up to any weather thanks to the aluminum-zinc coated steel enclosure, offering better structural rigidity with the oxidation resistance of an all-aluminum enclosure, plus the gullwing opening allows for easy service and maintenance access.</p>
+                    <p>The 24V starting system operates in sub-zero temperatures down to -22 °F, never needs refueling operating on your home’s NG or LP fuel supply, starts automatically when the power goes out, and returns to standby when power is restored.</p>
+                    <p>The 999cc V-Twin Champion engine provides 22-kilowatts of continuous power on propane and 19.8-kilowatts on natural gas. This 22 kW-rated unit produces 91.7 amps at 240 volts on propane and 82.5 amps at 240 volts on natural gas.</p>
+                    <p>The residential-friendly 67 dB[A]* is a little louder than normal conversation.</p>
+                    <p>The alternator produces less than 5% total harmonic distortion (THD) to ensure safe use with even the most sensitive electronics.</p>
+                    <p>This generator is available for all 50 states. Buy with confidence - Champion Support will back your purchase with FREE lifetime technical support, a 10-year limited warranty on the generator and a 2-year limited warranty on the ATS.</p>
+                    <p class="italic text-xs">*Measurement is approximate and for reference purposes only. Sound measured at 23 ft. (7 m) and does not account for your installation site.</p>
+                </div>
+
+                <!-- Specs & Included Grid -->
+                <div class="grid lg:grid-cols-3 gap-8 mb-10">
+                    <div class="lg:col-span-1">
+                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m1-included-list">
+                            <li>Battery Jumper Wire</li>
+                            <li>Gas Inlet Flex Hose</li>
+                            <li>Gas Inlet Hose</li>
+                            <li>Keys for Door Lock</li>
+                            <li>Master Mixer Assembly</li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m1-specs-list">
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Rated Watts</span><span class="font-medium text-gray-900 dark:text-gray-200">22000W</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Natural Gas Rated Watts</span><span class="font-medium text-gray-900 dark:text-gray-200">19800W</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Rated Amps (120V/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">183.4A / 91.7A</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Nat. Gas Rated Amps (120V/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">165A / 82.5A</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Rated Volts / Frequency</span><span class="font-medium text-gray-900 dark:text-gray-200">120/240V | 60Hz</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Phase</span><span class="font-medium text-gray-900 dark:text-gray-200">Single</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Fuel Cons. (1/2 | Full)</span><span class="font-medium text-gray-900 dark:text-gray-200">2 gal/h | 3.6 gal/h</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Nat. Gas Fuel Cons. (1/2 | Full)</span><span class="font-medium text-gray-900 dark:text-gray-200">173.4 ft³/h | 270.2 ft³/h</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Main Line Circuit Breaker</span><span class="font-medium text-gray-900 dark:text-gray-200">100A</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Starting System</span><span class="font-medium text-gray-900 dark:text-gray-200">Automatic 24V</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Operational Volume</span><span class="font-medium text-gray-900 dark:text-gray-200">67 dB(A)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Cooling System</span><span class="font-medium text-gray-900 dark:text-gray-200">Air Cooled</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">AC Ton Rating</span><span class="font-medium text-gray-900 dark:text-gray-200">5T</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Generator Enclosure</span><span class="font-medium text-gray-900 dark:text-gray-200">Aluminum-Zinc Steel</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Generator Mounting Pad</span><span class="font-medium text-gray-900 dark:text-gray-200">Composite</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Brand</span><span class="font-medium text-gray-900 dark:text-gray-200">Champion</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Size / Speed</span><span class="font-medium text-gray-900 dark:text-gray-200">999cc | 3600 RPM</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Type</span><span class="font-medium text-gray-900 dark:text-gray-200">4-stroke V-Twin</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Fuel Type</span><span class="font-medium text-gray-900 dark:text-gray-200">Propane, Natural Gas</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Oil Type / Cap</span><span class="font-medium text-gray-900 dark:text-gray-200">0W-40 Synthetic | 2 qt.</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Oil Included / Shut-off</span><span class="font-medium text-gray-900 dark:text-gray-200">Yes / Yes</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">ETL Listing / EPA</span><span class="font-medium text-gray-900 dark:text-gray-200">cETLus / Yes</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Operation</span><span class="font-medium text-gray-900 dark:text-gray-200">Automatic (Whole House)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Amps / Volts</span><span class="font-medium text-gray-900 dark:text-gray-200">200A | 120/240</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Response Time</span><span class="font-medium text-gray-900 dark:text-gray-200">Adj. (0.5-30 sec.)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Enclosure Rating</span><span class="font-medium text-gray-900 dark:text-gray-200">NEMA 3R</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Dimensions (L x W x H)</span><span class="font-medium text-gray-900 dark:text-gray-200">54" x 30.3" x 43.9"</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Weight</span><span class="font-medium text-gray-900 dark:text-gray-200">637.6 lb.</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manuals & Documents Section -->
+                <div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Operator's Manual (English) -->
+                        <a href="https://drive.google.com/file/d/1QOlQKhH8IwFyAfs8ZY2Vd_00w1H4ZJ7O/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual (100304)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+
+                        <!-- Parts Info 100304 (English) -->
+                        <a href="https://drive.google.com/file/d/1Rxfmt1Do2eMVBHLJTZvxtbcg1_TuBM1V/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Parts Info (100304)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+
+                        <!-- Parts Info 100304 (French) -->
+                        <a href="https://drive.google.com/file/d/1dRiqG7m-xN26Fj92vLII389PfbvFaQAL/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Info. sur les pièces (100304)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Français • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+
+                        <!-- Parts Info 102007 (English) -->
+                        <a href="https://drive.google.com/file/d/17CCTjZFe84PhiwueKys5gZsEcHPOUBxJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Parts Info (102007)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+
+                        <!-- Parts Info 102007 (French) -->
+                        <a href="https://drive.google.com/file/d/1iuUB7I90k-doxJ4nQdNkPcjcHaUQVIiv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Info. sur les pièces (102007)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Français • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sticky Footer CTA -->
+            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
+                <a href="#contact" onclick="closeModal(event, 'modal-1', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: 10kW -->
+    <div id="modal-2" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event, 'modal-2')">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-2xl shadow-2xl relative modal-content z-10 p-8 border border-gray-200 dark:border-gray-700" onclick="event.stopPropagation()">
+            <button onclick="closeModal(event, 'modal-2', true)" class="absolute -top-4 -right-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border-2 border-gray-100 dark:border-gray-700 z-20">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod2-title">10-kW Home Standby</h3>
+            <div class="bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-sm font-semibold px-3 py-1 rounded inline-block mb-4" data-i18n="badge-starter">Starter Whole Home</div>
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-auto">Fully automatic 24/7 operation</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-gas">Runs on natural gas or propane</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-axis">Includes aXis Controller® technology</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod2-feat4">Ideal for: Small homes, basic heating, living spaces</span></li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic" data-i18n="mod2-note">A step up in power ensuring greater comfort during extended grid outages.</p>
+            <a href="#contact" onclick="closeModal(event, 'modal-2', true)" class="w-full block text-center bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 rounded-lg transition-colors" data-i18n="btn-get-quote">Get a Quote</a>
+        </div>
+    </div>
+
+    <!-- Modal 3: 12.5kW -->
+    <div id="modal-3" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event, 'modal-3')">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-2xl shadow-2xl relative modal-content z-10 p-8 border border-gray-200 dark:border-gray-700" onclick="event.stopPropagation()">
+            <button onclick="closeModal(event, 'modal-3', true)" class="absolute -top-4 -right-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border-2 border-gray-100 dark:border-gray-700 z-20">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod3-title">12.5-kW Home Standby</h3>
+            <div class="bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-sm font-semibold px-3 py-1 rounded inline-block mb-4" data-i18n="badge-mid">Medium Home Power</div>
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-auto">Fully automatic 24/7 operation</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-axis">Includes aXis Controller® technology</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-gas">Runs on natural gas or propane</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod3-feat4">Ideal for: Medium homes, multiple heavy loads</span></li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic" data-i18n="mod3-note">Easily handles everyday household demands without missing a beat.</p>
+            <a href="#contact" onclick="closeModal(event, 'modal-3', true)" class="w-full block text-center bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 rounded-lg transition-colors" data-i18n="btn-get-quote">Get a Quote</a>
+        </div>
+    </div>
+
+    <!-- Modal 4: 14kW -->
+    <div id="modal-4" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event, 'modal-4')">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-2xl shadow-2xl relative modal-content z-10 p-8 border border-gray-200 dark:border-gray-700" onclick="event.stopPropagation()">
+            <button onclick="closeModal(event, 'modal-4', true)" class="absolute -top-4 -right-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border-2 border-gray-100 dark:border-gray-700 z-20">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod4-title">14-kW Home Standby</h3>
+            <div class="bg-brand-accent/20 text-yellow-600 dark:text-yellow-500 text-sm font-semibold px-3 py-1 rounded inline-block mb-4" data-i18n="badge-popular">Most Popular</div>
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-auto">Fully automatic 24/7 operation</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-axis">Includes aXis Controller® technology</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-gas">Runs on natural gas or propane</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod4-feat4">Ideal for: Central A/C, electric ovens, well pumps</span></li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic" data-i18n="mod4-note">The sweet spot between price and performance. Powers majority of modern households during a blackout.</p>
+            <a href="#contact" onclick="closeModal(event, 'modal-4', true)" class="w-full block text-center bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 rounded-lg transition-colors" data-i18n="btn-get-quote">Get a Quote</a>
+        </div>
+    </div>
+
+    <!-- Modal 5: 16kW -->
+    <div id="modal-5" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event, 'modal-5')">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-2xl shadow-2xl relative modal-content z-10 p-8 border border-gray-200 dark:border-gray-700" onclick="event.stopPropagation()">
+            <button onclick="closeModal(event, 'modal-5', true)" class="absolute -top-4 -right-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border-2 border-gray-100 dark:border-gray-700 z-20">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod5-title">16-kW Home Standby</h3>
+            <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-semibold px-3 py-1 rounded inline-block mb-4" data-i18n="badge-adv-mid">Advanced Mid-Size</div>
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-auto">Fully automatic 24/7 operation</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-axis">Includes aXis Controller® technology</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-gas">Runs on natural gas or propane</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod5-feat4">Ideal for: Larger footprint homes, extra appliances</span></li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic" data-i18n="mod5-note">Delivers the extra push needed to support larger homes without jumping to a massive unit.</p>
+            <a href="#contact" onclick="closeModal(event, 'modal-5', true)" class="w-full block text-center bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 rounded-lg transition-colors" data-i18n="btn-get-quote">Get a Quote</a>
+        </div>
+    </div>
+
+    <!-- Modal 6: 18kW -->
+    <div id="modal-6" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event, 'modal-6')">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-2xl shadow-2xl relative modal-content z-10 p-8 border border-gray-200 dark:border-gray-700" onclick="event.stopPropagation()">
+            <button onclick="closeModal(event, 'modal-6', true)" class="absolute -top-4 -right-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border-2 border-gray-100 dark:border-gray-700 z-20">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod6-title">18-kW Home Standby</h3>
+            <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-semibold px-3 py-1 rounded inline-block mb-4" data-i18n="badge-large">Large Home Starter</div>
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-auto">Fully automatic 24/7 operation</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-axis">Includes aXis Controller® technology</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-commercial">Commercial-grade V-Twin engine</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod6-feat4">Ideal for: Large properties, multi-zone HVAC</span></li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic" data-i18n="mod6-note">The entry point for large homes. Easily handles multiple large electrical loads seamlessly.</p>
+            <a href="#contact" onclick="closeModal(event, 'modal-6', true)" class="w-full block text-center bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 rounded-lg transition-colors" data-i18n="btn-get-quote">Get a Quote</a>
+        </div>
+    </div>
+
+    <!-- Modal 7: 20kW -->
+    <div id="modal-7" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event, 'modal-7')">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-2xl shadow-2xl relative modal-content z-10 p-8 border border-gray-200 dark:border-gray-700" onclick="event.stopPropagation()">
+            <button onclick="closeModal(event, 'modal-7', true)" class="absolute -top-4 -right-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border-2 border-gray-100 dark:border-gray-700 z-20">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod7-title">20-kW Home Standby</h3>
+            <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-semibold px-3 py-1 rounded inline-block mb-4" data-i18n="badge-premium">Premium Power</div>
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-auto">Fully automatic 24/7 operation</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-axis">Includes aXis Controller® technology</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-commercial">Commercial-grade V-Twin engine</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod7-feat4">Ideal for: Luxury appliances, heated pools, heavy electric load</span></li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic" data-i18n="mod7-note">Premium power for demanding households. Keeps your luxury appliances and systems running perfectly.</p>
+            <a href="#contact" onclick="closeModal(event, 'modal-7', true)" class="w-full block text-center bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 rounded-lg transition-colors" data-i18n="btn-get-quote">Get a Quote</a>
+        </div>
+    </div>
+
+    <!-- Modal 8: 22kW -->
+    <div id="modal-8" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event, 'modal-8')">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-2xl shadow-2xl relative modal-content z-10 p-8 border border-gray-200 dark:border-gray-700" onclick="event.stopPropagation()">
+            <button onclick="closeModal(event, 'modal-8', true)" class="absolute -top-4 -right-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border-2 border-gray-100 dark:border-gray-700 z-20">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod8-title">22-kW Home Standby</h3>
+            <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-semibold px-3 py-1 rounded inline-block mb-4" data-i18n="badge-whole">Whole Home Power</div>
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod8-feat1">Maximum whole-home capacity</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-axis">Includes aXis Controller® technology</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-commercial">Commercial-grade V-Twin engine</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod8-feat4">Ideal for: Large homes, heavy electric heating, dual A/C units</span></li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic" data-i18n="mod8-note">Never compromise your lifestyle. Designed for families who want zero disruptions when the grid fails.</p>
+            <a href="#contact" onclick="closeModal(event, 'modal-8', true)" class="w-full block text-center bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 rounded-lg transition-colors" data-i18n="btn-get-quote">Get a Quote</a>
+        </div>
+    </div>
+
+    <!-- Modal 9: 24kW -->
+    <div id="modal-9" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event, 'modal-9')">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-2xl shadow-2xl relative modal-content z-10 p-8 border border-gray-200 dark:border-gray-700" onclick="event.stopPropagation()">
+            <button onclick="closeModal(event, 'modal-9', true)" class="absolute -top-4 -right-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border-2 border-gray-100 dark:border-gray-700 z-20">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod9-title">24-kW Home Standby</h3>
+            <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm font-semibold px-3 py-1 rounded inline-block mb-4" data-i18n="badge-max">Maximum Capacity</div>
+            <ul class="space-y-3 mb-6">
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod8-feat1">Maximum whole-home capacity</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-axis">Includes aXis Controller® technology</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-commercial">Commercial-grade V-Twin engine</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod9-feat4">Ideal for: Sprawling properties, multiple outbuildings</span></li>
+            </ul>
+            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic" data-i18n="mod9-note">The ultimate backup solution. Absolute maximum capacity for massive residential needs.</p>
+            <a href="#contact" onclick="closeModal(event, 'modal-9', true)" class="w-full block text-center bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 rounded-lg transition-colors" data-i18n="btn-get-quote">Get a Quote</a>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script>
@@ -591,7 +1233,7 @@
                 'nav-other': 'Other Services',
                 'nav-hvac': 'Heating and Cooling',
                 'nav-plan': 'Home Protection Plan',
-                'nav-gen': 'Generator',
+                'nav-gen': 'Home Standby Generators',
                 'nav-grants': 'Grant and Tax Credit Programs',
                 'nav-about': 'Why Us',
                 'nav-ev': 'EV Charging',
@@ -601,30 +1243,176 @@
                 
                 // Generators Page Specific
                 'gen-hero-badge': 'Never Be Caught In The Dark Again',
-                'gen-hero-title': 'Backup Generator Solutions in <span class="text-brand-accent">Montreal</span>',
-                'gen-hero-desc': 'At Big G Electric, we are seeing a growing demand for partial and whole-home backup power systems due to increased power outages. We can match you with the right size generator for your peace of mind.',
+                'gen-hero-title': 'Home Standby Generators in <span class="text-brand-accent">Montreal</span>',
+                'gen-hero-desc': 'At Big G Electric, we are seeing a growing demand for partial and whole-home standby backup power systems due to increased power outages. We can match you with the right size Champion Power Equipment generator for your peace of mind, from installation to comprehensive repair.',
                 'gen-cta-book': 'Get a Free Quote!',
                 
                 'gen-partner-text': 'We are proud to be a',
-                'gen-partner-badge': 'Generac Authorized Service Dealer',
+                'gen-partner-badge': 'Champion Standby Authorized Dealer, Reseller & Repair Center',
                 
-                'gen-ben-title': 'Benefits of a New Generac Standby Generator',
-                'gen-ben-subtitle': 'By choosing a Generac standby generator from Big G Electric, you ensure reliable power backup, professional service, and long-term value for your home.',
-                'gen-b1-title': 'Reliability',
-                'gen-b1-desc': 'Generac generators are known for their reliability and ability to provide continuous power during outages, ensuring your home remains functional.',
+                'gen-ben-title': 'Benefits of a Champion Home Standby Generator',
+                'gen-ben-subtitle': 'By choosing a Champion Power Equipment standby generator from Big G Electric, you ensure reliable power backup, professional installation, authorized repair services, and long-term value for your home.',
+                'gen-b1-title': 'Unmatched Reliability',
+                'gen-b1-desc': 'Champion standby generators are engineered for absolute reliability, providing continuous whole-home power during outages to keep your life running smoothly.',
                 'gen-b2-title': 'Automatic Operation',
-                'gen-b2-desc': 'These generators automatically detect power outages and start up within seconds, providing a seamless transition and minimizing disruption.',
-                'gen-b3-title': 'Flexible Fuel Options',
-                'gen-b3-desc': 'Generac generators can run on natural gas or liquid propane, providing flexibility in fuel choice and ensuring a steady supply of power.',
+                'gen-b2-desc': 'Champion generators automatically detect grid power outages and start up within seconds, providing a seamless transition with zero manual intervention required.',
+                'gen-b3-title': 'Authorized Repair & Service',
+                'gen-b3-desc': 'As an official reseller and repairer, Big G Electric guarantees factory-certified parts, professional tune-ups, and expert repairs for your Champion equipment.',
                 'gen-b4-title': 'Protection for Appliances',
-                'gen-b4-desc': 'By providing a stable power source, these generators protect your sensitive home appliances and electronics from damage caused by power surges.',
+                'gen-b4-desc': 'Providing clean, stable power, Champion standby systems protect your sensitive electronics, HVAC systems, and home appliances from damaging power surges.',
                 'gen-b5-title': 'Increased Home Value',
-                'gen-b5-desc': 'Installing a standby generator can dramatically enhance your home’s value and appeal to future buyers, making it a valuable long-term investment.',
+                'gen-b5-desc': 'Installing a permanent home standby generator dramatically enhances your property\'s value and appeal to future buyers, making it a smart long-term investment.',
                 'gen-b6-title': 'Total Peace of Mind',
-                'gen-b6-desc': 'Have peace of mind knowing your home will remain powered during extreme weather emergencies, protecting your family’s comfort and safety.',
+                'gen-b6-desc': 'Rest easy knowing your family will remain warm, safe, and connected during severe winter storms and extreme weather emergencies in Montreal and Laval.',
                 
+                // Generator Models Section
+                'models-title': 'Our Champion Generator Lineup',
+                'models-subtitle': 'Explore our selection of industry-leading Champion standby generators. Find the perfect fit for your home\'s power needs.',
+                'badge-popular': 'Most Popular',
+                'badge-essential': 'Essential Power',
+                'badge-starter': 'Starter Whole Home',
+                'badge-mid': 'Medium Home Power',
+                'badge-adv-mid': 'Advanced Mid-Size',
+                'badge-large': 'Large Home Starter',
+                'badge-premium': 'Premium Power',
+                'badge-whole': 'Whole Home Power',
+                'badge-max': 'Maximum Capacity',
+                'btn-more-info': 'More Info',
+                'btn-view-manual': 'View Manual',
+                'btn-get-quote': 'Get a Quote',
+                
+                // Shared features
+                'feat-auto': 'Fully automatic 24/7 operation',
+                'feat-gas': 'Runs on natural gas or propane',
+                'feat-axis': 'Includes aXis Controller® technology',
+                'feat-commercial': 'Commercial-grade V-Twin engine',
+
+                // Common Labels
+                'lbl-features': 'Features',
+                'lbl-description': 'Description',
+                'lbl-included': 'What’s included',
+                'lbl-specs': 'Specifications & Measurements',
+                'lbl-docs': 'Manuals & Documents',
+
+                // Card 1
+                'badge-mod1': 'Whole House Power',
+                'mod1-title': '22 kW Whole House Home Standby Generator and 200A Switch with aXis Technology',
+                'mod1-short-desc': 'Champion’s 22 kW aXis Home Standby Generator System includes a 200-amp aXis automatic transfer switch. This fully automatic system manages your home’s loads while reducing costs and increasing efficiency. Designed with advanced sound dampening, never needs refueling, works in extreme temperatures, and has an industry leading 10-year limited warranty.',
+                
+                'm1-f1-t': 'Whole House Power',
+                'm1-f1-d': 'Up to 20% more fuel efficient than leading competitors, this 22-kilowatt generator provides 22,000 watts of continuous power on propane and 19,800 watts on natural gas, with no refueling, no manual operation, and no extension cords needed.',
+                'm1-f2-t': 'Efficient',
+                'm1-f2-d': 'With less wiring and lower installation costs thanks to our Power Line Carrier technology, you’ll save time and money installing your new HSB, easily manage your high-demand appliances with aXis technology, plus advanced airflow design extends engine life.',
+                'm1-f3-t': 'Quiet Operation',
+                'm1-f3-d': 'Thanks to advanced sound dampening and a specially designed low-tone muffler, this generator operates at a residential-friendly 67 dB[A] noise level and performs self-diagnostic tests.',
+                'm1-f4-t': 'Reliable & Champion Support',
+                'm1-f4-d': '24-volt starting system operates in sub-zero temperatures down to -22 °F with aluminum-zinc coated steel. Includes 10-year limited warranty with FREE lifetime technical support from dedicated experts.',
+                
+                'm1-long-desc': `<p class="font-bold text-gray-900 dark:text-white">Model #201221</p>
+                                 <p class="font-bold text-brand-blue dark:text-blue-400">22 kW Whole House Home Standby Generator and 200A Switch with aXis Technology</p>
+                                 <p class="font-semibold text-gray-900 dark:text-gray-300">10 Year Warranty</p>
+                                 <p>Champion’s 22 kW aXis Home Standby Generator System includes a 200-amp aXis automatic transfer switch. This fully automatic system manages your home’s loads while reducing costs and increasing efficiency. Designed with advanced sound dampening, never needs refueling, works in extreme temperatures, and has an industry leading 10-year limited warranty.</p>
+                                 <p>The Champion Power Equipment 201221 Home Standby Generator System includes 22 kW aXis Home Standby Generator and 200A aXis ATS Whole House Automatic Transfer Switch. Equipped with aXis technology for reduced costs, increases efficiency, and peace of mind while ensuring security and convenience for your family during an emergency. Enjoy totally automatic, seamless power to your home during an outage.</p>
+                                 <p>Champion aXis 22 kW generator features aXis Controller™ with 4-inch color display and Power Line Carrier technology, which uses your home’s existing wiring so your generator can talk to the automatic transfer switch and other components without needing to run separate wires, saving you money and time on installation.</p>
+                                 <p>With aXis Wi-Fi Direct your installer can use a tablet or cell phone to program your generator meaning less hassle, faster setup, and lower cost.</p>
+                                 <p>Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with CSA standards for Canada.</p>
+                                 <p>The Whole House automatic transfer switch backs up your home’s 200-amp distribution panel and has the ability to manage your high-demand appliances by using our aXis Load Management Modules model 100868 (sold separately). Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with UL standards for the US.</p>
+                                 <p>The innovative advanced airflow design stands out from the competition and allows your HSB to operate at cooler temperatures which extends the life of your engine. Your HSB is up to 20% more fuel efficient than leading competitors with 3.6 gal/hr using propane and 270.2 ft3/hr using natural gas at rated load.</p>
+                                 <p>Be confident your HSB will hold up to any weather thanks to the aluminum-zinc coated steel enclosure, offering better structural rigidity with the oxidation resistance of an all-aluminum enclosure, plus the gullwing opening allows for easy service and maintenance access.</p>
+                                 <p>The 24V starting system operates in sub-zero temperatures down to -22 °F, never needs refueling operating on your home’s NG or LP fuel supply, starts automatically when the power goes out, and returns to standby when power is restored.</p>
+                                 <p>The 999cc V-Twin Champion engine provides 22-kilowatts of continuous power on propane and 19.8-kilowatts on natural gas. This 22 kW-rated unit produces 91.7 amps at 240 volts on propane and 82.5 amps at 240 volts on natural gas.</p>
+                                 <p>The residential-friendly 67 dB[A]* is a little louder than normal conversation.</p>
+                                 <p>The alternator produces less than 5% total harmonic distortion (THD) to ensure safe use with even the most sensitive electronics.</p>
+                                 <p>This generator is available for all 50 states. Buy with confidence - Champion Support will back your purchase with FREE lifetime technical support, a 10-year limited warranty on the generator and a 2-year limited warranty on the ATS.</p>
+                                 <p class="italic text-xs">*Measurement is approximate and for reference purposes only. Sound measured at 23 ft. (7 m) and does not account for your installation site.</p>`,
+                
+                'm1-included-list': `<li>Battery Jumper Wire</li><li>Gas Inlet Flex Hose</li><li>Gas Inlet Hose</li><li>Keys for Door Lock</li><li>Master Mixer Assembly</li>`,
+                
+                'm1-specs-list': `<div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Rated Watts</span><span class="font-medium text-gray-900 dark:text-gray-200">22000W</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Natural Gas Rated Watts</span><span class="font-medium text-gray-900 dark:text-gray-200">19800W</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Rated Amps (120V/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">183.4A / 91.7A</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Nat. Gas Rated Amps (120V/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">165A / 82.5A</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Rated Volts / Frequency</span><span class="font-medium text-gray-900 dark:text-gray-200">120/240V | 60Hz</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Phase</span><span class="font-medium text-gray-900 dark:text-gray-200">Single</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Fuel Cons. (1/2 | Full)</span><span class="font-medium text-gray-900 dark:text-gray-200">2 gal/h | 3.6 gal/h</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Nat. Gas Fuel Cons. (1/2 | Full)</span><span class="font-medium text-gray-900 dark:text-gray-200">173.4 ft³/h | 270.2 ft³/h</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Main Line Circuit Breaker</span><span class="font-medium text-gray-900 dark:text-gray-200">100A</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Starting System</span><span class="font-medium text-gray-900 dark:text-gray-200">Automatic 24V</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Operational Volume</span><span class="font-medium text-gray-900 dark:text-gray-200">67 dB(A)</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Cooling System</span><span class="font-medium text-gray-900 dark:text-gray-200">Air Cooled</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">AC Ton Rating</span><span class="font-medium text-gray-900 dark:text-gray-200">5T</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Generator Enclosure</span><span class="font-medium text-gray-900 dark:text-gray-200">Aluminum-Zinc Steel</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Generator Mounting Pad</span><span class="font-medium text-gray-900 dark:text-gray-200">Composite</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Brand</span><span class="font-medium text-gray-900 dark:text-gray-200">Champion</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Size / Speed</span><span class="font-medium text-gray-900 dark:text-gray-200">999cc | 3600 RPM</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Type</span><span class="font-medium text-gray-900 dark:text-gray-200">4-stroke V-Twin</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Fuel Type</span><span class="font-medium text-gray-900 dark:text-gray-200">Propane, Natural Gas</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Oil Type / Cap</span><span class="font-medium text-gray-900 dark:text-gray-200">0W-40 Synthetic | 2 qt.</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Oil Included / Shut-off</span><span class="font-medium text-gray-900 dark:text-gray-200">Yes / Yes</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">ETL Listing / EPA</span><span class="font-medium text-gray-900 dark:text-gray-200">cETLus / Yes</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Operation</span><span class="font-medium text-gray-900 dark:text-gray-200">Automatic (Whole House)</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Amps / Volts</span><span class="font-medium text-gray-900 dark:text-gray-200">200A | 120/240</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Response Time</span><span class="font-medium text-gray-900 dark:text-gray-200">Adj. (0.5-30 sec.)</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Enclosure Rating</span><span class="font-medium text-gray-900 dark:text-gray-200">NEMA 3R</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Dimensions (L x W x H)</span><span class="font-medium text-gray-900 dark:text-gray-200">54" x 30.3" x 43.9"</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Weight</span><span class="font-medium text-gray-900 dark:text-gray-200">637.6 lb.</span></div>`,
+                
+                // Card 2
+                'mod2-title': '10-kW Home Standby',
+                'mod2-desc': 'A great starter unit for small homes, easily protecting your kitchen appliances, heating system, and living spaces.',
+                'mod2-feat4': 'Ideal for: Small homes, basic heating, living spaces',
+                'mod2-note': 'A step up in power ensuring greater comfort during extended grid outages.',
+                
+                // Card 3
+                'mod3-title': '12.5-kW Home Standby',
+                'mod3-desc': 'Expanded coverage for medium homes. Runs multiple high-draw appliances simultaneously without overloading.',
+                'mod3-feat4': 'Ideal for: Medium homes, multiple heavy loads',
+                'mod3-note': 'Easily handles everyday household demands without missing a beat.',
+
+                // Card 4
+                'mod4-title': '14-kW Home Standby',
+                'mod4-desc': 'The ideal mid-size solution. Powers most of the home including heavy loads like central A/C units and electric water heaters.',
+                'mod4-feat4': 'Ideal for: Central A/C, electric ovens, well pumps',
+                'mod4-note': 'The sweet spot between price and performance. Powers majority of modern households during a blackout.',
+                
+                // Card 5
+                'mod5-title': '16-kW Home Standby',
+                'mod5-desc': 'Advanced mid-size power. Delivers the extra push needed to support larger homes without jumping to a massive unit.',
+                'mod5-feat4': 'Ideal for: Larger footprint homes, extra appliances',
+                'mod5-note': 'Delivers the extra push needed to support larger homes without jumping to a massive unit.',
+
+                // Card 6
+                'mod6-title': '18-kW Home Standby',
+                'mod6-desc': 'The entry point for large homes. Easily handles multiple large electrical loads seamlessly during an outage.',
+                'mod6-feat4': 'Ideal for: Large properties, multi-zone HVAC',
+                'mod6-note': 'The entry point for large homes. Easily handles multiple large electrical loads seamlessly.',
+
+                // Card 7
+                'mod7-title': '20-kW Home Standby',
+                'mod7-desc': 'Premium power for demanding households. Keeps your luxury appliances and dual HVAC systems running perfectly.',
+                'mod7-feat4': 'Ideal for: Luxury appliances, heated pools, heavy electric load',
+                'mod7-note': 'Premium power for demanding households. Keeps your luxury appliances and systems running perfectly.',
+
+                // Card 8
+                'mod8-title': '22-kW Home Standby',
+                'mod8-desc': 'Maximum whole-home power. Designed to handle everything seamlessly, keeping your large home fully operational.',
+                'mod8-feat1': 'Maximum whole-home capacity',
+                'mod8-feat4': 'Ideal for: Large homes, heavy electric heating, dual A/C units',
+                'mod8-note': 'Never compromise your lifestyle. Designed for families who want zero disruptions when the grid fails.',
+
+                // Card 9
+                'mod9-title': '24-kW Home Standby',
+                'mod9-desc': 'The ultimate backup solution. Absolute maximum capacity to support sprawling properties and commercial-grade needs.',
+                'mod9-feat4': 'Ideal for: Sprawling properties, multiple outbuildings',
+                'mod9-note': 'The ultimate backup solution. Absolute maximum capacity for massive residential needs.',
+
+                // Financing 
+                'finance-title': 'Flexible Payment Options Available',
+                'finance-desc': 'Don\'t let budget constraints leave you in the dark. We have partnered with top financial institutions to offer flexible payment options and financing plans for your new Champion home standby generator. Get the backup power you need today, and pay over time!',
+                'finance-cta': 'Ask about our financing plans <i data-lucide="arrow-right" class="w-4 h-4 inline"></i>',
+
                 'gen-plans-title': 'Membership & Maintenance Options',
-                'gen-plans-subtitle': 'Keep your generator running perfectly year-round with our exclusive Generac service plans.',
+                'gen-plans-subtitle': 'Keep your Champion generator running perfectly year-round with our authorized service plans.',
                 'gen-annually': '/ Annually',
                 'gen-btn-select': 'Select Plan',
                 'gen-btn-select-plat': 'Select Platinum',
@@ -655,7 +1443,7 @@
                 'gen-fine-2': 'Extra maintenance visit after 100hrs of runtime available for plan holders at $299 / extra visit required.',
                 'gen-fine-3': 'All maintenance and tune up visits to be scheduled Monday-Friday between 8am-5pm at our convenience.',
                 'gen-fine-4': '<strong>$189 Emergency call out fee</strong> (plus applicable charges for work).',
-                'gen-fine-5': 'Repairs are not included with maintenance plans unless covered by Generac warranty.',
+                'gen-fine-5': 'Repairs are not included with maintenance plans unless covered by Champion warranty.',
                 
                 'gen-chk-title': 'What is Included in Our Visits?',
                 'gen-chk-subtitle': 'Comprehensive, certified care to keep your generator ready for anything.',
@@ -675,14 +1463,14 @@
                 
                 'gen-cl2-title': 'Generator Tune Up',
                 'gen-c2-1': 'Pre-winter inspection',
-                'gen-c2-2': 'Start-up',
+                'gen-c2-2': 'Start-up testing',
                 'gen-c2-3': 'Check voltage',
-                'gen-c2-4': 'Check oil',
-                'gen-cl-note': '"Big G Electric offers professional installation and maintenance, ensuring your generator is correctly set up and functioning optimally, with ongoing support as needed."',
+                'gen-c2-4': 'Check oil levels',
+                'gen-cl-note': '"Big G Electric offers professional installation, authorized repair, and ongoing maintenance, ensuring your Champion generator is correctly set up and functioning optimally for years to come."',
 
                 // Form & Footer
                 'contact-title': 'Request a Callback',
-                'contact-subtitle': 'Leave your details and we\'ll get back to you shortly to explore your generator options.',
+                'contact-subtitle': 'Leave your details and we\'ll get back to you shortly to explore your home standby generator and financing options.',
                 'form-name': 'Full Name',
                 'form-phone': 'Phone Number',
                 'form-email': 'Email Address',
@@ -695,12 +1483,11 @@
                 'opt-ev': 'EV Charging Station',
                 'opt-other': 'Other',
                 'form-submit': 'Submit Request',
-                'form-success': 'Thank you! Your request has been sent.',
-                'footer-desc': 'Professional electrical services, EV charging installation, and HVAC solutions serving the Greater Montreal area.',
+                'footer-desc': 'Professional electrical services, home standby generator installation and repair, EV charging, and HVAC solutions serving the Greater Montreal area.',
                 'footer-contact': 'Contact Info',
                 'footer-hours': 'Business Hours',
                 'hours-247': 'Open 24 Hours,<br>7 Days a Week',
-                'hours-desc': 'Available day and night for your electrical emergencies and scheduled projects.',
+                'hours-desc': 'Available day and night for your electrical emergencies, generator repairs, and scheduled projects.',
                 'footer-rights': '© 2026 Big G Electric. All rights reserved.'
             },
             fr: {
@@ -718,7 +1505,7 @@
                 'nav-other': 'Autres Services',
                 'nav-hvac': 'Chauffage et Climatisation',
                 'nav-plan': 'Plan de Protection Domiciliaire',
-                'nav-gen': 'Génératrice',
+                'nav-gen': 'Génératrices de Secours',
                 'nav-grants': 'Programmes de Subventions et Crédits',
                 'nav-about': 'Pourquoi Nous',
                 'nav-ev': 'Recharge VE',
@@ -728,30 +1515,176 @@
 
                 // Generators Page Specific
                 'gen-hero-badge': 'Ne Soyez Plus Jamais Pris Dans Le Noir',
-                'gen-hero-title': 'Solutions de Génératrices de Secours à <span class="text-brand-accent">Montréal</span>',
-                'gen-hero-desc': 'Chez Big G Electric, nous constatons une demande croissante de systèmes d\'alimentation de secours en raison de l\'augmentation des pannes. Nous pouvons vous associer à la génératrice de la bonne taille pour votre tranquillité d\'esprit.',
+                'gen-hero-title': 'Génératrices de Secours Résidentielles à <span class="text-brand-accent">Montréal</span>',
+                'gen-hero-desc': 'Chez Big G Electric, nous constatons une demande croissante de systèmes d\'alimentation de secours en raison de l\'augmentation des pannes. Nous pouvons vous associer à la génératrice Champion Power Equipment de la bonne taille, de l\'installation à la réparation complète.',
                 'gen-cta-book': 'Obtenir un Devis Gratuit !',
                 
                 'gen-partner-text': 'Nous sommes fiers d\'être un',
-                'gen-partner-badge': 'Détaillant Generac Autorisé',
+                'gen-partner-badge': 'Détaillant, Revendeur et Centre de Réparation Autorisé Champion',
                 
-                'gen-ben-title': 'Avantages d\'une Nouvelle Génératrice de Secours Generac',
-                'gen-ben-subtitle': 'En choisissant une génératrice de secours Generac de Big G Electric, vous garantissez une alimentation fiable, un service professionnel et une valeur à long terme pour votre maison.',
-                'gen-b1-title': 'Fiabilité',
-                'gen-b1-desc': 'Les génératrices Generac sont connues pour leur fiabilité et leur capacité à fournir une alimentation continue pendant les pannes, garantissant que votre maison reste fonctionnelle.',
+                'gen-ben-title': 'Avantages d\'une Génératrice de Secours Champion',
+                'gen-ben-subtitle': 'En choisissant une génératrice de secours Champion Power Equipment de Big G Electric, vous garantissez une alimentation fiable, une installation professionnelle, des services de réparation autorisés et une valeur à long terme pour votre maison.',
+                'gen-b1-title': 'Fiabilité Inégalée',
+                'gen-b1-desc': 'Les génératrices Champion sont conçues pour une fiabilité absolue, fournissant une alimentation continue à toute la maison pendant les pannes.',
                 'gen-b2-title': 'Fonctionnement Automatique',
-                'gen-b2-desc': 'Ces génératrices détectent automatiquement les pannes de courant et démarrent en quelques secondes, assurant une transition en douceur et minimisant les perturbations.',
-                'gen-b3-title': 'Options de Carburant Flexibles',
-                'gen-b3-desc': 'Les génératrices Generac peuvent fonctionner au gaz naturel ou au propane liquide, offrant une flexibilité de choix de carburant et assurant une alimentation stable.',
+                'gen-b2-desc': 'Les génératrices Champion détectent automatiquement les pannes et démarrent en quelques secondes, assurant une transition en douceur sans intervention manuelle.',
+                'gen-b3-title': 'Réparation et Service Autorisés',
+                'gen-b3-desc': 'En tant que revendeur et réparateur officiel, Big G Electric garantit des pièces certifiées par l\'usine et des réparations expertes pour votre équipement Champion.',
                 'gen-b4-title': 'Protection des Appareils',
-                'gen-b4-desc': 'En fournissant une source d\'alimentation stable, ces génératrices protègent vos appareils ménagers et électroniques sensibles contre les dommages causés par les surtensions.',
+                'gen-b4-desc': 'Fournissant une alimentation propre et stable, les systèmes Champion protègent vos appareils électroniques sensibles et vos systèmes CVC contre les surtensions.',
                 'gen-b5-title': 'Valeur Accrue de la Maison',
-                'gen-b5-desc': 'L\'installation d\'une génératrice de secours peut considérablement améliorer la valeur et l\'attrait de votre maison pour les futurs acheteurs.',
+                'gen-b5-desc': 'L\'installation d\'une génératrice de secours permanente améliore considérablement la valeur de votre propriété et son attrait pour les futurs acheteurs.',
                 'gen-b6-title': 'Tranquillité d\'Esprit Totale',
-                'gen-b6-desc': 'Ayez l\'esprit tranquille en sachant que votre maison restera alimentée lors d\'urgences météorologiques extrêmes, protégeant le confort et la sécurité de votre famille.',
+                'gen-b6-desc': 'Ayez l\'esprit tranquille en sachant que votre famille restera au chaud et en sécurité lors de tempêtes hivernales extrêmes à Montréal et Laval.',
                 
+                // Generator Models Section
+                'models-title': 'Notre Gamme de Génératrices Champion',
+                'models-subtitle': 'Explorez notre sélection de génératrices de secours Champion. Trouvez la solution parfaite pour les besoins en électricité de votre maison.',
+                'badge-popular': 'Le Plus Populaire',
+                'badge-essential': 'Énergie Essentielle',
+                'badge-starter': 'Maison Entière Initiale',
+                'badge-mid': 'Maison de Taille Moyenne',
+                'badge-adv-mid': 'Taille Moyenne Avancée',
+                'badge-large': 'Grande Maison Initiale',
+                'badge-premium': 'Puissance Premium',
+                'badge-whole': 'Maison Entière Max',
+                'badge-max': 'Capacité Maximale',
+                'btn-more-info': 'Plus d\'Infos',
+                'btn-view-manual': 'Voir le Manuel',
+                'btn-get-quote': 'Obtenir un Devis',
+                
+                // Shared features FR
+                'feat-auto': 'Fonctionnement 24/7 entièrement automatique',
+                'feat-gas': 'Fonctionne au gaz naturel ou au propane',
+                'feat-axis': 'Inclut la technologie aXis Controller®',
+                'feat-commercial': 'Moteur V-Twin de qualité commerciale',
+
+                // Common Labels
+                'lbl-features': 'Caractéristiques',
+                'lbl-description': 'Description',
+                'lbl-included': 'Ce qui est inclus',
+                'lbl-specs': 'Spécifications et Mesures',
+                'lbl-docs': 'Manuels et Documents',
+
+                // Card 1
+                'badge-mod1': 'Alimentation Maison Entière',
+                'mod1-title': 'Génératrice de Secours Maison Entière 22 kW et Commutateur 200A avec Technologie aXis',
+                'mod1-short-desc': 'Le système de génératrice de secours aXis 22 kW de Champion comprend un commutateur de transfert automatique aXis de 200 ampères. Ce système entièrement automatique gère les charges de votre maison tout en réduisant les coûts et en augmentant l\'efficacité. Conçu avec une insonorisation avancée, il ne nécessite aucun ravitaillement manuel, fonctionne à des températures extrêmes et bénéficie d\'une garantie limitée de 10 ans.',
+                
+                'm1-f1-t': 'Alimentation pour Toute la Maison',
+                'm1-f1-d': 'Jusqu\'à 20 % plus écoénergétique que les principaux concurrents, cette génératrice fournit 22 000 watts en continu au propane et 19 800 watts au gaz naturel, sans ravitaillement ni fonctionnement manuel.',
+                'm1-f2-t': 'Efficace',
+                'm1-f2-d': 'Grâce à notre technologie Power Line Carrier (courants porteurs), vous économiserez du temps et de l\'argent sur l\'installation. Gère facilement vos gros appareils avec la technologie aXis.',
+                'm1-f3-t': 'Fonctionnement Silencieux',
+                'm1-f3-d': 'Grâce à une insonorisation avancée et un silencieux spécialement conçu, cette génératrice fonctionne à un niveau sonore de 67 dB[A] très silencieux pour les quartiers résidentiels.',
+                'm1-f4-t': 'Fiabilité et Support Champion',
+                'm1-f4-d': 'Le système de démarrage 24 volts fonctionne à des températures sous zéro (-30°C) avec un boîtier en acier revêtu d\'aluminium-zinc. Comprend une garantie limitée de 10 ans avec support technique à vie.',
+                
+                'm1-long-desc': `<p class="font-bold text-gray-900 dark:text-white">Modèle #201221</p>
+                                 <p class="font-bold text-brand-blue dark:text-blue-400">Génératrice de Secours Maison Entière 22 kW et Commutateur 200A avec Technologie aXis</p>
+                                 <p class="font-semibold text-gray-900 dark:text-gray-300">Garantie de 10 ans</p>
+                                 <p>Le système de génératrice de secours aXis 22 kW de Champion comprend un commutateur de transfert automatique aXis de 200 ampères. Ce système entièrement automatique gère les charges de votre maison tout en réduisant les coûts et en augmentant l'efficacité. Conçu avec une insonorisation avancée, il ne nécessite aucun ravitaillement manuel, fonctionne à des températures extrêmes et bénéficie d'une garantie limitée de 10 ans.</p>
+                                 <p>Le système de génératrice de secours Champion Power Equipment 201221 comprend une génératrice aXis de 22 kW et un commutateur de transfert automatique aXis 200A pour toute la maison. Équipé de la technologie aXis pour réduire les coûts et augmenter l'efficacité, tout en assurant la sécurité de votre famille lors d'une urgence.</p>
+                                 <p>La génératrice aXis de 22 kW est dotée du contrôleur aXis™ avec écran couleur de 4 pouces et de la technologie Power Line Carrier, qui utilise le câblage existant de votre maison pour que la génératrice communique avec le commutateur de transfert sans fils supplémentaires, vous faisant économiser sur l'installation.</p>
+                                 <p>Avec aXis Wi-Fi Direct, votre installateur peut programmer la génératrice via tablette ou téléphone, pour une configuration plus rapide et à moindre coût.</p>
+                                 <p>Doté d'un boîtier évalué NEMA 3R Service Entry, ce commutateur peut être installé à l'intérieur ou à l'extérieur et est homologué ETL pour répondre aux normes de la CSA au Canada.</p>
+                                 <p>Le commutateur de transfert automatique prend en charge le panneau de distribution de 200 ampères de votre maison et peut gérer vos appareils à forte demande à l'aide de nos modules de gestion de charge aXis modèle 100868 (vendus séparément).</p>
+                                 <p>La conception avancée du flux d'air permet à votre système de fonctionner à des températures plus fraîches, prolongeant la durée de vie du moteur. Jusqu'à 20 % plus écoénergétique que les concurrents avec 3,6 gal/h au propane et 270,2 pi³/h au gaz naturel à charge nominale.</p>
+                                 <p>Soyez confiant face aux intempéries grâce au boîtier en acier revêtu d'aluminium-zinc, offrant la résistance à l'oxydation de l'aluminium et une rigidité structurelle supérieure.</p>
+                                 <p>Le système de démarrage 24V fonctionne à des températures sous zéro, démarre automatiquement en cas de panne de courant et se remet en veille lorsque le courant est rétabli.</p>
+                                 <p>Le moteur V-Twin Champion de 999 cc fournit 22 kilowatts de puissance continue au propane et 19,8 kilowatts au gaz naturel. L'unité produit 91,7 ampères à 240 volts au propane et 82,5 ampères à 240 volts au gaz naturel.</p>
+                                 <p>Le niveau sonore de 67 dB[A]* est légèrement plus fort qu'une conversation normale.</p>
+                                 <p>L'alternateur produit moins de 5 % de distorsion harmonique totale (THD) pour garantir une utilisation sécuritaire avec les appareils électroniques les plus sensibles.</p>
+                                 <p>Achetez en toute confiance - Le support Champion couvre votre achat avec un soutien technique gratuit à vie, une garantie de 10 ans sur la génératrice et de 2 ans sur le commutateur.</p>
+                                 <p class="italic text-xs">*La mesure est approximative. Le son mesuré à 7 m ne tient pas compte de votre site d'installation.</p>`,
+                
+                'm1-included-list': `<li>Câble de démarrage de batterie</li><li>Tuyau flexible d'entrée de gaz</li><li>Tuyau d'entrée de gaz</li><li>Clés pour la serrure de la porte</li><li>Assemblage du mélangeur principal</li>`,
+                
+                'm1-specs-list': `<div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Watts Nominaux (Propane)</span><span class="font-medium text-gray-900 dark:text-gray-200">22 000W</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Watts Nominaux (Gaz Naturel)</span><span class="font-medium text-gray-900 dark:text-gray-200">19 800W</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Ampères Nom. Propane (120/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">183.4A / 91.7A</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Ampères Nom. Gaz Nat. (120/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">165A / 82.5A</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Volts / Fréquence</span><span class="font-medium text-gray-900 dark:text-gray-200">120/240 V | 60Hz</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Phase</span><span class="font-medium text-gray-900 dark:text-gray-200">Simple</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Conso. Propane (1/2 | Plein)</span><span class="font-medium text-gray-900 dark:text-gray-200">2 gal/h | 3.6 gal/h</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Conso. Gaz Nat. (1/2 | Plein)</span><span class="font-medium text-gray-900 dark:text-gray-200">173.4 pi³/h | 270.2 pi³/h</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Disjoncteur Ligne Principale</span><span class="font-medium text-gray-900 dark:text-gray-200">100A</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Système de Démarrage</span><span class="font-medium text-gray-900 dark:text-gray-200">Automatique 24V</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Volume Opérationnel</span><span class="font-medium text-gray-900 dark:text-gray-200">67 dB(A)</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Système de Refroidissement</span><span class="font-medium text-gray-900 dark:text-gray-200">Refroidi par air</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Évaluation Climatiseur</span><span class="font-medium text-gray-900 dark:text-gray-200">5T</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Matériau du Boîtier</span><span class="font-medium text-gray-900 dark:text-gray-200">Acier Revêtu d'Aluminium-Zinc</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Socle de Montage</span><span class="font-medium text-gray-900 dark:text-gray-200">Composite</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Marque du Moteur</span><span class="font-medium text-gray-900 dark:text-gray-200">Champion</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Taille / Vitesse Moteur</span><span class="font-medium text-gray-900 dark:text-gray-200">999cc | 3600 RPM</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Type de Moteur</span><span class="font-medium text-gray-900 dark:text-gray-200">V-Twin 4 temps</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Type de Carburant</span><span class="font-medium text-gray-900 dark:text-gray-200">Propane, Gaz Naturel</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Type / Capacité d'Huile</span><span class="font-medium text-gray-900 dark:text-gray-200">0W-40 Synthétique | 1.9L</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Huile Incluse / Arrêt Bas N.</span><span class="font-medium text-gray-900 dark:text-gray-200">Oui / Oui</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Homologation ETL / EPA</span><span class="font-medium text-gray-900 dark:text-gray-200">cETLus / Oui</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Application Commutateur</span><span class="font-medium text-gray-900 dark:text-gray-200">Maison Entière / Automatique</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Commutateur Amp. / Volts</span><span class="font-medium text-gray-900 dark:text-gray-200">200A | 120/240</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Temps de Réponse</span><span class="font-medium text-gray-900 dark:text-gray-200">Ajustable (0.5-30 sec.)</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Boîtier Commutateur</span><span class="font-medium text-gray-900 dark:text-gray-200">NEMA 3R</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Dimensions (L x L x H)</span><span class="font-medium text-gray-900 dark:text-gray-200">137 x 77 x 111 cm</span></div>
+                                  <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Poids</span><span class="font-medium text-gray-900 dark:text-gray-200">289 kg (637.6 lb)</span></div>`,
+
+                // Card 2
+                'mod2-title': 'Génératrice de Secours 10-kW',
+                'mod2-desc': 'Une excellente unité de départ pour les petites maisons, protégeant facilement vos appareils de cuisine et votre chauffage.',
+                'mod2-feat4': 'Idéal pour : Petites maisons, chauffage de base, espaces de vie',
+                'mod2-note': 'Une augmentation de puissance garantissant un plus grand confort lors des pannes prolongées.',
+
+                // Card 3
+                'mod3-title': 'Génératrice de Secours 12.5-kW',
+                'mod3-desc': 'Couverture étendue pour les maisons moyennes. Fait fonctionner plusieurs appareils à forte consommation simultanément.',
+                'mod3-feat4': 'Idéal pour : Maisons moyennes, charges lourdes multiples',
+                'mod3-note': 'Gère facilement les demandes domestiques quotidiennes sans faiblir.',
+
+                // Card 4
+                'mod4-title': 'Génératrice de Secours 14-kW',
+                'mod4-desc': 'La solution de taille moyenne idéale. Alimente la majeure partie de la maison, y compris les charges lourdes comme la climatisation.',
+                'mod4-feat4': 'Idéal pour : Climatisation, fours électriques, pompes de puits',
+                'mod4-note': 'Le compromis parfait entre prix et performance. Alimente la majorité des foyers modernes.',
+                
+                // Card 5
+                'mod5-title': 'Génératrice de Secours 16-kW',
+                'mod5-desc': 'Puissance intermédiaire avancée. Fournit l\'énergie supplémentaire nécessaire pour les grandes maisons sans passer à une unité massive.',
+                'mod5-feat4': 'Idéal pour : Maisons plus grandes, appareils supplémentaires',
+                'mod5-note': 'Fournit l\'énergie supplémentaire nécessaire pour soutenir de plus grandes maisons.',
+
+                // Card 6
+                'mod6-title': 'Génératrice de Secours 18-kW',
+                'mod6-desc': 'Le point d\'entrée pour les grandes maisons. Gère facilement plusieurs charges électriques importantes sans problème.',
+                'mod6-feat4': 'Idéal pour : Grandes propriétés, CVC multi-zones',
+                'mod6-note': 'Le point d\'entrée pour les grandes maisons. Gère facilement les charges lourdes.',
+
+                // Card 7
+                'mod7-title': 'Génératrice de Secours 20-kW',
+                'mod7-desc': 'Puissance premium pour les ménages exigeants. Maintient vos appareils de luxe et systèmes CVC en parfait état de marche.',
+                'mod7-feat4': 'Idéal pour : Appareils de luxe, piscines chauffées',
+                'mod7-note': 'Puissance premium pour les foyers exigeants. Maintenez vos systèmes de luxe en marche.',
+
+                // Card 8
+                'mod8-title': 'Génératrice de Secours 22-kW',
+                'mod8-desc': 'Puissance maximale pour toute la maison. Conçue pour tout gérer de manière transparente et maintenir votre maison opérationnelle.',
+                'mod8-feat1': 'Capacité maximale pour toute la maison',
+                'mod8-feat4': 'Idéal pour : Grandes maisons, chauffage électrique intensif',
+                'mod8-note': 'Ne compromettez jamais votre mode de vie. Conçu pour les familles qui ne veulent aucune perturbation.',
+
+                // Card 9
+                'mod9-title': 'Génératrice de Secours 24-kW',
+                'mod9-desc': 'La solution de secours ultime. Capacité maximale absolue pour soutenir de vastes propriétés et des besoins commerciaux.',
+                'mod9-feat4': 'Idéal pour : Vastes propriétés, dépendances multiples',
+                'mod9-note': 'La solution de secours ultime. Capacité maximale pour des besoins résidentiels massifs.',
+
+                // Financing 
+                'finance-title': 'Options de Paiement Flexibles Disponibles',
+                'finance-desc': 'Ne laissez pas les contraintes budgétaires vous laisser dans le noir. Nous avons établi des partenariats avec les meilleures institutions financières pour offrir des options de paiement et des plans de financement flexibles pour votre nouvelle génératrice Champion. Obtenez l\'alimentation dont vous avez besoin dès aujourd\'hui, et payez au fil du temps !',
+                'finance-cta': 'Renseignez-vous sur nos plans de financement <i data-lucide="arrow-right" class="w-4 h-4 inline"></i>',
+
                 'gen-plans-title': 'Options d\'Adhésion et d\'Entretien',
-                'gen-plans-subtitle': 'Gardez votre génératrice en parfait état de marche toute l\'année grâce à nos plans de service Generac exclusifs.',
+                'gen-plans-subtitle': 'Gardez votre génératrice Champion en parfait état de marche toute l\'année grâce à nos plans de service autorisés.',
                 'gen-annually': '/ Annuellement',
                 'gen-btn-select': 'Sélectionner',
                 'gen-btn-select-plat': 'Sélectionner Platine',
@@ -782,7 +1715,7 @@
                 'gen-fine-2': 'Visite d\'entretien supplémentaire après 100h de fonctionnement disponible pour les détenteurs de plan à 299 $ / visite requise.',
                 'gen-fine-3': 'Toutes les visites d\'entretien et de mise au point doivent être planifiées du lundi au vendredi entre 8h et 17h, à notre convenance.',
                 'gen-fine-4': '<strong>Frais d\'appel d\'urgence de 189 $</strong> (plus les frais applicables pour les travaux).',
-                'gen-fine-5': 'Les réparations ne sont pas incluses dans les plans d\'entretien, sauf si elles sont couvertes par la garantie Generac.',
+                'gen-fine-5': 'Les réparations ne sont pas incluses dans les plans d\'entretien, sauf si elles sont couvertes par la garantie Champion.',
                 
                 'gen-chk-title': 'Qu\'est-ce qui est Inclus dans Nos Visites ?',
                 'gen-chk-subtitle': 'Des soins complets et certifiés pour garder votre génératrice prête à tout.',
@@ -802,14 +1735,14 @@
                 
                 'gen-cl2-title': 'Mise au Point',
                 'gen-c2-1': 'Inspection pré-hivernale',
-                'gen-c2-2': 'Démarrage',
+                'gen-c2-2': 'Tests de démarrage',
                 'gen-c2-3': 'Vérification de la tension',
                 'gen-c2-4': 'Vérification de l\'huile',
-                'gen-cl-note': '"Big G Electric offre une installation et un entretien professionnels, s\'assurant que votre génératrice est correctement configurée et fonctionne de manière optimale, avec un soutien continu au besoin."',
+                'gen-cl-note': '"Big G Electric offre une installation professionnelle, des réparations autorisées et un entretien continu, s\'assurant que votre génératrice Champion est correctement configurée et fonctionne de manière optimale."',
 
                 // Form & Footer
                 'contact-title': 'Demander un Rappel',
-                'contact-subtitle': 'Laissez vos coordonnées et nous vous répondrons sous peu pour explorer vos options de génératrice.',
+                'contact-subtitle': 'Laissez vos coordonnées et nous vous répondrons sous peu pour explorer vos options de génératrice et de financement.',
                 'form-name': 'Nom Complet',
                 'form-phone': 'Numéro de Téléphone',
                 'form-email': 'Adresse Courriel',
@@ -822,12 +1755,11 @@
                 'opt-ev': 'Borne de Recharge VE',
                 'opt-other': 'Autre',
                 'form-submit': 'Soumettre la Demande',
-                'form-success': 'Merci ! Votre demande a été envoyée.',
-                'footer-desc': 'Services électriques professionnels, installation de recharge VE et solutions CVC (HVAC) desservant la région du Grand Montréal.',
+                'footer-desc': 'Services électriques professionnels, installation et réparation de génératrices de secours, recharge VE et solutions CVC desservant la région du Grand Montréal.',
                 'footer-contact': 'Coordonnées',
                 'footer-hours': 'Heures d\'Ouverture',
                 'hours-247': 'Ouvert 24 heures,<br>7 jours sur 7',
-                'hours-desc': 'Disponible jour et nuit pour vos urgences électriques et projets planifiés.',
+                'hours-desc': 'Disponible jour et nuit pour vos urgences électriques, réparations de génératrices et projets planifiés.',
                 'footer-rights': '© 2026 Big G Electric. Tous droits réservés.'
             }
         };
@@ -900,6 +1832,26 @@
                 mobileMenu.classList.add('hidden');
             });
         });
+
+        // --- Modal Logic ---
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        function closeModal(event, modalId, force = false) {
+            // Close if 'force' is true (X button clicked) OR if clicked directly on the overlay backdrop
+            if (force || event.target.classList.contains('modal-overlay')) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.remove('open');
+                    document.body.style.overflow = ''; // Restore background scrolling
+                }
+            }
+        }
     </script>
 </body>
 </html>
