@@ -1068,38 +1068,212 @@
         </div>
     </div>
 
-    <!-- Modal 2: 10kW -->
-    <div id="modal-2" class="fixed inset-0 z-[60] flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event, 'modal-2')">
+    <!-- Modal 2: 22kW -->
+    <div id="modal-1" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-1')">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-lg rounded-2xl shadow-2xl relative modal-content z-10 p-8 border border-gray-200 dark:border-gray-700" onclick="event.stopPropagation()">
-            <button onclick="closeModal(event, 'modal-2', true)" class="absolute -top-4 -right-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border-2 border-gray-100 dark:border-gray-700 z-20">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod2-title">10-kW Home Standby</h3>
-            <div class="bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-sm font-semibold px-3 py-1 rounded inline-block mb-4" data-i18n="badge-starter">Starter Whole Home</div>
+        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
             
-            <!-- SCROLLING GALLERY WITH CONTROLS -->
-            <div class="relative mb-6 group">
-                <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700" aria-label="Scroll left"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
-                <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                    <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Generator+View+1'" alt="Champion Generator View 1" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Generator+View+2'" alt="Champion Generator View 2" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    <img src="22kwhomestandby3.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Generator+View+3'" alt="Champion Generator View 3" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    <img src="22kwhomestandby4.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Generator+View+4'" alt="Champion Generator View 4" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    <img src="22kwhomestandby5.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Generator+View+5'" alt="Champion Generator View 5" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    <img src="22kwhomestandby6.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Generator+View+6'" alt="Champion Generator View 6" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                </div>
-                <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700" aria-label="Scroll right"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+            <!-- Sticky Header / Close -->
+            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
+                <div class="bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod1">Whole House Power</div>
+                <button onclick="closeModal(event, 'modal-1', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
             </div>
 
-            <ul class="space-y-3 mb-6">
-                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-auto">Fully automatic 24/7 operation</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-gas">Runs on natural gas or propane</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="feat-axis">Includes aXis Controller® technology</span></li>
-                <li class="flex items-start gap-2"><i data-lucide="check" class="w-5 h-5 text-green-500 shrink-0"></i><span class="text-gray-700 dark:text-gray-300" data-i18n="mod2-feat4">Ideal for: Small homes, basic heating, living spaces</span></li>
-            </ul>
-            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 italic" data-i18n="mod2-note">A step up in power ensuring greater comfort during extended grid outages.</p>
-            <a href="#contact" onclick="closeModal(event, 'modal-2', true)" class="w-full block text-center bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 rounded-lg transition-colors" data-i18n="btn-get-quote">Get a Quote</a>
+            <!-- Content Body -->
+            <div class="p-6 md:p-8">
+                <!-- SCROLLING GALLERY WITH CONTROLS -->
+                <div class="relative mb-8 group">
+                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700" aria-label="Scroll left">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
+                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" alt="22kW Champion Generator View 1" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" alt="22kW Champion Generator View 2" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <img src="22kwhomestandby3.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+3'" alt="22kW Champion Generator View 3" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <img src="22kwhomestandby4.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+4'" alt="22kW Champion Generator View 4" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <img src="22kwhomestandby5.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+5'" alt="22kW Champion Generator View 5" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <img src="22kwhomestandby6.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+6'" alt="22kW Champion Generator View 6" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
+                    </div>
+                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700" aria-label="Scroll right">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Title & Short Desc -->
+                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod1-title">22 kW Whole House Home Standby Generator and 100A Switch with aXis Technology</h3>
+                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod1-short-desc">The Champion Power Equipment 201219 Home Standby Generator System includes 22 kW aXis Home Standby Generator and 100A aXis ATS Whole House Automatic Transfer Switch. Equipped with aXis technology for reduced costs, increases efficiency, and peace of mind while ensuring security and convenience for your family during an emergency. Enjoy totally automatic, seamless power to your home during an outage.</p>
+
+                <!-- Features -->
+                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
+                <div class="grid md:grid-cols-2 gap-4 mb-10">
+                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span>Whole House Power</span></h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Up to 20% more fuel efficient than leading competitors, this 22-kilowatt generator provides 22,000 watts of continuous power on propane and 19,800 watts on natural gas, with no refueling, no manual operation, and no extension cords needed.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span>Efficient</span></h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">With less wiring and lower installation costs thanks to our Power Line Carrier technology, you’ll save time and money installing your new HSB, easily manage your high-demand appliances with aXis technology, plus advanced airflow design extends engine life.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span>Quiet Operation</span></h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Thanks to advanced sound dampening and a specially designed low-tone muffler, this generator operates at a residential-friendly 67 dB[A] noise level and performs self-diagnostic tests.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
+                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield" class="w-5 h-5 text-brand-blue"></i> <span>Reliable</span></h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">24-volt starting system operates in sub-zero temperatures down to -22 °F with aluminum-zinc coated steel for weatherproofing and oxidation-resistance.</p>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700 md:col-span-2">
+                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5 text-brand-blue"></i> <span>Champion Support</span></h5>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Includes 10-year limited warranty with FREE lifetime technical support from dedicated experts.</p>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
+                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed">
+                    <p class="font-bold text-gray-900 dark:text-white">Model #201219</p>
+                    <p class="font-bold text-brand-blue dark:text-blue-400">22 kW Whole House Home Standby Generator and 100A Switch with aXis Technology</p>
+                    <p class="font-semibold text-gray-900 dark:text-gray-300">10 Year Warranty</p>
+                    
+                    <p>The Champion Power Equipment 201219 Home Standby Generator System includes 22 kW aXis Home Standby Generator and 100A aXis ATS Whole House Automatic Transfer Switch. Equipped with aXis technology for reduced costs, increases efficiency, and peace of mind while ensuring security and convenience for your family during an emergency. Enjoy totally automatic, seamless power to your home during an outage.</p>
+                    
+                    <p>Champion aXis 22 kW generator features aXis Controller™ with 4-inch color display and Power Line Carrier technology, which uses your home’s existing wiring so your generator can talk to the automatic transfer switch and other components without needing to run separate wires, saving you money and time on installation.</p>
+                    
+                    <p>With aXis Wi-Fi Direct your installer can use a tablet or cell phone to program your generator meaning less hassle, faster setup, and lower cost.</p>
+                    
+                    <p>Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with CSA standards for Canada.</p>
+                    
+                    <p>The Whole House automatic transfer switch backs up your home’s 100-amp distribution panel and has the ability to manage your high-demand appliances by using our aXis Load Management Modules model 100868 (sold separately). Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with UL standards for the US.</p>
+                    
+                    <p>The innovative advanced airflow design stands out from the competition and allows your HSB to operate at cooler temperatures which extends the life of your engine. Your HSB is up to 20% more fuel efficient than leading competitors with 3.6 gal/hr using propane and 270.2 ft3/hr using natural gas at rated load.</p>
+                    
+                    <p>Be confident your HSB will hold up to any weather thanks to the aluminum-zinc coated steel enclosure, offering better structural rigidity with the oxidation resistance of an all-aluminum enclosure, plus the gullwing opening allows for easy service and maintenance access.</p>
+                    
+                    <p>The 24V starting system operates in sub-zero temperatures down to -22 °F, never needs refueling operating on your home’s NG or LP fuel supply, starts automatically when the power goes out, and returns to standby when power is restored.</p>
+                    
+                    <p>The 999cc V-Twin Champion engine provides 22-kilowatts of continuous power on propane and 19.8-kilowatts on natural gas. This 22 kW-rated unit produces 91.7 amps at 240 volts on propane and 82.5 amps at 240 volts on natural gas.</p>
+                    
+                    <p>The residential-friendly 67 dB[A]* is a little louder than normal conversation.</p>
+                    
+                    <p>The alternator produces less than 5% total harmonic distortion (THD) to ensure safe use with even the most sensitive electronics.</p>
+                    
+                    <p>This generator is available for all 50 states. Buy with confidence - Champion Support will back your purchase with FREE lifetime technical support, a 10-year limited warranty on the generator and a 2-year limited warranty on the ATS.</p>
+                    
+                    <p class="italic text-xs">*Measurement is approximate and for reference purposes only. Sound measured at 23 ft. (7 m) and does not account for your installation site.</p>
+                </div>
+
+                <!-- Specs & Included Grid -->
+                <div class="grid lg:grid-cols-3 gap-8 mb-10">
+                    <div class="lg:col-span-1">
+                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
+                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5">
+                            <li>Battery Jumper Wire</li>
+                            <li>Gas Inlet Flex Hose</li>
+                            <li>Gas Inlet Hose</li>
+                            <li>Keys for Door Lock</li>
+                            <li>Master Mixer Assembly</li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Rated Watts</span><span class="font-medium text-gray-900 dark:text-gray-200">22000W</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Natural Gas Rated Watts</span><span class="font-medium text-gray-900 dark:text-gray-200">19800W</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Rated Amps (120V/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">183.4A / 91.7A</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Nat. Gas Rated Amps (120V/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">165A / 82.5A</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Rated Volts / Frequency</span><span class="font-medium text-gray-900 dark:text-gray-200">120/240V | 60Hz</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Phase</span><span class="font-medium text-gray-900 dark:text-gray-200">Single</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Fuel Cons. (1/2 | Full)</span><span class="font-medium text-gray-900 dark:text-gray-200">2 gal/h | 3.6 gal/h</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Nat. Gas Fuel Cons. (1/2 | Full)</span><span class="font-medium text-gray-900 dark:text-gray-200">173.4 ft³/h | 270.2 ft³/h</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Main Line Circuit Breaker</span><span class="font-medium text-gray-900 dark:text-gray-200">100A</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Starting System</span><span class="font-medium text-gray-900 dark:text-gray-200">Automatic 24V</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Operational Volume</span><span class="font-medium text-gray-900 dark:text-gray-200">67 dB(A)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Cooling System</span><span class="font-medium text-gray-900 dark:text-gray-200">Air Cooled</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">AC Ton Rating</span><span class="font-medium text-gray-900 dark:text-gray-200">5T</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Generator Enclosure</span><span class="font-medium text-gray-900 dark:text-gray-200">Aluminum-Zinc Coated Steel</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Generator Mounting Pad</span><span class="font-medium text-gray-900 dark:text-gray-200">Composite</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Brand</span><span class="font-medium text-gray-900 dark:text-gray-200">Champion</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Size / Speed</span><span class="font-medium text-gray-900 dark:text-gray-200">999cc | 3600 RPM</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Type</span><span class="font-medium text-gray-900 dark:text-gray-200">4-stroke V-Twin</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Fuel Type</span><span class="font-medium text-gray-900 dark:text-gray-200">Propane (LPG), Natural Gas (NG)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Oil Type / Cap</span><span class="font-medium text-gray-900 dark:text-gray-200">0W-40 Full Synthetic | 2 qt.</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Oil Included / Shut-off</span><span class="font-medium text-gray-900 dark:text-gray-200">Yes / Yes</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">ETL Listing / EPA</span><span class="font-medium text-gray-900 dark:text-gray-200">cETLus / Yes</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Operation</span><span class="font-medium text-gray-900 dark:text-gray-200">Automatic (Whole House)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Amps / Volts</span><span class="font-medium text-gray-900 dark:text-gray-200">100A | 120/240</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Response Time</span><span class="font-medium text-gray-900 dark:text-gray-200">Adj. (0.5-30 sec.)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Enclosure Rating</span><span class="font-medium text-gray-900 dark:text-gray-200">NEMA 3R</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Load Management</span><span class="font-medium text-gray-900 dark:text-gray-200">Yes</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Dimensions (L x W x H)</span><span class="font-medium text-gray-900 dark:text-gray-200">54 in. x 30.3 in. x 43.9 in.</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Weight</span><span class="font-medium text-gray-900 dark:text-gray-200">636.3 lb.</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manuals & Documents Section -->
+                <div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Operator's Manual (English) -->
+                        <a href="https://drive.google.com/file/d/1QOlQKhH8IwFyAfs8ZY2Vd_00w1H4ZJ7O/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual (100304)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+
+                        <!-- Parts Info 100304 (English) -->
+                        <a href="https://drive.google.com/file/d/1Rxfmt1Do2eMVBHLJTZvxtbcg1_TuBM1V/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Parts Info (100304)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+
+                        <!-- Parts Info 100304 (French) -->
+                        <a href="https://drive.google.com/file/d/1dRiqG7m-xN26Fj92vLII389PfbvFaQAL/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Info. sur les pièces (100304)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Français • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+
+                        <!-- Parts Info 102007 (English) -->
+                        <a href="https://drive.google.com/file/d/17CCTjZFe84PhiwueKys5gZsEcHPOUBxJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Parts Info (102007)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+
+                        <!-- Parts Info 102007 (French) -->
+                        <a href="https://drive.google.com/file/d/1iuUB7I90k-doxJ4nQdNkPcjcHaUQVIiv/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
+                            <div class="flex-grow">
+                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Info. sur les pièces (102007)</h5>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Français • PDF</p>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sticky Footer CTA -->
+            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
+                <a href="#contact" onclick="closeModal(event, 'modal-1', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
+            </div>
         </div>
     </div>
 
