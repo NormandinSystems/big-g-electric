@@ -85,44 +85,7 @@
             background: rgba(17, 24, 39, 0.9);
             backdrop-filter: blur(10px);
         }
-        /* Modal Transitions */
-        .modal-overlay {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease-in-out;
-        }
-        .modal-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
-        .modal-content {
-            transform: scale(0.95) translateY(20px);
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-        }
-        .modal-overlay.open .modal-content {
-            transform: scale(1) translateY(0);
-            opacity: 1;
-        }
-        /* Custom Scrollbar for large modals */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(0,0,0,0.05);
-            border-radius: 8px;
-        }
-        .dark .custom-scrollbar::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.05);
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(0,0,0,0.2);
-            border-radius: 8px;
-        }
-        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(255,255,255,0.2);
-        }
-        /* Hide scrollbar for gallery but allow scrolling */
+        /* Custom Scrollbar for the carousels */
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -256,7 +219,7 @@
             </div>
         </section>
 
-        <!-- Partner Banner (Champion Specific) -->
+        <!-- Partner Banner -->
         <section class="py-10 bg-gray-900 dark:bg-black transition-colors duration-300 border-b border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row justify-center items-center gap-6 reveal">
@@ -329,7 +292,7 @@
             </div>
         </section>
 
-        <!-- Generator Models Section (Cards) -->
+        <!-- Generator Models Section (Cards with internal Carousels) -->
         <section class="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300 border-t border-gray-200 dark:border-gray-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal">
@@ -341,208 +304,236 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
                     
-                    <!-- Model 1: 22kW aXis -->
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
-                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative overflow-hidden border-b border-gray-200 dark:border-gray-700">
-                            <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+Generator'" alt="22-kW Home Standby Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">22 kW</span>
+                    <!-- Generator Card 1: 22 kW Whole House 200A aXis (201221) -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col relative">
+                        <!-- Card Carousel Container -->
+                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative border-b border-gray-200 dark:border-gray-700 group/carousel">
+                            <!-- Left Arrow -->
+                            <button onclick="scrollGallery(this, -1)" aria-label="Scroll left" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-700">
+                                <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                            </button>
+
+                            <!-- IMAGE CAROUSEL START: Add your img tags here -->
+                            <div class="gallery-container w-full h-full overflow-x-auto flex snap-x snap-mandatory hide-scrollbar scroll-smooth">
+                                <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+22kW'" alt="22-kW Home Standby" class="w-full h-full object-cover snap-center shrink-0">
+                                <!-- Add more images below like this: -->
+                                <!-- <img src="another-image.jpg" class="w-full h-full object-cover snap-center shrink-0"> -->
+                            </div>
+                            <!-- IMAGE CAROUSEL END -->
+
+                            <!-- Right Arrow -->
+                            <button onclick="scrollGallery(this, 1)" aria-label="Scroll right" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700 hover:bg-white dark:hover:bg-gray-700">
+                                <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                            </button>
+
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-30 pointer-events-none">22 kW</span>
                         </div>
+                        
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod1-title">22-kW Home Standby w/ 200A Switch</h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod1-short-desc">Includes a 200A aXis automatic transfer switch. Highly efficient, manages high-demand appliances easily with advanced technology.</p>
-                            <div class="space-y-3">
-                                <button onclick="openModal('modal-1')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-more-info">More Info</span>
-                                    <i data-lucide="info" class="w-4 h-4"></i>
-                                </button>
-                                <a href="https://drive.google.com/file/d/1QOlQKhH8IwFyAfs8ZY2Vd_00w1H4ZJ7O/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-view-manual">View Manual</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">22-kW Whole House w/ 200A aXis Switch</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">Includes a 200A aXis automatic transfer switch. The ultimate solution for sprawling properties, managing high-demand appliances easily with advanced technology.</p>
+                            <div class="space-y-3 mt-auto">
+                                <a href="https://www.championpowerequipment.com/product/201221-22-kw-whole-house-home-standby-generator-and-200a-switch-with-axis-technology/" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-champion">View Details on Champion</span>
                                     <i data-lucide="external-link" class="w-4 h-4"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Model 2: 22kW 100A -->
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
-                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative overflow-hidden border-b border-gray-200 dark:border-gray-700">
-                            <img src="" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+Generator'" alt="10-kW Home Standby Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">22 kW</span>
+                    <!-- Generator Card 2: 22 kW Whole House 100A aXis (201219) -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col relative">
+                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative border-b border-gray-200 dark:border-gray-700 group/carousel">
+                            <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+
+                            <!-- IMAGE CAROUSEL START -->
+                            <div class="gallery-container w-full h-full overflow-x-auto flex snap-x snap-mandatory hide-scrollbar scroll-smooth">
+                                <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+22kW'" class="w-full h-full object-cover snap-center shrink-0">
+                            </div>
+                            <!-- IMAGE CAROUSEL END -->
+
+                            <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-30 pointer-events-none">22 kW</span>
                         </div>
+                        
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod2-title">22-kW Home Standby w/ 100A Switch</h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod2-short-desc">Includes a 100A aXis automatic transfer switch. Highly efficient, manages high-demand appliances easily with advanced technology.</p>
-                            <div class="space-y-3">
-                                <button onclick="openModal('modal-2')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-more-info">More Info</span>
-                                    <i data-lucide="info" class="w-4 h-4"></i>
-                                </button>
-                                <a href="https://drive.google.com/drive/folders/1K7UoF-lk2MsryEpx3i6xLEL1eRvhu4uF?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-view-manual">View Manual</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">22-kW Whole House w/ 100A aXis Switch</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">Includes a 100-amp indoor-rated aXis ATS. Get totally automatic, seamless power to your home equipped with smart load management technology.</p>
+                            <div class="space-y-3 mt-auto">
+                                <a href="https://www.championpowerequipment.com/product/201219-22-kw-whole-house-home-standby-generator-and-100a-switch-with-axis-technology/" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-champion">View Details on Champion</span>
                                     <i data-lucide="external-link" class="w-4 h-4"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Model 3: 12.5kW -->
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
-                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative overflow-hidden border-b border-gray-200 dark:border-gray-700">
-                            <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+Generator'" alt="12.5-kW Home Standby Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-                            <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">12.5 kW</span>
+                    <!-- Generator Card 3: 22 kW Whole House 100A FLEX (201010) -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col relative">
+                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative border-b border-gray-200 dark:border-gray-700 group/carousel">
+                            <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+
+                            <!-- IMAGE CAROUSEL START -->
+                            <div class="gallery-container w-full h-full overflow-x-auto flex snap-x snap-mandatory hide-scrollbar scroll-smooth">
+                                <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+22kW'" class="w-full h-full object-cover snap-center shrink-0">
+                            </div>
+                            <!-- IMAGE CAROUSEL END -->
+
+                            <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-30 pointer-events-none">22 kW</span>
                         </div>
+                        
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod3-title">12.5-kW Home Standby</h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod3-short-desc">Expanded coverage for medium homes. Runs multiple high-draw appliances simultaneously without overloading.</p>
-                            <div class="space-y-3">
-                                <button onclick="openModal('modal-3')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-more-info">More Info</span>
-                                    <i data-lucide="info" class="w-4 h-4"></i>
-                                </button>
-                                <a href="https://drive.google.com/your-manual-link-3" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-view-manual">View Manual</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">22-kW Whole House w/ 100A FLEX Switch</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">Includes a 100A FLEX automatic transfer switch. Reliable maximum whole-home coverage with a flexible indoor-rated switch integration.</p>
+                            <div class="space-y-3 mt-auto">
+                                <a href="https://www.championpowerequipment.com/product/201010-22-kw-whole-house-home-standby-generator-and-100a-switch-with-flex-technology/" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-champion">View Details on Champion</span>
                                     <i data-lucide="external-link" class="w-4 h-4"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Model 4: 14kW (Most Popular) -->
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group relative">
-                        <div class="absolute top-0 left-0 w-full bg-brand-accent text-gray-900 text-xs font-bold text-center py-1 z-20 uppercase tracking-widest" data-i18n="badge-popular">Most Popular</div>
-                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative overflow-hidden border-b border-gray-200 dark:border-gray-700 mt-6">
-                            <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+Generator'" alt="14-kW Home Standby Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-                            <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">14 kW</span>
+                    <!-- Generator Card 4: 22 kW Whole House 200A FLEX (201016) -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col relative">
+                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative border-b border-gray-200 dark:border-gray-700 group/carousel">
+                            <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+
+                            <!-- IMAGE CAROUSEL START -->
+                            <div class="gallery-container w-full h-full overflow-x-auto flex snap-x snap-mandatory hide-scrollbar scroll-smooth">
+                                <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+22kW'" class="w-full h-full object-cover snap-center shrink-0">
+                            </div>
+                            <!-- IMAGE CAROUSEL END -->
+
+                            <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-30 pointer-events-none">22 kW</span>
                         </div>
+                        
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod4-title">14-kW Home Standby</h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod4-short-desc">The ideal mid-size solution. Powers most of the home including heavy loads like central A/C units and electric water heaters.</p>
-                            <div class="space-y-3">
-                                <button onclick="openModal('modal-4')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-more-info">More Info</span>
-                                    <i data-lucide="info" class="w-4 h-4"></i>
-                                </button>
-                                <a href="https://drive.google.com/your-manual-link-4" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-view-manual">View Manual</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">22-kW Whole House w/ 200A FLEX Switch</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">Includes a 200A FLEX automatic transfer switch suitable for indoor or outdoor use. The premium choice for robust, high-demand full-home power support.</p>
+                            <div class="space-y-3 mt-auto">
+                                <a href="https://www.championpowerequipment.com/product/201016-22-kw-whole-house-home-standby-generator-and-200a-switch-with-flex-technology/" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-champion">View Details on Champion</span>
                                     <i data-lucide="external-link" class="w-4 h-4"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Model 5: 16kW -->
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
-                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative overflow-hidden border-b border-gray-200 dark:border-gray-700">
-                            <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+Generator'" alt="16-kW Home Standby Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">16 kW</span>
+                    <!-- Generator Card 5: 14 kW Whole House 200A aXis (100839) - Most Popular -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col relative">
+                        <!-- Most Popular Banner -->
+                        <div class="absolute top-0 left-0 w-full bg-brand-accent text-gray-900 text-xs font-bold text-center py-1 z-30 uppercase tracking-widest">Most Popular</div>
+
+                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative border-b border-gray-200 dark:border-gray-700 group/carousel mt-6">
+                            <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+
+                            <!-- IMAGE CAROUSEL START -->
+                            <div class="gallery-container w-full h-full overflow-x-auto flex snap-x snap-mandatory hide-scrollbar scroll-smooth">
+                                <img src="14kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+14kW'" class="w-full h-full object-cover snap-center shrink-0">
+                            </div>
+                            <!-- IMAGE CAROUSEL END -->
+
+                            <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+
+                            <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-30 pointer-events-none">14 kW</span>
                         </div>
+                        
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod5-title">16-kW Home Standby</h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod5-short-desc">Advanced mid-size power. Delivers the extra push needed to support larger homes without jumping to a massive unit.</p>
-                            <div class="space-y-3">
-                                <button onclick="openModal('modal-5')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-more-info">More Info</span>
-                                    <i data-lucide="info" class="w-4 h-4"></i>
-                                </button>
-                                <a href="https://drive.google.com/your-manual-link-5" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-view-manual">View Manual</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">14-kW Whole House w/ 200A aXis Switch</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">The ideal mid-size solution. Powers most of the home including heavy loads like central A/C units with seamless aXis intelligent load management.</p>
+                            <div class="space-y-3 mt-auto">
+                                <a href="https://www.championpowerequipment.com/product/100839-14-kw-whole-house-home-standby-generator-and-200a-switch-with-axis-technology/" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-champion">View Details on Champion</span>
                                     <i data-lucide="external-link" class="w-4 h-4"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Model 6: 18kW -->
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
-                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative overflow-hidden border-b border-gray-200 dark:border-gray-700">
-                            <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+Generator'" alt="18-kW Home Standby Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">18 kW</span>
+                    <!-- Generator Card 6: 14 kW Whole House 100A aXis (100838) -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col relative">
+                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative border-b border-gray-200 dark:border-gray-700 group/carousel">
+                            <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+
+                            <!-- IMAGE CAROUSEL START -->
+                            <div class="gallery-container w-full h-full overflow-x-auto flex snap-x snap-mandatory hide-scrollbar scroll-smooth">
+                                <img src="14kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+14kW'" class="w-full h-full object-cover snap-center shrink-0">
+                            </div>
+                            <!-- IMAGE CAROUSEL END -->
+
+                            <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+
+                            <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-30 pointer-events-none">14 kW</span>
                         </div>
+                        
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod6-title">18-kW Home Standby</h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod6-short-desc">The entry point for large homes. Easily handles multiple large electrical loads seamlessly during an outage.</p>
-                            <div class="space-y-3">
-                                <button onclick="openModal('modal-6')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-more-info">More Info</span>
-                                    <i data-lucide="info" class="w-4 h-4"></i>
-                                </button>
-                                <a href="https://drive.google.com/your-manual-link-6" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-view-manual">View Manual</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">14-kW Whole House w/ 100A aXis Switch</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">Includes a 100-amp indoor-rated aXis ATS. Perfect balance of power, efficiency, and smart load management for typical household needs.</p>
+                            <div class="space-y-3 mt-auto">
+                                <a href="https://www.championpowerequipment.com/product/100838-14-kw-whole-house-home-standby-generator-and-100a-switch-with-axis-technology/" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-champion">View Details on Champion</span>
                                     <i data-lucide="external-link" class="w-4 h-4"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Model 7: 20kW -->
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
-                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative overflow-hidden border-b border-gray-200 dark:border-gray-700">
-                            <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+Generator'" alt="20-kW Home Standby Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-                            <span class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">20 kW</span>
+                    <!-- Generator Card 7: 12.5 kW Select Circuit 100A (100179) -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col relative">
+                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative border-b border-gray-200 dark:border-gray-700 group/carousel">
+                            <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
+
+                            <!-- IMAGE CAROUSEL START -->
+                            <div class="gallery-container w-full h-full overflow-x-auto flex snap-x snap-mandatory hide-scrollbar scroll-smooth">
+                                <img src="12kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+12.5kW'" class="w-full h-full object-cover snap-center shrink-0">
+                            </div>
+                            <!-- IMAGE CAROUSEL END -->
+
+                            <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-30 pointer-events-none">12.5 kW</span>
                         </div>
+                        
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod7-title">20-kW Home Standby</h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod7-short-desc">Premium power for demanding households. Keeps your luxury appliances and dual HVAC systems running perfectly.</p>
-                            <div class="space-y-3">
-                                <button onclick="openModal('modal-7')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-more-info">More Info</span>
-                                    <i data-lucide="info" class="w-4 h-4"></i>
-                                </button>
-                                <a href="https://drive.google.com/your-manual-link-7" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-view-manual">View Manual</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">12.5-kW Select Circuit w/ 100A Switch</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">Includes a 100-amp indoor-rated ATS. Great select-circuit coverage for medium homes. Runs multiple appliances simultaneously without overloading.</p>
+                            <div class="space-y-3 mt-auto">
+                                <a href="https://www.championpowerequipment.com/product/100179-12-5-kw-select-circuit-home-standby-generator-and-100a-switch/" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-champion">View Details on Champion</span>
                                     <i data-lucide="external-link" class="w-4 h-4"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Model 8: 22kW -->
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
-                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative overflow-hidden border-b border-gray-200 dark:border-gray-700">
-                            <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+Generator'" alt="22-kW Home Standby Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">22 kW</span>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod8-title">22-kW Home Standby</h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod8-short-desc">Maximum whole-home power. Designed to handle everything seamlessly, keeping your large home fully operational.</p>
-                            <div class="space-y-3">
-                                <button onclick="openModal('modal-8')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-more-info">More Info</span>
-                                    <i data-lucide="info" class="w-4 h-4"></i>
-                                </button>
-                                <a href="https://drive.google.com/your-manual-link-8" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-view-manual">View Manual</span>
-                                    <i data-lucide="external-link" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Generator Card 8: 8.5 kW Select Circuit 50A (100177) -->
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col relative">
+                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative border-b border-gray-200 dark:border-gray-700 group/carousel">
+                            <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
 
-                    <!-- Model 9: 24kW -->
-                    <div class="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 flex flex-col group">
-                        <div class="h-56 bg-gray-100 dark:bg-gray-800 relative overflow-hidden border-b border-gray-200 dark:border-gray-700">
-                            <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+Generator'" alt="24-kW Home Standby Generator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-10">24 kW</span>
+                            <!-- IMAGE CAROUSEL START -->
+                            <div class="gallery-container w-full h-full overflow-x-auto flex snap-x snap-mandatory hide-scrollbar scroll-smooth">
+                                <img src="8kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Champion+8.5kW'" class="w-full h-full object-cover snap-center shrink-0">
+                            </div>
+                            <!-- IMAGE CAROUSEL END -->
+
+                            <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-8 h-8 rounded-full shadow opacity-0 group-hover/carousel:opacity-100 transition-opacity flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
+
+                            <span class="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md z-30 pointer-events-none">8.5 kW</span>
                         </div>
+                        
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2" data-i18n="mod9-title">24-kW Home Standby</h3>
-                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow" data-i18n="mod9-short-desc">The ultimate backup solution. Absolute maximum capacity to support sprawling properties and commercial-grade needs.</p>
-                            <div class="space-y-3">
-                                <button onclick="openModal('modal-9')" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-more-info">More Info</span>
-                                    <i data-lucide="info" class="w-4 h-4"></i>
-                                </button>
-                                <a href="https://drive.google.com/your-manual-link-9" target="_blank" rel="noopener noreferrer" class="w-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
-                                    <span data-i18n="btn-view-manual">View Manual</span>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">8.5-kW Select Circuit w/ 50A Switch</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow">Includes a 50-amp indoor-rated ATS. Perfect for backing up your most essential circuits like refrigeration, heating, and emergency lights.</p>
+                            <div class="space-y-3 mt-auto">
+                                <a href="https://www.championpowerequipment.com/product/100177-8-5-kw-select-circuit-home-standby-generator-and-50a-switch/" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue hover:bg-brand-dark text-white font-medium py-2.5 rounded-lg transition-colors flex justify-center items-center gap-2">
+                                    <span data-i18n="btn-view-champion">View Details on Champion</span>
                                     <i data-lucide="external-link" class="w-4 h-4"></i>
                                 </a>
                             </div>
@@ -868,795 +859,6 @@
         </div>
     </footer>
 
-    <!-- MODAL CONTAINERS -->
-    
-    <!-- Modal 1: 22kW aXis Detailed -->
-    <div id="modal-1" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-1')">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
-            
-            <!-- Sticky Header / Close -->
-            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-                <div class="bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod1">Whole House Power</div>
-                <button onclick="closeModal(event, 'modal-1', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-
-            <!-- Content Body -->
-            <div class="p-6 md:p-8">
-                <!-- SCROLLING GALLERY WITH CONTROLS -->
-                <div class="relative mb-8 group">
-                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700" aria-label="Scroll left">
-                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
-                    </button>
-                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" alt="22kW Champion Generator View 1" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" alt="22kW Champion Generator View 2" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby3.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+3'" alt="22kW Champion Generator View 3" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby4.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+4'" alt="22kW Champion Generator View 4" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby5.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+5'" alt="22kW Champion Generator View 5" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby6.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+6'" alt="22kW Champion Generator View 6" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    </div>
-                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700" aria-label="Scroll right">
-                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
-                    </button>
-                </div>
-
-                <!-- Title & Short Desc -->
-                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod1-title">22 kW Whole House Home Standby Generator and 200A Switch with aXis Technology</h3>
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod1-short-desc">Champion’s 22 kW aXis Home Standby Generator System includes a 200-amp aXis automatic transfer switch. This fully automatic system manages your home’s loads while reducing costs and increasing efficiency. Designed with advanced sound dampening, never needs refueling, works in extreme temperatures, and has an industry leading 10-year limited warranty.</p>
-
-                <!-- Features -->
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
-                <div class="grid md:grid-cols-2 gap-4 mb-10">
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m1-f1-t">Whole House Power</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m1-f1-d">Up to 20% more fuel efficient than leading competitors, this 22-kilowatt generator provides 22,000 watts of continuous power on propane and 19,800 watts on natural gas, with no refueling, no manual operation, and no extension cords needed.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m1-f2-t">Efficient</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m1-f2-d">With less wiring and lower installation costs thanks to our Power Line Carrier technology, you’ll save time and money installing your new HSB, easily manage your high-demand appliances with aXis technology, plus advanced airflow design extends engine life.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m1-f3-t">Quiet Operation</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m1-f3-d">Thanks to advanced sound dampening and a specially designed low-tone muffler, this generator operates at a residential-friendly 67 dB[A] noise level and performs self-diagnostic tests.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m1-f4-t">Reliable & Champion Support</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m1-f4-d">24-volt starting system operates in sub-zero temperatures down to -22 °F with aluminum-zinc coated steel. Includes 10-year limited warranty with FREE lifetime technical support from dedicated experts.</p>
-                    </div>
-                </div>
-
-                <!-- Description -->
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m1-long-desc">
-                    <p class="font-bold text-gray-900 dark:text-white">Model #201221</p>
-                    <p class="font-bold text-brand-blue dark:text-blue-400">22 kW Whole House Home Standby Generator and 200A Switch with aXis Technology</p>
-                    <p class="font-semibold text-gray-900 dark:text-gray-300">10 Year Warranty</p>
-                    <p>Champion’s 22 kW aXis Home Standby Generator System includes a 200-amp aXis automatic transfer switch. This fully automatic system manages your home’s loads while reducing costs and increasing efficiency. Designed with advanced sound dampening, never needs refueling, works in extreme temperatures, and has an industry leading 10-year limited warranty.</p>
-                    <p>The Champion Power Equipment 201221 Home Standby Generator System includes 22 kW aXis Home Standby Generator and 200A aXis ATS Whole House Automatic Transfer Switch. Equipped with aXis technology for reduced costs, increases efficiency, and peace of mind while ensuring security and convenience for your family during an emergency. Enjoy totally automatic, seamless power to your home during an outage.</p>
-                    <p>Champion aXis 22 kW generator features aXis Controller™ with 4-inch color display and Power Line Carrier technology, which uses your home’s existing wiring so your generator can talk to the automatic transfer switch and other components without needing to run separate wires, saving you money and time on installation.</p>
-                    <p>With aXis Wi-Fi Direct your installer can use a tablet or cell phone to program your generator meaning less hassle, faster setup, and lower cost.</p>
-                    <p>Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with CSA standards for Canada.</p>
-                    <p>The Whole House automatic transfer switch backs up your home’s 200-amp distribution panel and has the ability to manage your high-demand appliances by using our aXis Load Management Modules model 100868 (sold separately). Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with UL standards for the US.</p>
-                    <p>The innovative advanced airflow design stands out from the competition and allows your HSB to operate at cooler temperatures which extends the life of your engine. Your HSB is up to 20% more fuel efficient than leading competitors with 3.6 gal/hr using propane and 270.2 ft3/hr using natural gas at rated load.</p>
-                    <p>Be confident your HSB will hold up to any weather thanks to the aluminum-zinc coated steel enclosure, offering better structural rigidity with the oxidation resistance of an all-aluminum enclosure, plus the gullwing opening allows for easy service and maintenance access.</p>
-                    <p>The 24V starting system operates in sub-zero temperatures down to -22 °F, never needs refueling operating on your home’s NG or LP fuel supply, starts automatically when the power goes out, and returns to standby when power is restored.</p>
-                    <p>The 999cc V-Twin Champion engine provides 22-kilowatts of continuous power on propane and 19.8-kilowatts on natural gas. This 22 kW-rated unit produces 91.7 amps at 240 volts on propane and 82.5 amps at 240 volts on natural gas.</p>
-                    <p>The residential-friendly 67 dB[A]* is a little louder than normal conversation.</p>
-                    <p>The alternator produces less than 5% total harmonic distortion (THD) to ensure safe use with even the most sensitive electronics.</p>
-                    <p>This generator is available for all 50 states. Buy with confidence - Champion Support will back your purchase with FREE lifetime technical support, a 10-year limited warranty on the generator and a 2-year limited warranty on the ATS.</p>
-                    <p class="italic text-xs">*Measurement is approximate and for reference purposes only. Sound measured at 23 ft. (7 m) and does not account for your installation site.</p>
-                </div>
-
-                <!-- Specs & Included Grid -->
-                <div class="grid lg:grid-cols-3 gap-8 mb-10">
-                    <div class="lg:col-span-1">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
-                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m1-included-list">
-                            <li>Battery Jumper Wire</li>
-                            <li>Gas Inlet Flex Hose</li>
-                            <li>Gas Inlet Hose</li>
-                            <li>Keys for Door Lock</li>
-                            <li>Master Mixer Assembly</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-2">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m1-specs-list">
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Rated Watts</span><span class="font-medium text-gray-900 dark:text-gray-200">22000W</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Natural Gas Rated Watts</span><span class="font-medium text-gray-900 dark:text-gray-200">19800W</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Rated Amps (120V/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">183.4A / 91.7A</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Nat. Gas Rated Amps (120V/240V)</span><span class="font-medium text-gray-900 dark:text-gray-200">165A / 82.5A</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Rated Volts / Frequency</span><span class="font-medium text-gray-900 dark:text-gray-200">120/240V | 60Hz</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Phase</span><span class="font-medium text-gray-900 dark:text-gray-200">Single</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Propane Fuel Cons. (1/2 | Full)</span><span class="font-medium text-gray-900 dark:text-gray-200">2 gal/h | 3.6 gal/h</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Nat. Gas Fuel Cons. (1/2 | Full)</span><span class="font-medium text-gray-900 dark:text-gray-200">173.4 ft³/h | 270.2 ft³/h</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Main Line Circuit Breaker</span><span class="font-medium text-gray-900 dark:text-gray-200">100A</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Starting System</span><span class="font-medium text-gray-900 dark:text-gray-200">Automatic 24V</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Operational Volume</span><span class="font-medium text-gray-900 dark:text-gray-200">67 dB(A)</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Cooling System</span><span class="font-medium text-gray-900 dark:text-gray-200">Air Cooled</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">AC Ton Rating</span><span class="font-medium text-gray-900 dark:text-gray-200">5T</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Generator Enclosure</span><span class="font-medium text-gray-900 dark:text-gray-200">Aluminum-Zinc Steel</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Generator Mounting Pad</span><span class="font-medium text-gray-900 dark:text-gray-200">Composite</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Brand</span><span class="font-medium text-gray-900 dark:text-gray-200">Champion</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Size / Speed</span><span class="font-medium text-gray-900 dark:text-gray-200">999cc | 3600 RPM</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Type</span><span class="font-medium text-gray-900 dark:text-gray-200">4-stroke V-Twin</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Fuel Type</span><span class="font-medium text-gray-900 dark:text-gray-200">Propane, Natural Gas</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Engine Oil Type / Cap</span><span class="font-medium text-gray-900 dark:text-gray-200">0W-40 Synthetic | 2 qt.</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Oil Included / Shut-off</span><span class="font-medium text-gray-900 dark:text-gray-200">Yes / Yes</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">ETL Listing / EPA</span><span class="font-medium text-gray-900 dark:text-gray-200">cETLus / Yes</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Operation</span><span class="font-medium text-gray-900 dark:text-gray-200">Automatic (Whole House)</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Amps / Volts</span><span class="font-medium text-gray-900 dark:text-gray-200">200A | 120/240</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Response Time</span><span class="font-medium text-gray-900 dark:text-gray-200">Adj. (0.5-30 sec.)</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Switch Enclosure Rating</span><span class="font-medium text-gray-900 dark:text-gray-200">NEMA 3R</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Dimensions (L x W x H)</span><span class="font-medium text-gray-900 dark:text-gray-200">54" x 30.3" x 43.9"</span></div>
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">Weight</span><span class="font-medium text-gray-900 dark:text-gray-200">637.6 lb.</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Manuals & Documents Section -->
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <!-- Operator's Manual (English) -->
-                        <a href="https://drive.google.com/file/d/1QOlQKhH8IwFyAfs8ZY2Vd_00w1H4ZJ7O/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
-                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
-                            <div class="flex-grow">
-                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual (100304)</h5>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
-                            </div>
-                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
-                        </a>
-                        <!-- Additional Manuals Follow... -->
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Sticky Footer CTA -->
-            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
-                <a href="#contact" onclick="closeModal(event, 'modal-1', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 2: 22kW 100A -->
-    <div id="modal-2" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-2')">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
-            <!-- Sticky Header / Close -->
-            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-                <div class="bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod2">Whole House Power</div>
-                <button onclick="closeModal(event, 'modal-2', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <!-- Content Body -->
-            <div class="p-6 md:p-8">
-                <!-- SCROLLING GALLERY WITH CONTROLS -->
-                <div class="relative mb-8 group">
-                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700" aria-label="Scroll left"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
-                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" alt="Generator View 1" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" alt="Generator View 2" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby3.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+3'" alt="Generator View 3" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    </div>
-                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700" aria-label="Scroll right"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
-                </div>
-                <!-- Title & Short Desc -->
-                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod2-title">Modal Title</h3>
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod2-short-desc">Short description goes here.</p>
-                <!-- Features -->
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
-                <div class="grid md:grid-cols-2 gap-4 mb-10">
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m2-f1-t">Feature 1</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m2-f1-d">Feature 1 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m2-f2-t">Feature 2</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m2-f2-d">Feature 2 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m2-f3-t">Feature 3</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m2-f3-d">Feature 3 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m2-f4-t">Feature 4</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m2-f4-d">Feature 4 description.</p>
-                    </div>
-                </div>
-                <!-- Description -->
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m2-long-desc">
-                    <p>[Full Description Goes Here]</p>
-                </div>
-                <!-- Specs & Included Grid -->
-                <div class="grid lg:grid-cols-3 gap-8 mb-10">
-                    <div class="lg:col-span-1">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
-                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m2-included-list">
-                            <li>[Included Item]</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-2">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m2-specs-list">
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">[Spec]</span><span class="font-medium text-gray-900 dark:text-gray-200">[Value]</span></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Manuals & Documents Section -->
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
-                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
-                            <div class="flex-grow">
-                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual</h5>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
-                            </div>
-                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Sticky Footer CTA -->
-            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
-                <a href="#contact" onclick="closeModal(event, 'modal-2', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 3: 12.5kW -->
-    <div id="modal-3" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-3')">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
-            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-                <div class="bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue dark:text-blue-400 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod3">Badge</div>
-                <button onclick="closeModal(event, 'modal-3', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <div class="p-6 md:p-8">
-                <div class="relative mb-8 group">
-                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
-                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    </div>
-                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
-                </div>
-                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod3-title">Modal Title</h3>
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod3-short-desc">Short description goes here.</p>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
-                <div class="grid md:grid-cols-2 gap-4 mb-10">
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m3-f1-t">Feature 1</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m3-f1-d">Feature 1 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m3-f2-t">Feature 2</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m3-f2-d">Feature 2 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m3-f3-t">Feature 3</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m3-f3-d">Feature 3 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m3-f4-t">Feature 4</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m3-f4-d">Feature 4 description.</p>
-                    </div>
-                </div>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m3-long-desc">
-                    <p>[Full Description Goes Here]</p>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8 mb-10">
-                    <div class="lg:col-span-1">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
-                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m3-included-list">
-                            <li>[Included Item]</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-2">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m3-specs-list">
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">[Spec]</span><span class="font-medium text-gray-900 dark:text-gray-200">[Value]</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
-                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
-                            <div class="flex-grow">
-                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual</h5>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
-                            </div>
-                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
-                <a href="#contact" onclick="closeModal(event, 'modal-3', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 4: 14kW -->
-    <div id="modal-4" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-4')">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
-            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-                <div class="bg-brand-accent/20 text-yellow-600 dark:text-yellow-500 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod4">Badge</div>
-                <button onclick="closeModal(event, 'modal-4', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <div class="p-6 md:p-8">
-                <div class="relative mb-8 group">
-                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
-                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    </div>
-                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
-                </div>
-                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod4-title">Modal Title</h3>
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod4-short-desc">Short description goes here.</p>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
-                <div class="grid md:grid-cols-2 gap-4 mb-10">
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m4-f1-t">Feature 1</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m4-f1-d">Feature 1 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m4-f2-t">Feature 2</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m4-f2-d">Feature 2 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m4-f3-t">Feature 3</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m4-f3-d">Feature 3 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m4-f4-t">Feature 4</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m4-f4-d">Feature 4 description.</p>
-                    </div>
-                </div>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m4-long-desc">
-                    <p>[Full Description Goes Here]</p>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8 mb-10">
-                    <div class="lg:col-span-1">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
-                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m4-included-list">
-                            <li>[Included Item]</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-2">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m4-specs-list">
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">[Spec]</span><span class="font-medium text-gray-900 dark:text-gray-200">[Value]</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
-                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
-                            <div class="flex-grow">
-                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual</h5>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
-                            </div>
-                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
-                <a href="#contact" onclick="closeModal(event, 'modal-4', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 5: 16kW -->
-    <div id="modal-5" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-5')">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
-            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-                <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod5">Badge</div>
-                <button onclick="closeModal(event, 'modal-5', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <div class="p-6 md:p-8">
-                <div class="relative mb-8 group">
-                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
-                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    </div>
-                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
-                </div>
-                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod5-title">Modal Title</h3>
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod5-short-desc">Short description goes here.</p>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
-                <div class="grid md:grid-cols-2 gap-4 mb-10">
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m5-f1-t">Feature 1</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m5-f1-d">Feature 1 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m5-f2-t">Feature 2</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m5-f2-d">Feature 2 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m5-f3-t">Feature 3</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m5-f3-d">Feature 3 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m5-f4-t">Feature 4</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m5-f4-d">Feature 4 description.</p>
-                    </div>
-                </div>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m5-long-desc">
-                    <p>[Full Description Goes Here]</p>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8 mb-10">
-                    <div class="lg:col-span-1">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
-                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m5-included-list">
-                            <li>[Included Item]</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-2">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m5-specs-list">
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">[Spec]</span><span class="font-medium text-gray-900 dark:text-gray-200">[Value]</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
-                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
-                            <div class="flex-grow">
-                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual</h5>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
-                            </div>
-                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
-                <a href="#contact" onclick="closeModal(event, 'modal-5', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 6: 18kW -->
-    <div id="modal-6" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-6')">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
-            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-                <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod6">Badge</div>
-                <button onclick="closeModal(event, 'modal-6', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <div class="p-6 md:p-8">
-                <div class="relative mb-8 group">
-                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
-                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    </div>
-                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
-                </div>
-                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod6-title">Modal Title</h3>
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod6-short-desc">Short description goes here.</p>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
-                <div class="grid md:grid-cols-2 gap-4 mb-10">
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m6-f1-t">Feature 1</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m6-f1-d">Feature 1 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m6-f2-t">Feature 2</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m6-f2-d">Feature 2 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m6-f3-t">Feature 3</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m6-f3-d">Feature 3 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m6-f4-t">Feature 4</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m6-f4-d">Feature 4 description.</p>
-                    </div>
-                </div>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m6-long-desc">
-                    <p>[Full Description Goes Here]</p>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8 mb-10">
-                    <div class="lg:col-span-1">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
-                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m6-included-list">
-                            <li>[Included Item]</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-2">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m6-specs-list">
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">[Spec]</span><span class="font-medium text-gray-900 dark:text-gray-200">[Value]</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
-                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
-                            <div class="flex-grow">
-                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual</h5>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
-                            </div>
-                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
-                <a href="#contact" onclick="closeModal(event, 'modal-6', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 7: 20kW -->
-    <div id="modal-7" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-7')">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
-            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-                <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod7">Badge</div>
-                <button onclick="closeModal(event, 'modal-7', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <div class="p-6 md:p-8">
-                <div class="relative mb-8 group">
-                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
-                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    </div>
-                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
-                </div>
-                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod7-title">Modal Title</h3>
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod7-short-desc">Short description goes here.</p>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
-                <div class="grid md:grid-cols-2 gap-4 mb-10">
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m7-f1-t">Feature 1</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m7-f1-d">Feature 1 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m7-f2-t">Feature 2</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m7-f2-d">Feature 2 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m7-f3-t">Feature 3</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m7-f3-d">Feature 3 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m7-f4-t">Feature 4</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m7-f4-d">Feature 4 description.</p>
-                    </div>
-                </div>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m7-long-desc">
-                    <p>[Full Description Goes Here]</p>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8 mb-10">
-                    <div class="lg:col-span-1">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
-                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m7-included-list">
-                            <li>[Included Item]</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-2">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m7-specs-list">
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">[Spec]</span><span class="font-medium text-gray-900 dark:text-gray-200">[Value]</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
-                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
-                            <div class="flex-grow">
-                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual</h5>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
-                            </div>
-                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
-                <a href="#contact" onclick="closeModal(event, 'modal-7', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 8: 22kW -->
-    <div id="modal-8" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-8')">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
-            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-                <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod8">Badge</div>
-                <button onclick="closeModal(event, 'modal-8', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <div class="p-6 md:p-8">
-                <div class="relative mb-8 group">
-                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
-                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    </div>
-                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
-                </div>
-                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod8-title">Modal Title</h3>
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod8-short-desc">Short description goes here.</p>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
-                <div class="grid md:grid-cols-2 gap-4 mb-10">
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m8-f1-t">Feature 1</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m8-f1-d">Feature 1 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m8-f2-t">Feature 2</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m8-f2-d">Feature 2 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m8-f3-t">Feature 3</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m8-f3-d">Feature 3 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m8-f4-t">Feature 4</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m8-f4-d">Feature 4 description.</p>
-                    </div>
-                </div>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m8-long-desc">
-                    <p>[Full Description Goes Here]</p>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8 mb-10">
-                    <div class="lg:col-span-1">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
-                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m8-included-list">
-                            <li>[Included Item]</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-2">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m8-specs-list">
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">[Spec]</span><span class="font-medium text-gray-900 dark:text-gray-200">[Value]</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
-                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
-                            <div class="flex-grow">
-                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual</h5>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
-                            </div>
-                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
-                <a href="#contact" onclick="closeModal(event, 'modal-8', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 9: 24kW -->
-    <div id="modal-9" class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-6 modal-overlay" onclick="closeModal(event, 'modal-9')">
-        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm pointer-events-none"></div>
-        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative modal-content z-10 flex flex-col custom-scrollbar" onclick="event.stopPropagation()">
-            <div class="sticky top-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur z-20 border-b border-gray-200 dark:border-gray-800 px-6 py-4 flex justify-between items-center">
-                <div class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-xs sm:text-sm font-semibold px-3 py-1 rounded inline-block" data-i18n="badge-mod9">Badge</div>
-                <button onclick="closeModal(event, 'modal-9', true)" class="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-500 hover:text-red-500 transition-colors border border-gray-200 dark:border-gray-700">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <div class="p-6 md:p-8">
-                <div class="relative mb-8 group">
-                    <button onclick="scrollGallery(this, -1)" class="absolute left-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-left" class="w-6 h-6"></i></button>
-                    <div class="gallery-container w-full overflow-x-auto flex gap-4 snap-x snap-mandatory hide-scrollbar pb-4 scroll-smooth">
-                        <img src="22kwhomestandby.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+1'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <img src="22kwhomestandby2.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/1f2937?text=Image+2'" class="h-48 md:h-72 w-auto object-cover rounded-xl snap-center shrink-0 border border-gray-200 dark:border-gray-700 shadow-sm">
-                    </div>
-                    <button onclick="scrollGallery(this, 1)" class="absolute right-2 top-[calc(50%-8px)] -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 text-gray-800 dark:text-gray-200 w-10 h-10 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 hover:bg-white dark:hover:bg-gray-700 hidden md:flex items-center justify-center border border-gray-200 dark:border-gray-700"><i data-lucide="chevron-right" class="w-6 h-6"></i></button>
-                </div>
-                <h3 class="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4" data-i18n="mod9-title">Modal Title</h3>
-                <p class="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-10" data-i18n="mod9-short-desc">Short description goes here.</p>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-6 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-features">Features</h4>
-                <div class="grid md:grid-cols-2 gap-4 mb-10">
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="home" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m9-f1-t">Feature 1</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m9-f1-d">Feature 1 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m9-f2-t">Feature 2</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m9-f2-d">Feature 2 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="volume-x" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m9-f3-t">Feature 3</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m9-f3-d">Feature 3 description.</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-100 dark:border-gray-700">
-                        <h5 class="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2"><i data-lucide="shield-check" class="w-5 h-5 text-brand-blue"></i> <span data-i18n="m9-f4-t">Feature 4</span></h5>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="m9-f4-d">Feature 4 description.</p>
-                    </div>
-                </div>
-                <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-description">Description</h4>
-                <div class="text-sm text-gray-600 dark:text-gray-400 space-y-4 mb-10 leading-relaxed" data-i18n="m9-long-desc">
-                    <p>[Full Description Goes Here]</p>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8 mb-10">
-                    <div class="lg:col-span-1">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-included">What's included</h4>
-                        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400 list-disc pl-5" data-i18n="m9-included-list">
-                            <li>[Included Item]</li>
-                        </ul>
-                    </div>
-                    <div class="lg:col-span-2">
-                        <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-specs">Specifications & Measurements</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-xs sm:text-sm" data-i18n="m9-specs-list">
-                            <div class="flex justify-between py-1 border-b border-gray-100 dark:border-gray-800/50"><span class="text-gray-500">[Spec]</span><span class="font-medium text-gray-900 dark:text-gray-200">[Value]</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-800 pb-2" data-i18n="lbl-docs">Manuals & Documents</h4>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
-                            <i data-lucide="file-text" class="w-6 h-6 text-red-500 shrink-0"></i>
-                            <div class="flex-grow">
-                                <h5 class="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-blue transition-colors">Operator's Manual</h5>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">English • PDF</p>
-                            </div>
-                            <i data-lucide="external-link" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="sticky bottom-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-4 md:px-8 flex justify-end z-20">
-                <a href="#contact" onclick="closeModal(event, 'modal-9', true)" class="w-full sm:w-auto bg-brand-blue hover:bg-brand-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl text-center" data-i18n="btn-get-quote">Get a Free Quote</a>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Scripts -->
     <script>
@@ -1715,48 +917,7 @@
                 // Generator Models Section
                 'models-title': 'Our Champion Generator Lineup',
                 'models-subtitle': 'Explore our selection of industry-leading Champion standby generators. Find the perfect fit for your home\'s power needs.',
-                'btn-more-info': 'More Info',
-                'btn-view-manual': 'View Manual',
-                'btn-get-quote': 'Get a Quote',
-
-                // Common Labels
-                'lbl-features': 'Features',
-                'lbl-description': 'Description',
-                'lbl-included': 'What’s included',
-                'lbl-specs': 'Specifications & Measurements',
-                'lbl-docs': 'Manuals & Documents',
-
-                // --- MODAL 1 DATA ---
-                'badge-mod1': 'Whole House Power',
-                'mod1-title': '22 kW Whole House Home Standby Generator and 200A Switch with aXis Technology',
-                'mod1-short-desc': 'Champion’s 22 kW aXis Home Standby Generator System includes a 200-amp aXis automatic transfer switch. This fully automatic system manages your home’s loads while reducing costs and increasing efficiency. Designed with advanced sound dampening, never needs refueling, works in extreme temperatures, and has an industry leading 10-year limited warranty.',
-                'm1-f1-t': 'Whole House Power',
-                'm1-f1-d': 'Up to 20% more fuel efficient than leading competitors, this 22-kilowatt generator provides 22,000 watts of continuous power on propane and 19,800 watts on natural gas, with no refueling, no manual operation, and no extension cords needed.',
-                'm1-f2-t': 'Efficient',
-                'm1-f2-d': 'With less wiring and lower installation costs thanks to our Power Line Carrier technology, you’ll save time and money installing your new HSB, easily manage your high-demand appliances with aXis technology, plus advanced airflow design extends engine life.',
-                'm1-f3-t': 'Quiet Operation',
-                'm1-f3-d': 'Thanks to advanced sound dampening and a specially designed low-tone muffler, this generator operates at a residential-friendly 67 dB[A] noise level and performs self-diagnostic tests.',
-                'm1-f4-t': 'Reliable & Champion Support',
-                'm1-f4-d': '24-volt starting system operates in sub-zero temperatures down to -22 °F with aluminum-zinc coated steel. Includes 10-year limited warranty with FREE lifetime technical support from dedicated experts.',
-                'm1-long-desc': `<p class="font-bold text-gray-900 dark:text-white">Model #201221</p>
-                                 <p class="font-bold text-brand-blue dark:text-blue-400">22 kW Whole House Home Standby Generator and 200A Switch with aXis Technology</p>
-                                 <p class="font-semibold text-gray-900 dark:text-gray-300">10 Year Warranty</p>
-                                 <p>Champion’s 22 kW aXis Home Standby Generator System includes a 200-amp aXis automatic transfer switch. This fully automatic system manages your home’s loads while reducing costs and increasing efficiency. Designed with advanced sound dampening, never needs refueling, works in extreme temperatures, and has an industry leading 10-year limited warranty.</p>
-                                 <p>The Champion Power Equipment 201221 Home Standby Generator System includes 22 kW aXis Home Standby Generator and 200A aXis ATS Whole House Automatic Transfer Switch. Equipped with aXis technology for reduced costs, increases efficiency, and peace of mind while ensuring security and convenience for your family during an emergency. Enjoy totally automatic, seamless power to your home during an outage.</p>
-                                 <p>Champion aXis 22 kW generator features aXis Controller™ with 4-inch color display and Power Line Carrier technology, which uses your home’s existing wiring so your generator can talk to the automatic transfer switch and other components without needing to run separate wires, saving you money and time on installation.</p>
-                                 <p>With aXis Wi-Fi Direct your installer can use a tablet or cell phone to program your generator meaning less hassle, faster setup, and lower cost.</p>
-                                 <p>Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with CSA standards for Canada.</p>
-                                 <p>The Whole House automatic transfer switch backs up your home’s 200-amp distribution panel and has the ability to manage your high-demand appliances by using our aXis Load Management Modules model 100868 (sold separately). Featuring a NEMA 3R Service Entry rated enclosure, this switch may be installed indoors or outdoors and is ETL listed to comply with UL standards for the US.</p>
-                                 <p>The innovative advanced airflow design stands out from the competition and allows your HSB to operate at cooler temperatures which extends the life of your engine. Your HSB is up to 20% more fuel efficient than leading competitors with 3.6 gal/hr using propane and 270.2 ft3/hr using natural gas at rated load.</p>
-                                 <p>Be confident your HSB will hold up to any weather thanks to the aluminum-zinc coated steel enclosure, offering better structural rigidity with the oxidation resistance of an all-aluminum enclosure, plus the gullwing opening allows for easy service and maintenance access.</p>
-                                 <p>The 24V starting system operates in sub-zero temperatures down to -22 °F, never needs refueling operating on your home’s NG or LP fuel supply, starts automatically when the power goes out, and returns to standby when power is restored.</p>
-                                 <p>The 999cc V-Twin Champion engine provides 22-kilowatts of continuous power on propane and 19.8-kilowatts on natural gas. This 22 kW-rated unit produces 91.7 amps at 240 volts on propane and 82.5 amps at 240 volts on natural gas.</p>
-                                 <p>The residential-friendly 67 dB[A]* is a little louder than normal conversation.</p>
-                                 <p>The alternator produces less than 5% total harmonic distortion (THD) to ensure safe use with even the most sensitive electronics.</p>
-                                 <p>This generator is available for all 50 states. Buy with confidence - Champion Support will back your purchase with FREE lifetime technical support, a 10-year limited warranty on the generator and a 2-year limited warranty on the ATS.</p>
-                                 <p class="italic text-xs">*Measurement is approximate and for reference purposes only. Sound measured at 23 ft. (7 m) and does not account for your installation site.</p>`,
-                'm1-included-list': `<li>Battery Jumper Wire</li><li>Gas Inlet Flex Hose</li><li>Gas Inlet Hose</li><li>Keys for Door Lock</li><li>Master Mixer Assembly</li>`,
-                'm1-specs-list': `<!-- English Spec List HTML Goes Here -->`
+                'btn-view-champion': 'View Details on Champion',
             },
             fr: {
                 'nav-services': 'Services',
@@ -1779,8 +940,8 @@
                 'nav-ev': 'Recharge VE',
                 'nav-reviews': 'Avis',
                 'nav-contact': 'Contactez-nous',
-                'nav-call': 'Appelez'
-                // You can expand French translations for the modal content here later
+                'nav-call': 'Appelez',
+                'btn-view-champion': 'Voir les détails sur Champion'
             }
         };
 
@@ -1852,33 +1013,14 @@
                 mobileMenu.classList.add('hidden');
             });
         });
-
-        // --- Modal Logic ---
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.add('open');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            }
-        }
-
-        function closeModal(event, modalId, force = false) {
-            // Close if 'force' is true (X button clicked) OR if clicked directly on the overlay backdrop
-            if (force || event.target.classList.contains('modal-overlay')) {
-                const modal = document.getElementById(modalId);
-                if (modal) {
-                    modal.classList.remove('open');
-                    document.body.style.overflow = ''; // Restore background scrolling
-                }
-            }
-        }
         
-        // --- Gallery Scroll Logic ---
+        // --- Inside-Card Gallery Scroll Logic ---
         function scrollGallery(button, direction) {
+            // Find the sibling gallery container inside the same parent div
             const container = button.parentElement.querySelector('.gallery-container');
             if (container) {
-                // Scroll by approximately 1 image width or 75% of container
-                const scrollAmount = container.clientWidth * 0.75;
+                // Scroll by exactly 1 image width (100% of container)
+                const scrollAmount = container.clientWidth;
                 container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
             }
         }
