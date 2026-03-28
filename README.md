@@ -8,3 +8,5 @@ also make sure to put in that we have flexible payment options from our partners
 she also needs pictures of the generators 
 
 update the south shore locations 
+
+add champion power logo on the main page under the cmeq logo
